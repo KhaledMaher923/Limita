@@ -1,0 +1,6 @@
+@Limita_HostAddress = http://localhost:5199
+
+GET {{Limita_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
