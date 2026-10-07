@@ -7,7 +7,25 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.12.0" />
+    <PackageReference Include="MediatR" Version="12.5.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.31" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Limita.Domain\Limita.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Features\Accounts\" />
+    <Folder Include="Features\Auth\" />
+    <Folder Include="Features\Cards\" />
+    <Folder Include="Features\Transers\" />
+    <Folder Include="Features\Transactions\" />
+    <Folder Include="Features\SpendingLimits\" />
+    <Folder Include="Features\SavingsGoals\" />
+    <Folder Include="Features\Notifications\" />
   </ItemGroup>
 
 </Project>
