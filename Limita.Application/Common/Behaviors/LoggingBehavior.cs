@@ -16,7 +16,8 @@ namespace Limita.Application.Common.Behaviors
     {
         public async Task<TResponse> Handle(TRequest request, RequestHandlerDelegate<TResponse> next, CancellationToken cancellationToken)
         {
-            var name = typeof(TRequest).Name;
+            // Requests are nested in their slice (CreateAccount.Command), so log the slice name.
+            var name = typeof(TRequest).DeclaringType?.Name ?? typeof(TResponse).Name;
             var stopwatch = Stopwatch.StartNew();
             logger.LogInformation($"Handling {name}");
 

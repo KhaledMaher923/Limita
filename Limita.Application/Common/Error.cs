@@ -14,7 +14,8 @@ namespace Limita.Application.Common
         Conflict,
         Unauthorized,
         Forbidden,
-        BusinessRule
+        BusinessRule,
+        TooManyRequests
     }
 
     public sealed record Error(string Code, string Description,ErrorType errorType)
@@ -28,9 +29,6 @@ namespace Limita.Application.Common
         public static Error Unauthorized(string code, string description) => new(code, description, ErrorType.Unauthorized);
         public static Error Forbidden(string code, string description) => new(code, description, ErrorType.Forbidden);
         public static Error BusinessRule(string code, string description) => new(code, description, ErrorType.BusinessRule);
-
-
-
-
+        public static Error TooManyRequests(string code, string description) => new(code, description, ErrorType.TooManyRequests);
     }
 }

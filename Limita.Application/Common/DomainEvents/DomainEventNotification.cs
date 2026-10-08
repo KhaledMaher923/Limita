@@ -14,6 +14,7 @@ namespace Limita.Application.Common.DomainEvents
     /// </summary>
     public sealed record DomainEventNotification<TEvent>(TEvent DomainEvent) : INotification
         where TEvent : IDomainEvent;
+
     public static class DomainEventNotification
     {
         public static INotification Create(IDomainEvent domainEvent)
