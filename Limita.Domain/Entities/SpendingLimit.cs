@@ -22,6 +22,11 @@ namespace Limita.Domain.Entities
         public TransactionCategory? Category { get; private set; }
         public LimitPeriod Period { get; private set; }
         public Money LimitAmount { get; private set; } = null!;
+        public DateTimeOffset? LastHalfwayNotificationPeriodStart
+        { get; private set; }
+
+        public DateTimeOffset? LastExceededNotificationPeriodStart
+        { get; private set; }
         public bool IsActive { get; private set; }
 
         public static SpendingLimit Create(
@@ -49,6 +54,34 @@ namespace Limita.Domain.Entities
             };
         }
 
+        public void EvaluateSpending(
+            Money spentSoFar,
+            DateTimeOffset now)
+        {
+            if (spentSoFar.Currency != LimitAmount.Currency)
+                throw new DomainException("Spending currency must match the limit currency.");
+
+            var periodStart = GetPeriodStart(now);
+
+            if (spentSoFar.Amount >= LimitAmount.Amount / 2m
+                && LastHalfwayNotificationPeriodStart != periodStart)
+            {
+                Raise(new SpendingLimitHalfwayReachedEvent (
+                    Id,
+                    UserId,
+                    LimitAmount,
+                    spentSoFar));
+
+                LastHalfwayNotificationPeriodStart = periodStart;
+            }
+
+            if (IsExceededBy(spentSoFar)
+                && LastExceededNotificationPeriodStart != periodStart)
+            {
+                ReportExceeded(spentSoFar);
+                LastExceededNotificationPeriodStart = periodStart;
+            }
+        }
         public void ChangeLimit(Money newLimit)
         {
             Guard.Positive(newLimit, "Limit amount");

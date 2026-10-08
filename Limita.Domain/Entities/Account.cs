@@ -46,13 +46,16 @@ namespace Limita.Domain.Entities
             string? description,
             DateTimeOffset now,
             Guid? transferId = null,
-            Guid? savingsGoalId = null)
+            Guid? savingsGoalId = null,
+            Guid? withdrawalId = null,
+            Guid? timeDepositId = null,
+            Guid? exchangeOperationId = null)
         {
             EnsureCanTransact(amount);
 
             Balance += amount;
 
-            return Transaction.Create(Id, TransactionType.Credit, amount, Balance.Amount, category, description, now, transferId, savingsGoalId);
+            return Transaction.Create(Id, TransactionType.Credit, amount, Balance.Amount, category, description, now, transferId, savingsGoalId, withdrawalId, timeDepositId, exchangeOperationId);
         }
 
         /// <summary>
@@ -64,7 +67,10 @@ namespace Limita.Domain.Entities
             string? description,
             DateTimeOffset now,
             Guid? transferId = null,
-            Guid? savingsGoalId = null)
+            Guid? savingsGoalId = null,
+            Guid? withdrawalId = null,
+            Guid? timeDepositId = null,
+            Guid? exchangeOperationId = null)
         {
             EnsureCanTransact(amount);
 
@@ -73,7 +79,7 @@ namespace Limita.Domain.Entities
 
             Balance -= amount;
 
-            return Transaction.Create(Id, TransactionType.Debit, amount, Balance.Amount, category, description, now, transferId, savingsGoalId);
+            return Transaction.Create(Id, TransactionType.Debit, amount, Balance.Amount, category, description, now, transferId, savingsGoalId, withdrawalId, timeDepositId, exchangeOperationId);
         }
 
         public void Freeze()
