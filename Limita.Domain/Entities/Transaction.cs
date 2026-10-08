@@ -25,6 +25,7 @@ namespace Limita.Domain.Entities
         public Guid? SavingsGoalId { get; private set; }
         public Guid? WithdrawalId { get; private set; }
         public Guid? TimeDepositId { get; private set; }
+        public Guid? ExchangeOperationId { get; private set; }
         public TransactionType Type { get; private set; }
         public Money Amount { get; private set; } = null!;
         public decimal BalanceAfter { get; private set; }
@@ -43,7 +44,8 @@ namespace Limita.Domain.Entities
             Guid? transferId,
             Guid? savingsGoalId,
             Guid? withdrawalId,
-            Guid? timeDepositId)
+            Guid? timeDepositId,
+            Guid? exchangeOperationId = null)
         {
             var transaction = new Transaction 
             {
@@ -52,6 +54,7 @@ namespace Limita.Domain.Entities
                 SavingsGoalId = savingsGoalId,
                 WithdrawalId = withdrawalId,
                 TimeDepositId = timeDepositId,
+                ExchangeOperationId = exchangeOperationId,
                 Type = type,
                 Amount = amount,
                 BalanceAfter = balanceAfter,

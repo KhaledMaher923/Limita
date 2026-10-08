@@ -28,6 +28,7 @@ namespace Limita.Domain.Enums
         Entertainment,
         Health,
         Education,
+        Exchange,
         Other
     }
 

@@ -30,6 +30,10 @@ namespace Limita.Infrastructure.Persistence.Configurations
             builder.HasOne<User>().WithMany().HasForeignKey(s => s.UserId).OnDelete(DeleteBehavior.Restrict);
             builder.HasOne<Card>().WithMany().HasForeignKey(s => s.CardId).OnDelete(DeleteBehavior.Restrict);
             builder.HasOne<Account>().WithMany().HasForeignKey(s => s.AccountId).OnDelete(DeleteBehavior.Restrict);
+
+            builder.Property(limit => limit.LastHalfwayNotificationPeriodStart);
+
+            builder.Property(limit => limit.LastExceededNotificationPeriodStart);
         }
     }
 }

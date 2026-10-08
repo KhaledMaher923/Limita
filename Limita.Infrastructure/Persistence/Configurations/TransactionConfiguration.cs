@@ -40,6 +40,11 @@ namespace Limita.Infrastructure.Persistence.Configurations
                 .WithMany()
                 .HasForeignKey(transaction => transaction.TimeDepositId)
                 .OnDelete(DeleteBehavior.Restrict);
+
+            builder.HasOne<ExchangeOperation>()
+                   .WithMany()
+                   .HasForeignKey(transaction => transaction.ExchangeOperationId)
+                   .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }

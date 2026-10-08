@@ -31,6 +31,7 @@ namespace Limita.Infrastructure.Persistence
         public DbSet<OtpCode> OtpCodes => Set<OtpCode>();
         public DbSet<TimeDeposit> TimeDeposits => Set<TimeDeposit>();
         public DbSet<Withdrawal> Withdrawals => Set<Withdrawal>();
+        public DbSet<ExchangeOperation> ExchangeOperations => Set<ExchangeOperation>();
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

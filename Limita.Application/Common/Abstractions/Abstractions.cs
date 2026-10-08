@@ -34,6 +34,7 @@ namespace Limita.Application.Common.Abstractions
         DbSet<OtpCode> OtpCodes { get; }
         DbSet<TimeDeposit> TimeDeposits { get; }
         DbSet<Withdrawal> Withdrawals { get; }
+        DbSet<ExchangeOperation> ExchangeOperations { get; }
     }
 
     public interface ICurrentUser
