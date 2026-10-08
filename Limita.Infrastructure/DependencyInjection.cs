@@ -1,5 +1,6 @@
 ﻿using Limita.Application.Common.Abstractions;
 using Limita.Infrastructure.Identity;
+using Limita.Infrastructure.Messaging;
 using Limita.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -28,6 +29,33 @@ namespace Limita.Infrastructure
 
             services.Configure<JwtOptions>(configuration.GetSection(JwtOptions.SectionName));
             services.AddSingleton(TimeProvider.System); // inject TimeProvider instead of calling DateTime.UtcNow
+
+            // Authentication services
+            services.AddSingleton<IPasswordHasher, PasswordHasherService>();
+            services.AddSingleton<IJwtTokenGenerator, JwtTokenGenerator>();
+            services.AddSingleton<ISecretHasher, SecretHasher>();
+            services.AddSingleton<ISecretGenerator, SecretGenerator>();
+
+            // SMS provider, chosen by the Sms:Provider setting (see docs/SMS.md).
+            services.Configure<SmsOptions>(configuration.GetSection(SmsOptions.SectionName));
+            var smsProvider = configuration[$"{SmsOptions.SectionName}:Provider"];
+
+            if (string.Equals(smsProvider, "Twilio", StringComparison.OrdinalIgnoreCase))
+            {
+                services.AddHttpClient<ISmsSender, TwilioSmsSender>(client =>
+                {
+                    client.BaseAddress = new Uri("https://api.twilio.com/");
+                    client.Timeout = TimeSpan.FromSeconds(10);
+                });
+            }
+            else if (string.Equals(smsProvider, "Console", StringComparison.OrdinalIgnoreCase))
+            {
+                services.AddSingleton<ISmsSender, DevelopmentSmsSender>(); // the API refuses this outside Development
+            }
+            else
+            {
+                services.AddSingleton<ISmsSender, NotConfiguredSmsSender>();
+            }
 
             return services;
         }
