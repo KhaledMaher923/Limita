@@ -1,3 +1,4 @@
+using System.Text;
 using Limita.Application;
 using Limita.Common;
 using Limita.Development;
@@ -11,6 +12,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
+
 builder.Services.AddSwaggerGen(options =>
 {
     options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
@@ -69,7 +71,7 @@ builder.Services
 
             ValidateIssuerSigningKey = true,
             IssuerSigningKey = new SymmetricSecurityKey(
-                System.Text.Encoding.UTF8.GetBytes(jwt.SecretKey)),
+                Encoding.UTF8.GetBytes(jwt.SecretKey)),
 
             ValidateLifetime = true,
             ClockSkew = TimeSpan.FromSeconds(30)

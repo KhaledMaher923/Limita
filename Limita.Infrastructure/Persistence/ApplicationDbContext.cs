@@ -24,14 +24,15 @@ namespace Limita.Infrastructure.Persistence
         public DbSet<Card> Cards => Set<Card>();
         public DbSet<Transaction> Transactions => Set<Transaction>();
         public DbSet<Transfer> Transfers => Set<Transfer>();
-        public DbSet<SpendingLimit> SpendingLimits => Set<SpendingLimit>();
-        public DbSet<SavingsGoal> SavingsGoals => Set<SavingsGoal>();
-        public DbSet<Notification> Notifications => Set<Notification>();
         public DbSet<RefreshToken> RefreshTokens => Set<RefreshToken>();
         public DbSet<OtpCode> OtpCodes => Set<OtpCode>();
+        public DbSet<Notification> Notifications => Set<Notification>();
+        public DbSet<SpendingLimit> SpendingLimits => Set<SpendingLimit>();
+        public DbSet<SavingsGoal> SavingsGoals => Set<SavingsGoal>();
         public DbSet<TimeDeposit> TimeDeposits => Set<TimeDeposit>();
         public DbSet<Withdrawal> Withdrawals => Set<Withdrawal>();
         public DbSet<ExchangeOperation> ExchangeOperations => Set<ExchangeOperation>();
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -85,7 +86,7 @@ namespace Limita.Infrastructure.Persistence
             {
                 var entities = ChangeTracker.Entries<Entity>()
                     .Select(entry => entry.Entity)
-                    .Where(entity =>  entity.DomainEvents.Count > 0)
+                    .Where(entity => entity.DomainEvents.Count > 0)
                     .ToList();
 
                 if (entities.Count == 0) return;
