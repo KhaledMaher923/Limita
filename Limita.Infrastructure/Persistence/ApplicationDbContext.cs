@@ -19,16 +19,28 @@ namespace Limita.Infrastructure.Persistence
     {
         private IDbContextTransaction? _transaction;
 
+<<<<<<< HEAD
+=======
         public DbSet<User> Users => Set<User>();
+>>>>>>> origin/master
         public DbSet<Account> Accounts => Set<Account>();
         public DbSet<Card> Cards => Set<Card>();
         public DbSet<Transaction> Transactions => Set<Transaction>();
         public DbSet<Transfer> Transfers => Set<Transfer>();
+<<<<<<< HEAD
+        public DbSet<User> Users => Set<User>();
+        public DbSet<RefreshToken> RefreshTokens => Set<RefreshToken>();
+        public DbSet<OtpCode> OtpCodes => Set<OtpCode>();
+        public DbSet<Notification> Notifications => Set<Notification>();
+        public DbSet<SpendingLimit> SpendingLimits => Set<SpendingLimit>();
+        public DbSet<SavingsGoal> SavingsGoals => Set<SavingsGoal>();
+=======
         public DbSet<SpendingLimit> SpendingLimits => Set<SpendingLimit>();
         public DbSet<SavingsGoal> SavingsGoals => Set<SavingsGoal>();
         public DbSet<Notification> Notifications => Set<Notification>();
         public DbSet<RefreshToken> RefreshTokens => Set<RefreshToken>();
         public DbSet<OtpCode> OtpCodes => Set<OtpCode>();
+>>>>>>> origin/master
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -82,7 +94,11 @@ namespace Limita.Infrastructure.Persistence
             {
                 var entities = ChangeTracker.Entries<Entity>()
                     .Select(entry => entry.Entity)
+<<<<<<< HEAD
+                    .Where(entity => entity.DomainEvents.Count > 0)
+=======
                     .Where(entity =>  entity.DomainEvents.Count > 0)
+>>>>>>> origin/master
                     .ToList();
 
                 if (entities.Count == 0) return;
