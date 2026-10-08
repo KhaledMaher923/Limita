@@ -30,6 +30,16 @@ namespace Limita.Infrastructure.Persistence.Configurations
             builder.HasOne<Account>().WithMany().HasForeignKey(t => t.AccountId).OnDelete(DeleteBehavior.Restrict);
             builder.HasOne<Transfer>().WithMany().HasForeignKey(t => t.TransferId).OnDelete(DeleteBehavior.Restrict);
             builder.HasOne<SavingsGoal>().WithMany().HasForeignKey(t => t.SavingsGoalId).OnDelete(DeleteBehavior.Restrict);
+
+            builder.HasOne<Withdrawal>()
+                   .WithMany()
+                   .HasForeignKey(transaction => transaction.WithdrawalId)
+                   .OnDelete(DeleteBehavior.Restrict);
+
+            builder.HasOne<TimeDeposit>()
+                .WithMany()
+                .HasForeignKey(transaction => transaction.TimeDepositId)
+                .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }

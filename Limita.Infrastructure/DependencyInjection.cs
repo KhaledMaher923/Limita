@@ -5,6 +5,7 @@ using Limita.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,6 +25,8 @@ namespace Limita.Infrastructure
             // Do not enable EnableRetryOnFailure without redesigning TransactionBehavior: SQL Server retry
             // strategies do not allow user-initiated transactions unless they run inside an execution strategy.
             services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(connectionString));
+            services.AddHttpContextAccessor();
+            services.AddScoped<ICurrentUser, HttpCurrentUser>();
             services.AddScoped<IApplicationDbContext>(sp => sp.GetRequiredService<ApplicationDbContext>());
             services.AddScoped<IUnitOfWork>(sp => sp.GetRequiredService<ApplicationDbContext>());
 

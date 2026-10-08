@@ -29,6 +29,8 @@ namespace Limita.Infrastructure.Persistence
         public DbSet<Notification> Notifications => Set<Notification>();
         public DbSet<RefreshToken> RefreshTokens => Set<RefreshToken>();
         public DbSet<OtpCode> OtpCodes => Set<OtpCode>();
+        public DbSet<TimeDeposit> TimeDeposits => Set<TimeDeposit>();
+        public DbSet<Withdrawal> Withdrawals => Set<Withdrawal>();
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
