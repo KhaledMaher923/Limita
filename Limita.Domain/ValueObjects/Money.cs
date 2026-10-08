@@ -11,16 +11,15 @@ namespace Limita.Domain.ValueObjects
     /// <summary>
     /// An amount of money in a specific currency. Money is always a decimal, never a double or float.
     /// Rule for the MVP: at most two decimal places (matches the decimal(18,2) database column).
+    /// Mapped by EF Core as a complex type (see MoneyMapping in Infrastructure).
     /// </summary>
     public sealed record Money
     {
-        public decimal Amount { get; }
-        public string Currency { get; }
+        public decimal Amount { get; private init; }
+        public string Currency { get; private init; } = string.Empty;
 
-        public Money(decimal amount, string currency)
+        private Money() // required by EF Core
         {
-            Amount = amount;
-            Currency = currency;
         }
 
         public static Money Of(decimal amount, string currency)
@@ -31,7 +30,7 @@ namespace Limita.Domain.ValueObjects
             if (decimal.Round(amount, 2) != amount)
                 throw new DomainException("Money cannot have more than two decimal places.");
 
-            return new Money(amount, currency.ToUpperInvariant());
+            return new Money { Amount = amount, Currency = currency.ToUpperInvariant() };
         }
 
         public static Money Zero(string currency) => Of(0m, currency);
@@ -42,13 +41,13 @@ namespace Limita.Domain.ValueObjects
         public Money Add(Money other)
         {
             EnsureSameCurrency(other);
-            return new Money(Amount + other.Amount, Currency);
+            return new Money { Amount = Amount + other.Amount, Currency = Currency };
         }
 
         public Money Subtract(Money other)
         {
             EnsureSameCurrency(other);
-            return new Money(Amount - other.Amount, Currency);
+            return new Money { Amount = Amount - other.Amount, Currency = Currency };
         }
 
         public int CompareTo(Money other)
