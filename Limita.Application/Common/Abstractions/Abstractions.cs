@@ -17,38 +17,21 @@ namespace Limita.Application.Common.Abstractions
     }
 
     /// <summary>
-<<<<<<< HEAD
-    /// Handlers query and modify data through this interface. Add a DbSet property here
-    /// as each module introduces its entities (for example: DbSet<Account> Accounts).
-    /// </summary>
-    public interface IApplicationDbContext : IUnitOfWork
-    {
-=======
     /// Handlers query and modify data through this interface. Saving is done by TransactionBehavior,
     /// so handlers add or change entities but never call SaveChanges themselves.
     /// </summary>
     public interface IApplicationDbContext
     {
         DbSet<User> Users { get; }
->>>>>>> origin/master
         DbSet<Account> Accounts { get; }
         DbSet<Card> Cards { get; }
         DbSet<Transaction> Transactions { get; }
         DbSet<Transfer> Transfers { get; }
-<<<<<<< HEAD
-        DbSet<User> Users { get; }
-        DbSet<RefreshToken> RefreshTokens { get; }
-        DbSet<OtpCode> OtpCodes { get; }
-        DbSet<Notification> Notifications { get; }
-        DbSet<SpendingLimit> SpendingLimits { get; }
-        DbSet<SavingsGoal> SavingsGoals { get; }
-=======
         DbSet<SpendingLimit> SpendingLimits { get; }
         DbSet<SavingsGoal> SavingsGoals { get; }
         DbSet<Notification> Notifications { get; }
         DbSet<RefreshToken> RefreshTokens { get; }
         DbSet<OtpCode> OtpCodes { get; }
->>>>>>> origin/master
     }
 
     public interface ICurrentUser
