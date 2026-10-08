@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 
 namespace Limita.Application.Features.Auth
 {
+    /// <summary>Creates, sends and checks one-time codes. Used by phone verification and password reset.</summary>
     internal sealed class OtpService(
         IApplicationDbContext db,
         ISecretGenerator generator,
