@@ -91,6 +91,25 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.Use(async (context, next) =>
+{
+    try
+    {
+        await next();
+    }
+    catch (Microsoft.EntityFrameworkCore.DbUpdateConcurrencyException)
+    {
+        context.Response.Clear();
+        context.Response.StatusCode = StatusCodes.Status409Conflict;
+        await context.Response.WriteAsJsonAsync(new
+        {
+            title = "Account.ConcurrencyConflict",
+            detail = "The account balance changed during this request. Please retry."
+        });
+    }
+});
+
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
