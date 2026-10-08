@@ -1,6 +1,11 @@
 ﻿using Limita.Application.Common.Abstractions;
+using Limita.Application.Common.DomainEvents;
+using Limita.Domain.Events;
 using Limita.Infrastructure.Identity;
 using Limita.Infrastructure.Persistence;
+using Limita.Infrastructure.Services;
+using MediatR;
+using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -27,7 +32,13 @@ namespace Limita.Infrastructure
             services.AddScoped<IUnitOfWork>(sp => sp.GetRequiredService<ApplicationDbContext>());
 
             services.Configure<JwtOptions>(configuration.GetSection(JwtOptions.SectionName));
-            services.AddSingleton(TimeProvider.System); // inject TimeProvider instead of calling DateTime.UtcNow
+            services.AddSingleton(TimeProvider.System);
+
+            services.AddHttpContextAccessor();
+            services.AddScoped<ICurrentUser, CurrentUserService>();
+
+            // Domain event handlers
+            services.AddScoped<INotificationHandler<DomainEventNotification<CardAddedEvent>>, CardAddedNotificationHandler>();
 
             return services;
         }

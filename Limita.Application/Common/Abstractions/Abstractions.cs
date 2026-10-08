@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Limita.Domain.Entities;
+using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,9 +18,21 @@ namespace Limita.Application.Common.Abstractions
 
     /// <summary>
     /// Handlers query and modify data through this interface. Add a DbSet property here
-    /// as each module introduces its entities (for example: DbSet&lt;Account&gt; Accounts).
+    /// as each module introduces its entities (for example: DbSet<Account> Accounts).
     /// </summary>
-    public interface IApplicationDbContext { }
+    public interface IApplicationDbContext : IUnitOfWork
+    {
+        DbSet<Account> Accounts { get; }
+        DbSet<Card> Cards { get; }
+        DbSet<Transaction> Transactions { get; }
+        DbSet<Transfer> Transfers { get; }
+        DbSet<User> Users { get; }
+        DbSet<RefreshToken> RefreshTokens { get; }
+        DbSet<OtpCode> OtpCodes { get; }
+        DbSet<Notification> Notifications { get; }
+        DbSet<SpendingLimit> SpendingLimits { get; }
+        DbSet<SavingsGoal> SavingsGoals { get; }
+    }
 
     public interface ICurrentUser
     {
