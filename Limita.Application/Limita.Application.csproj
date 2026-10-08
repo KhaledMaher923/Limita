@@ -18,8 +18,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Features\Accounts\" />
-    <Folder Include="Features\Auth\" />
     <Folder Include="Features\Cards\" />
     <Folder Include="Features\Transers\" />
     <Folder Include="Features\Transactions\" />

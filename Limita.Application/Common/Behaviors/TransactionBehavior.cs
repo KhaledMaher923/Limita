@@ -1,4 +1,5 @@
 ﻿using Limita.Application.Common.Abstractions;
+using Limita.Application.Common.Messaging;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -15,7 +16,7 @@ namespace Limita.Application.Common.Behaviors
     /// </summary>
     internal sealed class TransactionBehavior<TRequest, TResponse>(IUnitOfWork unitOfWork)
         : IPipelineBehavior<TRequest, TResponse>
-        where TRequest : notnull, IRequest<TResponse>, ICommand
+        where TRequest : notnull, IRequest<TResponse>, ICommandBase
         where TResponse : Result
     {
         public async Task<TResponse> Handle(TRequest request, RequestHandlerDelegate<TResponse> next, CancellationToken cancellationToken)
@@ -26,9 +27,9 @@ namespace Limita.Application.Common.Behaviors
             {
                 var response = await next();
 
-                if (response.IsFailure)
+                if (response.IsFailure && request is not ICommitOnFailure)
                 {
-                    await unitOfWork.RollbackTransactionAsync(cancellationToken);
+                    await unitOfWork.RollbackTransactionAsync(CancellationToken.None);
                     return response;
                 }
 

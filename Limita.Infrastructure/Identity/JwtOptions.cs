@@ -16,7 +16,14 @@ namespace Limita.Infrastructure.Identity
         /// <summary>Signing key, at least 32 characters. Never commit a real key: use user-secrets or environment variables.</summary>
         public string SecretKey { get; init; } = string.Empty;
 
+<<<<<<< HEAD
         public int AccessTokenExpirationMinutes { get; init; } = 60;
         public int RefreshTokenExpirationDays { get; init; } = 7;
+=======
+        public int ExpiryMinutes { get; init; } = 15;
+
+        public int RefreshTokenDays { get; init; } = 7;
+
+>>>>>>> origin/master
     }
 }
