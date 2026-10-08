@@ -28,6 +28,7 @@ namespace Limita.Domain.Enums
         Entertainment,
         Health,
         Education,
+        Exchange,
         Other
     }
 
@@ -48,5 +49,20 @@ namespace Limita.Domain.Enums
     }
 
     public enum OtpPurpose { PhoneVerification, PasswordReset }
+
+    public enum WithdrawalStatus
+    {
+        PendingVerification,
+        Completed,
+        Expired,
+        Cancelled
+    }
+
+    public enum TimeDepositStatus
+    {
+        Active,
+        Matured,
+        Redeemed
+    }
 
 }
