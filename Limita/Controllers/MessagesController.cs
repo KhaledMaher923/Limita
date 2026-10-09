@@ -38,7 +38,7 @@ public sealed class MessagesController(ISender sender) : ControllerBase
     public async Task<IActionResult> Reply(Guid threadId, [FromBody] ReplyRequest request, CancellationToken ct)
     {
         var result = await sender.Send(new SendMessageReplyCommand(threadId, request.Body), ct);
-        if (result.IsFailure) return result.Error.errorType == Limita.Application.Common.ErrorType.Conflict
+        if (result.IsFailure) return result.Error.Type == Limita.Application.Common.ErrorType.Conflict
             ? Conflict(new { result.Error.Code, result.Error.Description })
             : NotFound(new { result.Error.Code, result.Error.Description });
         return StatusCode(StatusCodes.Status201Created, new { id = result.Value });

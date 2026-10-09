@@ -34,7 +34,7 @@ public sealed class ProfileController(ISender sender) : ControllerBase
     {
         var result = await sender.Send(new ChangeLanguageCommand(request.LanguageCode), ct);
         if (result.IsSuccess) return NoContent();
-        return result.Error.errorType == Limita.Application.Common.ErrorType.NotFound
+        return result.Error.Type == Limita.Application.Common.ErrorType.NotFound
             ? NotFound(new { result.Error.Code, result.Error.Description })
             : BadRequest(new { result.Error.Code, result.Error.Description });
     }

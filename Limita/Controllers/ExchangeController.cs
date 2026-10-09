@@ -1,4 +1,5 @@
-﻿using Limita.Application.Features.Exchange.Commands;
+﻿using Limita.Api.Common;
+using Limita.Application.Features.Exchange.Commands;
 using Limita.Application.Features.Exchange.Queries;
 using Limita.Common;
 using MediatR;
@@ -21,7 +22,7 @@ public sealed class ExchangeController(ISender sender)
             new GetCurrenciesQuery(),
             cancellationToken);
 
-        return ToActionResult(result);
+        return FromResult(result);
     }
 
     [AllowAnonymous]
@@ -39,7 +40,7 @@ public sealed class ExchangeController(ISender sender)
                 amount),
             cancellationToken);
 
-        return ToActionResult(result);
+        return FromResult(result);
     }
 
     [HttpPost]
@@ -50,7 +51,7 @@ public sealed class ExchangeController(ISender sender)
         var result = await sender.Send(command, cancellationToken);
 
         if (result.IsFailure)
-            return ToActionResult(result);
+            return FromResult(result);
 
         return Ok(new { exchangeOperationId = result.Value });
     }
