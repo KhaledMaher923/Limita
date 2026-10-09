@@ -34,6 +34,19 @@ namespace Limita.Infrastructure.Persistence
         public DbSet<ExchangeOperation> ExchangeOperations => Set<ExchangeOperation>();
 
 
+
+
+
+        //
+        public DbSet<Bill> Bills => Set<Bill>();   
+        public DbSet<BillPayment> BillPayments => Set<BillPayment>();
+        public DbSet<MobileTopUp> MobileTopUps => Set<MobileTopUp>();
+
+
+
+
+
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             // Picks up every IEntityTypeConfiguration<T> in this assembly (one per entity, added per module).
