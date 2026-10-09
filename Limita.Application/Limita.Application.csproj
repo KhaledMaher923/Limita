@@ -20,10 +20,8 @@
   <ItemGroup>
     <Folder Include="Features\Cards\" />
     <Folder Include="Features\Transers\" />
-    <Folder Include="Features\Transactions\" />
     <Folder Include="Features\SpendingLimits\" />
     <Folder Include="Features\SavingsGoals\" />
-    <Folder Include="Features\Notifications\" />
   </ItemGroup>
 
 </Project>
