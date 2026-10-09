@@ -41,9 +41,5 @@ namespace Limita.Application.Features.Auth
             foreach (var token in active)
                 token.Revoke(now);
         }
-
-
-
-
     }
 }

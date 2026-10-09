@@ -1,4 +1,4 @@
-﻿using Limita.Application.Common.Abstractions;
+using Limita.Application.Common.Abstractions;
 using Limita.Infrastructure.Identity;
 using Limita.Infrastructure.Messaging;
 using Limita.Infrastructure.Persistence;
@@ -11,6 +11,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Limita.Application.Features.Notifications;
 
 namespace Limita.Infrastructure
 {
@@ -29,9 +30,12 @@ namespace Limita.Infrastructure
             services.AddScoped<ICurrentUser, HttpCurrentUser>();
             services.AddScoped<IApplicationDbContext>(sp => sp.GetRequiredService<ApplicationDbContext>());
             services.AddScoped<IUnitOfWork>(sp => sp.GetRequiredService<ApplicationDbContext>());
+            services.AddScoped<INotificationPublisher, NotificationPublisher>();
 
             services.Configure<JwtOptions>(configuration.GetSection(JwtOptions.SectionName));
             services.AddSingleton(TimeProvider.System); // inject TimeProvider instead of calling DateTime.UtcNow
+            services.AddHttpContextAccessor();
+            services.AddScoped<ICurrentUser, HttpCurrentUser>();
 
             // Authentication services
             services.AddSingleton<IPasswordHasher, PasswordHasherService>();

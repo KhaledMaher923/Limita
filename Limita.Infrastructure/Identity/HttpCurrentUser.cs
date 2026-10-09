@@ -1,4 +1,4 @@
-﻿using Limita.Application.Common.Abstractions;
+using Limita.Application.Common.Abstractions;
 using Microsoft.AspNetCore.Http;
 
 namespace Limita.Infrastructure.Identity;

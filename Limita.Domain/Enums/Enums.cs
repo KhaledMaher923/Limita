@@ -47,7 +47,10 @@ namespace Limita.Domain.Enums
         SpendingLimitExceeded,
         SpendingLimitHalfwayReached,
         CardAdded,
-        SavingsGoalReached
+        SavingsGoalReached,
+        PaymentSuccessful,
+        PayInOneTap,
+        ShoppingLimit
     }
 
     public enum OtpPurpose { PhoneVerification, PasswordReset }

@@ -1,4 +1,4 @@
-﻿using Limita.Domain.Entities;
+using Limita.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -22,6 +22,10 @@ namespace Limita.Application.Common.Abstractions
     /// </summary>
     public interface IApplicationDbContext
     {
+        // Member 3
+        DbSet<Limita.Domain.Entities.Bank> Banks { get; }
+        DbSet<Limita.Domain.Entities.BankBranch> BankBranches { get; }
+        DbSet<Limita.Domain.Entities.Beneficiary> Beneficiaries { get; }
         DbSet<User> Users { get; }
         DbSet<Account> Accounts { get; }
         DbSet<Card> Cards { get; }
@@ -45,6 +49,12 @@ namespace Limita.Application.Common.Abstractions
         DbSet<BillPayment> BillPayments { get; }
         DbSet<MobileTopUp> MobileTopUps { get; }
 
+        DbSet<Branch> Branches { get; }
+        DbSet<InterestRate> InterestRates { get; }
+        DbSet<ExchangeRate> ExchangeRates { get; }
+        DbSet<Language> Languages { get; }
+        DbSet<MessageThread> MessageThreads { get; }
+        DbSet<Message> Messages { get; }
     }
 
     public interface ICurrentUser

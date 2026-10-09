@@ -1,4 +1,5 @@
-﻿using Limita.Application.Common.Messaging;
+﻿using Limita.Api.Common;
+using Limita.Application.Common.Messaging;
 using Limita.Application.Features.TimeDeposits.Commands;
 using Limita.Application.Features.TimeDeposits.Queries;
 using Limita.Common;
@@ -21,7 +22,7 @@ public sealed class TimeDepositsController(ISender sender)
             new GetTimeDepositTermsQuery(),
             cancellationToken);
 
-        return ToActionResult(result);
+        return FromResult(result);
     }
 
     [Authorize]
@@ -33,7 +34,7 @@ public sealed class TimeDepositsController(ISender sender)
             new GetTimeDepositsQuery(),
             cancellationToken);
 
-        return ToActionResult(result);
+        return FromResult(result);
     }
 
     [Authorize]
@@ -45,7 +46,7 @@ public sealed class TimeDepositsController(ISender sender)
         var result = await sender.Send(command, cancellationToken);
 
         if (result.IsFailure)
-            return ToActionResult(result);
+            return FromResult(result);
 
         return StatusCode(
             StatusCodes.Status201Created,
@@ -62,6 +63,6 @@ public sealed class TimeDepositsController(ISender sender)
 
         var result = await sender.Send(command, cancellationToken);
 
-        return ToActionResult(result);
+        return FromResult(result);
     }
 }

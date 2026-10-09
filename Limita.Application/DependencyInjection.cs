@@ -1,5 +1,6 @@
 ﻿using FluentValidation;
 using Limita.Application.Common.Behaviors;
+using Limita.Application.Features.Auth;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -26,6 +27,9 @@ namespace Limita.Application
             });
 
             services.AddValidatorsFromAssembly(assembly, includeInternalTypes: true);
+
+            services.AddScoped<OtpService>();
+            services.AddScoped<TokenIssuer>();
 
             return services;
         }

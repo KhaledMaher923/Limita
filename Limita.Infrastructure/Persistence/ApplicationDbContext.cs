@@ -1,4 +1,4 @@
-﻿using Limita.Application.Common.Abstractions;
+using Limita.Application.Common.Abstractions;
 using Limita.Application.Common.DomainEvents;
 using Limita.Domain.Common;
 using Limita.Domain.Entities;
@@ -8,7 +8,6 @@ using Microsoft.EntityFrameworkCore.Storage;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -18,6 +17,11 @@ namespace Limita.Infrastructure.Persistence
         : DbContext(options), IApplicationDbContext, IUnitOfWork
     {
         private IDbContextTransaction? _transaction;
+
+        // Member 3
+        public DbSet<Bank> Banks => Set<Bank>();
+        public DbSet<BankBranch> BankBranches => Set<BankBranch>();
+        public DbSet<Beneficiary> Beneficiaries => Set<Beneficiary>();
 
         public DbSet<User> Users => Set<User>();
         public DbSet<Account> Accounts => Set<Account>();
@@ -37,13 +41,18 @@ namespace Limita.Infrastructure.Persistence
 
 
 
-        //
+       
         public DbSet<Bill> Bills => Set<Bill>();   
         public DbSet<BillPayment> BillPayments => Set<BillPayment>();
         public DbSet<MobileTopUp> MobileTopUps => Set<MobileTopUp>();
 
 
-
+        public DbSet<Branch> Branches => Set<Branch>();
+        public DbSet<InterestRate> InterestRates => Set<InterestRate>();
+        public DbSet<ExchangeRate> ExchangeRates => Set<ExchangeRate>();
+        public DbSet<Language> Languages => Set<Language>();
+        public DbSet<MessageThread> MessageThreads => Set<MessageThread>();
+        public DbSet<Message> Messages => Set<Message>();
 
 
 
@@ -51,6 +60,9 @@ namespace Limita.Infrastructure.Persistence
         {
             // Picks up every IEntityTypeConfiguration<T> in this assembly (one per entity, added per module).
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(ApplicationDbContext).Assembly);
+
+            // Member 3: seed banks and branches
+            BankSeed.Seed(modelBuilder);
         }
 
         protected override void ConfigureConventions(ModelConfigurationBuilder configurationBuilder)

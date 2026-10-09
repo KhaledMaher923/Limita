@@ -1,3 +1,4 @@
+using Limita.Api.Common;
 using Limita.Application.Features.MobilePrepaid.Commands;
 using Limita.Common;
 using MediatR;
@@ -17,6 +18,6 @@ public sealed class MobileTopUpsController(ISender sender) : ApiControllerBase
     {
         var result = await sender.Send(command, cancellationToken);
 
-        return ToActionResult(result);
+        return FromResult(result);
     }
 }
