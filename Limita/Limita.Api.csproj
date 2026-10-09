@@ -16,6 +16,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Limita.Application\Limita.Application.csproj" />
+    <ProjectReference Include="..\Limita.Domain\Limita.Domain.csproj" />
     <ProjectReference Include="..\Limita.Infrastructure\Limita.Infrastructure.csproj" />
   </ItemGroup>
 

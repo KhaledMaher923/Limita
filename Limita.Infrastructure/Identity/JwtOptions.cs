@@ -17,5 +17,8 @@ namespace Limita.Infrastructure.Identity
         public string SecretKey { get; init; } = string.Empty;
 
         public int ExpiryMinutes { get; init; } = 15;
+
+        public int RefreshTokenDays { get; init; } = 7;
+
     }
 }

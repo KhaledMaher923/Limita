@@ -26,9 +26,9 @@ namespace Limita.Application.Common.Behaviors
             {
                 var response = await next();
 
-                if (response.IsFailure)
+                if (response.IsFailure && request is not ICommitOnFailure)
                 {
-                    await unitOfWork.RollbackTransactionAsync(cancellationToken);
+                    await unitOfWork.RollbackTransactionAsync(CancellationToken.None);
                     return response;
                 }
 

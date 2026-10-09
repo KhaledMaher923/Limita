@@ -23,10 +23,38 @@ namespace Limita.Infrastructure.Persistence
         public DbSet<BankBranch> BankBranches => Set<BankBranch>();
         public DbSet<Beneficiary> Beneficiaries => Set<Beneficiary>();
 
-        // Shared entities used by Member 3 handlers
+        public DbSet<User> Users => Set<User>();
         public DbSet<Account> Accounts => Set<Account>();
-        public DbSet<Transfer> Transfers => Set<Transfer>();
+        public DbSet<Card> Cards => Set<Card>();
         public DbSet<Transaction> Transactions => Set<Transaction>();
+        public DbSet<Transfer> Transfers => Set<Transfer>();
+        public DbSet<RefreshToken> RefreshTokens => Set<RefreshToken>();
+        public DbSet<OtpCode> OtpCodes => Set<OtpCode>();
+        public DbSet<Notification> Notifications => Set<Notification>();
+        public DbSet<SpendingLimit> SpendingLimits => Set<SpendingLimit>();
+        public DbSet<SavingsGoal> SavingsGoals => Set<SavingsGoal>();
+        public DbSet<TimeDeposit> TimeDeposits => Set<TimeDeposit>();
+        public DbSet<Withdrawal> Withdrawals => Set<Withdrawal>();
+        public DbSet<ExchangeOperation> ExchangeOperations => Set<ExchangeOperation>();
+
+
+
+
+
+       
+        public DbSet<Bill> Bills => Set<Bill>();   
+        public DbSet<BillPayment> BillPayments => Set<BillPayment>();
+        public DbSet<MobileTopUp> MobileTopUps => Set<MobileTopUp>();
+
+
+        public DbSet<Branch> Branches => Set<Branch>();
+        public DbSet<InterestRate> InterestRates => Set<InterestRate>();
+        public DbSet<ExchangeRate> ExchangeRates => Set<ExchangeRate>();
+        public DbSet<Language> Languages => Set<Language>();
+        public DbSet<MessageThread> MessageThreads => Set<MessageThread>();
+        public DbSet<Message> Messages => Set<Message>();
+
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -83,7 +111,7 @@ namespace Limita.Infrastructure.Persistence
             {
                 var entities = ChangeTracker.Entries<Entity>()
                     .Select(entry => entry.Entity)
-                    .Where(entity =>  entity.DomainEvents.Count >0)
+                    .Where(entity => entity.DomainEvents.Count > 0)
                     .ToList();
 
                 if (entities.Count == 0) return;

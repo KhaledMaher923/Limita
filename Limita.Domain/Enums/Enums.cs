@@ -28,7 +28,9 @@ namespace Limita.Domain.Enums
         Entertainment,
         Health,
         Education,
-        Other
+        Other,
+        MobileTopUp,
+        Exchange
     }
 
     public enum TransferStatus { Pending, Completed, Failed }
@@ -44,9 +46,27 @@ namespace Limita.Domain.Enums
         TransferReceived,
         SpendingLimitExceeded,
         CardAdded,
-        SavingsGoalReached
+        SavingsGoalReached,
+        PaymentSuccessful,
+        PayInOneTap,
+        ShoppingLimit
     }
 
     public enum OtpPurpose { PhoneVerification, PasswordReset }
+
+    public enum WithdrawalStatus
+    {
+        PendingVerification,
+        Completed,
+        Expired,
+        Cancelled
+    }
+
+    public enum TimeDepositStatus
+    {
+        Active,
+        Matured,
+        Redeemed
+    }
 
 }

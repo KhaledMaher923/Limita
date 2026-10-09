@@ -1,3 +1,4 @@
+using Limita.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -16,8 +17,8 @@ namespace Limita.Application.Common.Abstractions
     }
 
     /// <summary>
-    /// Handlers query and modify data through this interface. Add a DbSet property here
-    /// as each module introduces its entities (for example: DbSet&lt;Account&gt; Accounts).
+    /// Handlers query and modify data through this interface. Saving is done by TransactionBehavior,
+    /// so handlers add or change entities but never call SaveChanges themselves.
     /// </summary>
     public interface IApplicationDbContext
     {
@@ -25,11 +26,35 @@ namespace Limita.Application.Common.Abstractions
         DbSet<Limita.Domain.Entities.Bank> Banks { get; }
         DbSet<Limita.Domain.Entities.BankBranch> BankBranches { get; }
         DbSet<Limita.Domain.Entities.Beneficiary> Beneficiaries { get; }
+        DbSet<User> Users { get; }
+        DbSet<Account> Accounts { get; }
+        DbSet<Card> Cards { get; }
+        DbSet<Transaction> Transactions { get; }
+        DbSet<Transfer> Transfers { get; }
+        DbSet<SpendingLimit> SpendingLimits { get; }
+        DbSet<SavingsGoal> SavingsGoals { get; }
+        DbSet<Notification> Notifications { get; }
+        DbSet<RefreshToken> RefreshTokens { get; }
+        DbSet<OtpCode> OtpCodes { get; }
 
-        // Shared entities used by Member 3 handlers
-        DbSet<Limita.Domain.Entities.Account> Accounts { get; }
-        DbSet<Limita.Domain.Entities.Transfer> Transfers { get; }
-        DbSet<Limita.Domain.Entities.Transaction> Transactions { get; }
+        DbSet<TimeDeposit> TimeDeposits { get; }
+        DbSet<Withdrawal> Withdrawals { get; }
+        DbSet<ExchangeOperation> ExchangeOperations { get; }
+
+
+
+
+        //
+        DbSet<Bill> Bills { get; }              
+        DbSet<BillPayment> BillPayments { get; }
+        DbSet<MobileTopUp> MobileTopUps { get; }
+
+        DbSet<Branch> Branches { get; }
+        DbSet<InterestRate> InterestRates { get; }
+        DbSet<ExchangeRate> ExchangeRates { get; }
+        DbSet<Language> Languages { get; }
+        DbSet<MessageThread> MessageThreads { get; }
+        DbSet<Message> Messages { get; }
     }
 
     public interface ICurrentUser
