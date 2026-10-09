@@ -31,6 +31,12 @@ namespace Limita.Domain.Events
     Money Limit,
     Money SpentSoFar) : DomainEvent;
 
+    public sealed record SpendingLimitHalfwayReachedEvent(
+    Guid SpendingLimitId,
+    Guid UserId,
+    Money Limit,
+    Money SpentSoFar) : DomainEvent;
+
     public sealed record SavingsGoalReachedEvent(Guid SavingsGoalId, Guid UserId, string GoalName) : DomainEvent;
 
 }

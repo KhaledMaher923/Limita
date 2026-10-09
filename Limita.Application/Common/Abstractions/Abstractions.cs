@@ -32,6 +32,9 @@ namespace Limita.Application.Common.Abstractions
         DbSet<Notification> Notifications { get; }
         DbSet<RefreshToken> RefreshTokens { get; }
         DbSet<OtpCode> OtpCodes { get; }
+        DbSet<TimeDeposit> TimeDeposits { get; }
+        DbSet<Withdrawal> Withdrawals { get; }
+        DbSet<ExchangeOperation> ExchangeOperations { get; }
     }
 
     public interface ICurrentUser
