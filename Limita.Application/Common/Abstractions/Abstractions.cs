@@ -17,11 +17,10 @@ namespace Limita.Application.Common.Abstractions
     }
 
     /// <summary>
-    /// Handlers query and modify data through this interface. Add a DbSet property here
-    /// as each module introduces its entities (for example: DbSet<Account> Accounts).
+    /// Handlers query and modify data through this interface. Saving is done by TransactionBehavior,
+    /// so handlers add or change entities but never call SaveChanges themselves.
     /// </summary>
-   
-    public interface IApplicationDbContext  : IUnitOfWork
+    public interface IApplicationDbContext
     {
         DbSet<User> Users { get; }
         DbSet<Account> Accounts { get; }
