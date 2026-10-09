@@ -1,11 +1,11 @@
-﻿using Limita.Application.Common.Abstractions;
+using Limita.Application.Common.Abstractions;
+using Limita.Application.Common.Messaging;
 using MediatR;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Input;
 
 namespace Limita.Application.Common.Behaviors
 {
@@ -15,7 +15,7 @@ namespace Limita.Application.Common.Behaviors
     /// </summary>
     internal sealed class TransactionBehavior<TRequest, TResponse>(IUnitOfWork unitOfWork)
         : IPipelineBehavior<TRequest, TResponse>
-        where TRequest : notnull, IRequest<TResponse>, ICommand
+        where TRequest : notnull, IRequest<TResponse>, ICommandBase
         where TResponse : Result
     {
         public async Task<TResponse> Handle(TRequest request, RequestHandlerDelegate<TResponse> next, CancellationToken cancellationToken)

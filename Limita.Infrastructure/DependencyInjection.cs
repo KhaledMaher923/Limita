@@ -1,4 +1,4 @@
-﻿using Limita.Application.Common.Abstractions;
+using Limita.Application.Common.Abstractions;
 using Limita.Infrastructure.Identity;
 using Limita.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
@@ -28,6 +28,8 @@ namespace Limita.Infrastructure
 
             services.Configure<JwtOptions>(configuration.GetSection(JwtOptions.SectionName));
             services.AddSingleton(TimeProvider.System); // inject TimeProvider instead of calling DateTime.UtcNow
+            services.AddHttpContextAccessor();
+            services.AddScoped<ICurrentUser, HttpCurrentUser>();
 
             return services;
         }

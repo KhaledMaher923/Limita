@@ -8,7 +8,6 @@ using Microsoft.EntityFrameworkCore.Storage;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -33,6 +32,9 @@ namespace Limita.Infrastructure.Persistence
         {
             // Picks up every IEntityTypeConfiguration<T> in this assembly (one per entity, added per module).
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(ApplicationDbContext).Assembly);
+
+            // Member 3: seed banks and branches
+            BankSeed.Seed(modelBuilder);
         }
 
         protected override void ConfigureConventions(ModelConfigurationBuilder configurationBuilder)
