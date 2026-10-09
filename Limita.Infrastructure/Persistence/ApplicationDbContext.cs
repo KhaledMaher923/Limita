@@ -1,6 +1,7 @@
-﻿using Limita.Application.Common.Abstractions;
+using Limita.Application.Common.Abstractions;
 using Limita.Application.Common.DomainEvents;
 using Limita.Domain.Common;
+using Limita.Domain.Entities;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage;
@@ -17,6 +18,16 @@ namespace Limita.Infrastructure.Persistence
         : DbContext(options), IApplicationDbContext, IUnitOfWork
     {
         private IDbContextTransaction? _transaction;
+
+        // Member 3
+        public DbSet<Bank> Banks => Set<Bank>();
+        public DbSet<BankBranch> BankBranches => Set<BankBranch>();
+        public DbSet<Beneficiary> Beneficiaries => Set<Beneficiary>();
+
+        // Shared entities used by Member 3 handlers
+        public DbSet<Account> Accounts => Set<Account>();
+        public DbSet<Transfer> Transfers => Set<Transfer>();
+        public DbSet<Transaction> Transactions => Set<Transaction>();
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
