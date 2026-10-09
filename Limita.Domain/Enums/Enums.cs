@@ -45,6 +45,7 @@ namespace Limita.Domain.Enums
         TransferSent,
         TransferReceived,
         SpendingLimitExceeded,
+        SpendingLimitHalfwayReached,
         CardAdded,
         SavingsGoalReached
     }
