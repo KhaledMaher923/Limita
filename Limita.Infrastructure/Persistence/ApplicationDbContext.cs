@@ -43,7 +43,12 @@ namespace Limita.Infrastructure.Persistence
         public DbSet<MobileTopUp> MobileTopUps => Set<MobileTopUp>();
 
 
-
+        public DbSet<Branch> Branches => Set<Branch>();
+        public DbSet<InterestRate> InterestRates => Set<InterestRate>();
+        public DbSet<ExchangeRate> ExchangeRates => Set<ExchangeRate>();
+        public DbSet<Language> Languages => Set<Language>();
+        public DbSet<MessageThread> MessageThreads => Set<MessageThread>();
+        public DbSet<Message> Messages => Set<Message>();
 
 
 

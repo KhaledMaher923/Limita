@@ -45,6 +45,12 @@ namespace Limita.Application.Common.Abstractions
         DbSet<BillPayment> BillPayments { get; }
         DbSet<MobileTopUp> MobileTopUps { get; }
 
+        DbSet<Branch> Branches { get; }
+        DbSet<InterestRate> InterestRates { get; }
+        DbSet<ExchangeRate> ExchangeRates { get; }
+        DbSet<Language> Languages { get; }
+        DbSet<MessageThread> MessageThreads { get; }
+        DbSet<Message> Messages { get; }
     }
 
     public interface ICurrentUser
