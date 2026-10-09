@@ -1,4 +1,5 @@
-﻿using Limita.Application.Features.SpendingLimits;
+﻿using Limita.Api.Common;
+using Limita.Application.Features.SpendingLimits;
 using Limita.Common;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
@@ -19,7 +20,7 @@ public sealed class SpendingLimitsController(ISender sender)
             new GetSpendingLimitsQuery(),
             cancellationToken);
 
-        return ToActionResult(result);
+        return FromResult(result);
     }
 
     [HttpPost]
@@ -30,7 +31,7 @@ public sealed class SpendingLimitsController(ISender sender)
         var result = await sender.Send(command, cancellationToken);
 
         if (result.IsFailure)
-            return ToActionResult(result);
+            return FromResult(result);
 
         return StatusCode(
             StatusCodes.Status201Created,

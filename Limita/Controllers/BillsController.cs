@@ -1,3 +1,4 @@
+using Limita.Api.Common;
 using Limita.Application.Features.Bills.Commands;
 using Limita.Application.Features.Bills.Queries;
 using Limita.Common;
@@ -20,7 +21,7 @@ public sealed class BillsController(ISender sender) : ApiControllerBase
     {
         var result = await sender.Send(new GetBillByCodeQuery(type, code), cancellationToken);
 
-        return ToActionResult(result);
+        return FromResult(result);
     }
 
     [HttpGet("due")]
@@ -30,7 +31,7 @@ public sealed class BillsController(ISender sender) : ApiControllerBase
     {
         var result = await sender.Send(new GetDueBillsQuery(daysAhead), cancellationToken);
 
-        return ToActionResult(result);
+        return FromResult(result);
     }
 
     [HttpGet("payments")]
@@ -44,7 +45,7 @@ public sealed class BillsController(ISender sender) : ApiControllerBase
             new GetPaymentHistoryQuery(type, page, pageSize),
             cancellationToken);
 
-        return ToActionResult(result);
+        return FromResult(result);
     }
 
     [HttpPost("pay")]
@@ -54,7 +55,7 @@ public sealed class BillsController(ISender sender) : ApiControllerBase
     {
         var result = await sender.Send(command, cancellationToken);
 
-        return ToActionResult(result);
+        return FromResult(result);
     }
 
     [HttpPost("smart-pay")]
@@ -64,6 +65,6 @@ public sealed class BillsController(ISender sender) : ApiControllerBase
     {
         var result = await sender.Send(command, cancellationToken);
 
-        return ToActionResult(result);
+        return FromResult(result);
     }
 }

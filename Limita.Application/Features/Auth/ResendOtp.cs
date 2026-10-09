@@ -12,8 +12,8 @@ using System.Threading.Tasks;
 
 namespace Limita.Application.Features.Auth
 {
-    /// <summary>Sends a password reset code by SMS. The answer is always success, so nobody can discover which numbers are registered.</summary>
-    public static class ForgotPassword
+    /// <summary>Sends a new verification code (at most one per minute). Unknown or already verified numbers get a silent success.</summary>
+    public static class ResendOtp
     {
         public sealed record Command(string PhoneNumber) : ICommand;
 
@@ -29,14 +29,12 @@ namespace Limita.Application.Features.Auth
                 var phone = AuthInput.NormalizePhone(request.PhoneNumber);
                 var user = await db.Users.FirstOrDefaultAsync(u => u.PhoneNumber == phone, cancellationToken);
 
-                if (user is { IsPhoneVerified: true })
-                {
-                    // A cooldown failure is ignored on purpose: the caller must not learn whether the number exists.
-                    await otp.IssueAsync(user, OtpPurpose.PasswordReset, cancellationToken);
-                }
+                if (user is null || user.IsPhoneVerified)
+                    return Result.Success();
 
-                return Result.Success();
+                return await otp.IssueAsync(user, OtpPurpose.PhoneVerification, cancellationToken);
             }
         }
+
     }
 }

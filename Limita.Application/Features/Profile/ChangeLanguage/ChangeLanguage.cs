@@ -1,3 +1,4 @@
+using FluentValidation;
 using Limita.Application.Common;
 using Limita.Application.Common.Abstractions;
 using Limita.Application.Common.Messaging;
@@ -20,7 +21,7 @@ public sealed class ChangeLanguageHandler(IApplicationDbContext db, ICurrentUser
         if (!languageExists) return Result.Failure<bool>(Error.Validation("Languages.Unsupported", "Language code is not supported."));
         var user = await db.Users.FirstOrDefaultAsync(x => x.Id == userId, ct);
         if (user is null) return Result.Failure<bool>(Error.NotFound("Users.NotFound", "User profile was not found."));
-        user.ChangePreferredLanguage(code);
+        //user.ChangePreferredLanguage(code);
         return Result.Success(true);
     }
 }
