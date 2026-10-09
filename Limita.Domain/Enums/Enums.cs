@@ -28,7 +28,8 @@ namespace Limita.Domain.Enums
         Entertainment,
         Health,
         Education,
-        Other
+        Other,
+        MobileTopUp
     }
 
     public enum TransferStatus { Pending, Completed, Failed }
