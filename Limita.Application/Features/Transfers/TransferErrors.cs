@@ -21,4 +21,16 @@ public static class TransferErrors
 
     public static readonly Error BeneficiaryNotFound =
         Error.NotFound("Beneficiary.NotFound", "The beneficiary was not found.");
+
+    public static readonly Error BeneficiaryTypeMismatch =
+        Error.BusinessRule("Beneficiary.TypeMismatch", "The transfer type does not match the beneficiary.");
+
+    public static readonly Error AccountNotActive =
+        Error.BusinessRule("Account.NotActive", "The account is not active.");
+
+    public static readonly Error CurrencyMismatch =
+        Error.BusinessRule("Account.CurrencyMismatch", "The transfer currency must match the account currency.");
+
+    public static readonly Error InsufficientFunds =
+        Error.BusinessRule("Account.InsufficientFunds", "The account does not have enough funds for the transfer and its fee.");
 }

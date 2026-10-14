@@ -2,7 +2,9 @@
 using Limita.Application.Common;
 using Limita.Application.Common.Abstractions;
 using Limita.Application.Common.Messaging;
+using Limita.Application.Features.Auth;
 using Limita.Domain.Entities;
+using Limita.Domain.Enums;
 using Limita.Domain.ValueObjects;
 using Microsoft.EntityFrameworkCore;
 
@@ -31,8 +33,7 @@ public sealed class CreateWithdrawalValidator
             .Matches("^[A-Za-z]{3}$");
 
         RuleFor(command => command.PhoneNumber)
-            .NotEmpty()
-            .MaximumLength(20);
+            .ValidPhoneNumber();
     }
 }
 
@@ -64,6 +65,41 @@ internal sealed class CreateWithdrawalHandler(
         {
             return Result.Failure<Guid>(
                 Error.NotFound("Account.NotFound", "The account was not found."));
+        }
+
+        // The withdrawal code is sent by SMS, so it may only go to the signed-in user's own verified number.
+        // Otherwise any signed-in user could use this endpoint to send SMS to anybody.
+        var user = await dbContext.Users
+            .AsNoTracking()
+            .SingleOrDefaultAsync(item => item.Id == userId, cancellationToken);
+
+        if (user is null || !user.IsPhoneVerified
+            || AuthInput.NormalizePhone(request.PhoneNumber) != user.PhoneNumber)
+        {
+            return Result.Failure<Guid>(
+                Error.BusinessRule(
+                    "Withdrawal.PhoneMismatch",
+                    "The withdrawal code can only be sent to your own verified phone number."));
+        }
+
+        // Each request sends an SMS, so limit how many unconfirmed withdrawals one user can have open.
+        const int maxOpenWithdrawals = 3;
+        var openNow = timeProvider.GetUtcNow();
+
+        var openWithdrawals = await dbContext.Withdrawals
+            .AsNoTracking()
+            .CountAsync(
+                item => item.UserId == userId
+                    && item.Status == WithdrawalStatus.PendingVerification
+                    && item.ExpiresAt > openNow,
+                cancellationToken);
+
+        if (openWithdrawals >= maxOpenWithdrawals)
+        {
+            return Result.Failure<Guid>(
+                Error.TooManyRequests(
+                    "Withdrawal.TooManyOpen",
+                    "Please confirm or wait for your open withdrawals to expire before creating another."));
         }
 
         var amount = Money.Of(request.Amount, request.Currency);
