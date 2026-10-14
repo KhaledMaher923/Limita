@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Limita.Api.Controllers
 {
+    [Route("api/v1/[controller]")]
     public sealed class HealthController : ApiControllerBase
     {
         /// <summary>GET /api/v1/health, public.</summary>

@@ -19,6 +19,14 @@ public static class DevelopmentDataSeeder
         var passwordHasher = scope.ServiceProvider
             .GetRequiredService<IPasswordHasher>();
 
+        // A fresh machine has no database yet. Use the migrations when the project has them,
+        // otherwise create the schema from the model. (If you later add a first migration, delete the
+        // development database once so the migration can create it.)
+        if (dbContext.Database.GetMigrations().Any())
+            await dbContext.Database.MigrateAsync();
+        else
+            await dbContext.Database.EnsureCreatedAsync();
+
         const string email = "dev.user@limita.local";
 
         var user = await dbContext.Users
@@ -32,6 +40,9 @@ public static class DevelopmentDataSeeder
                 "+201000000000",
                 passwordHasher.Hash("DevOnly#2026"),
                 TimeProvider.System.GetUtcNow());
+
+            // The seeded user can sign in with the normal login endpoint straight away.
+            user.VerifyPhone();
 
             dbContext.Users.Add(user);
             await dbContext.SaveChangesAsync();

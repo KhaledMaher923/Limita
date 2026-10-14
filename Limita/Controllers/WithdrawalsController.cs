@@ -1,13 +1,10 @@
 ﻿using Limita.Api.Common;
 using Limita.Application.Features.Withdrawals.Commands;
-using Limita.Common;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Limita.Controllers;
-
-[Authorize]
 [Route("api/withdrawals")]
 public sealed class WithdrawalsController(ISender sender)
     : ApiControllerBase

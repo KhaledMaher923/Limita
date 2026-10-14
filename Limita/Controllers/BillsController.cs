@@ -9,7 +9,6 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Limita.Controllers;
 
-[Authorize]
 [Route("api/bills")]
 public sealed class BillsController(ISender sender) : ApiControllerBase
 {

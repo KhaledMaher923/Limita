@@ -25,7 +25,6 @@ public sealed class TimeDepositsController(ISender sender)
         return FromResult(result);
     }
 
-    [Authorize]
     [HttpGet]
     public async Task<IActionResult> GetMyDeposits(
         CancellationToken cancellationToken)
@@ -37,7 +36,6 @@ public sealed class TimeDepositsController(ISender sender)
         return FromResult(result);
     }
 
-    [Authorize]
     [HttpPost]
     public async Task<IActionResult> Create(
         CreateTimeDepositCommand command,
@@ -53,7 +51,6 @@ public sealed class TimeDepositsController(ISender sender)
             new { id = result.Value });
     }
 
-    [Authorize]
     [HttpPost("{id:guid}/redeem")]
     public async Task<IActionResult> Redeem(
     Guid id,

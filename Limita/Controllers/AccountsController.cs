@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Limita.Api.Controllers
 {
+    [Route("api/v1/[controller]")]
     public sealed class AccountsController(ISender sender) : ApiControllerBase
     {
         /// <summary>GET /api/v1/accounts: the signed-in user's accounts.</summary>
