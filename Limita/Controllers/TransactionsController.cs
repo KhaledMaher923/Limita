@@ -1,14 +1,12 @@
+using Limita.Api.Common;
 using Limita.Application.Features.Transactions.GetTransactionReport;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Limita.Controllers;
-
-[ApiController]
-[Authorize]
 [Route("api/transactions")]
-public sealed class TransactionsController(ISender sender) : ControllerBase
+public sealed class TransactionsController(ISender sender) : ApiControllerBase
 {
     /// <summary>Returns the authenticated user's ledger entries for a calendar month (YYYY-MM).</summary>
     [HttpGet]

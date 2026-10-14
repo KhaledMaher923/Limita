@@ -6,8 +6,6 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Limita.Controllers;
-
-[Authorize]
 [Route("api/spending-limits")]
 public sealed class SpendingLimitsController(ISender sender)
     : ApiControllerBase

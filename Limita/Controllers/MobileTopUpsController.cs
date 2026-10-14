@@ -6,8 +6,6 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Limita.Controllers;
-
-[Authorize]
 [Route("api/mobile-topups")]
 public sealed class MobileTopUpsController(ISender sender) : ApiControllerBase
 {

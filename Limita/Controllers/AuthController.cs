@@ -13,6 +13,7 @@ namespace Limita.Api.Controllers
     /// The public actions are throttled per IP address by the "auth" rate limiting policy.
     /// Action names differ from the use-case names (RegisterUser, not Register) so they never hide the Application types.
     /// </summary>
+    [Route("api/v1/[controller]")]
     public sealed class AuthController(ISender sender) : ApiControllerBase
     {
         // ---------- Public ----------

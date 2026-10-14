@@ -1,4 +1,5 @@
-﻿using Microsoft.OpenApi.Models;
+﻿using Limita.Common;
+using Microsoft.OpenApi.Models;
 
 namespace Limita.Api.Extensions
 {
@@ -28,6 +29,9 @@ namespace Limita.Api.Extensions
 
                 options.AddSecurityDefinition("Bearer", bearer);
                 options.AddSecurityRequirement(new OpenApiSecurityRequirement { { bearer, Array.Empty<string>() } });
+
+                // Public ([AllowAnonymous]) actions must not show the lock icon in Swagger UI.
+                options.OperationFilter<AllowAnonymousOperationFilter>();
 
             });
 

@@ -19,6 +19,8 @@ namespace Limita.Api.Extensions
                 .AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(options =>
                 {
+                    // Keep claim names as issued ("sub" stays "sub") instead of renaming them to long Microsoft names.
+                    options.MapInboundClaims = false;
                     options.TokenValidationParameters = new TokenValidationParameters
                     {
                         ValidateIssuer = true,
