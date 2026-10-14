@@ -14,9 +14,12 @@ public sealed class MarkNotificationReadHandler(IApplicationDbContext db, ICurre
     public async Task<Result<bool>> Handle(MarkNotificationReadCommand request, CancellationToken ct)
     {
         if (currentUser.UserId is not Guid userId) throw new UnauthorizedAccessException();
+        
         var notification = await db.Notifications.FirstOrDefaultAsync(x => x.Id == request.NotificationId && x.UserId == userId, ct);
+        
         if (notification is null) return Result.Failure<bool>(Error.NotFound("Notifications.NotFound", "Notification was not found."));
         notification.MarkAsRead();
+        
         return Result.Success(true); // TransactionBehavior persists command changes.
     }
 }

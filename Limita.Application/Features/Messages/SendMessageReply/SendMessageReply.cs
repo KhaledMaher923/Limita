@@ -16,16 +16,19 @@ public sealed class SendMessageReplyHandler(IApplicationDbContext db, ICurrentUs
     public async Task<Result<Guid>> Handle(SendMessageReplyCommand request, CancellationToken ct)
     {
         if (currentUser.UserId is not Guid userId) throw new UnauthorizedAccessException();
+        
         var thread = await db.MessageThreads.FirstOrDefaultAsync(x => x.Id == request.ThreadId && x.UserId == userId, ct);
+        
         if (thread is null) return Result.Failure<Guid>(Error.NotFound("Messages.ThreadNotFound", "Message thread was not found."));
         if (thread.Status != "Open") return Result.Failure<Guid>(Error.Conflict("Messages.ThreadClosed", "This message thread is closed."));
+        
         var message = Message.Send(thread.Id, userId, request.Body, isFromBank: false, timeProvider.GetUtcNow());
         thread.Touch(timeProvider.GetUtcNow());
         db.Messages.Add(message);
         return Result.Success(message.Id);
     }
 }
-public sealed class SendMessageReplyCommandValidator : FluentValidation.AbstractValidator<SendMessageReplyCommand>
+public sealed class SendMessageReplyCommandValidator : AbstractValidator<SendMessageReplyCommand>
 {
     public SendMessageReplyCommandValidator() => RuleFor(x => x.Body).NotEmpty().MaximumLength(2000);
 }

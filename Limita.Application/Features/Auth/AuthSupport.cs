@@ -99,6 +99,7 @@ namespace Limita.Application.Features.Auth
         string PhoneNumber,
         bool IsPhoneVerified,
         string? ProfilePictureUrl,
+        string PreferredLanguageCode,
         DateTimeOffset CreatedAt)
     {
         public static UserProfile From(User user) => new(
@@ -108,6 +109,7 @@ namespace Limita.Application.Features.Auth
             user.PhoneNumber,
             user.IsPhoneVerified,
             user.ProfilePictureUrl,
+            user.PreferredLanguageCode,
             user.CreatedAt);
     }
 

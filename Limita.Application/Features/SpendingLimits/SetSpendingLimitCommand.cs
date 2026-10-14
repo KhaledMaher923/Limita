@@ -65,8 +65,8 @@ internal sealed class SetSpendingLimitHandler(
 
         var limit = SpendingLimit.Create(
             userId,
-            account.Id,
             null,
+            account.Id,
             request.Category,
             LimitPeriod.Monthly,
             Money.Of(request.Amount, request.Currency));

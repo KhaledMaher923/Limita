@@ -1,6 +1,7 @@
 ﻿using Limita.Application.Common;
 using Limita.Application.Common.Abstractions;
 using Limita.Application.Common.Messaging;
+using Limita.Domain.Entities;
 using Limita.Domain.Enums;
 using Microsoft.EntityFrameworkCore;
 
@@ -43,6 +44,7 @@ internal sealed class GetSpendingLimitsHandler(
 
         var now = timeProvider.GetUtcNow();
         var response = new List<SpendingLimitDto>();
+        var excludedCategories = SpendingLimit.ExcludedCategories.ToList();
 
         foreach (var limit in limits)
         {
@@ -54,6 +56,7 @@ internal sealed class GetSpendingLimitsHandler(
             var query = dbContext.Transactions.Where(transaction =>
                 transaction.AccountId == accountId
                 && transaction.Type == TransactionType.Debit
+                && !excludedCategories.Contains(transaction.Category)
                 && transaction.CreatedAt >= periodStart);
 
             if (limit.Category is not null)
