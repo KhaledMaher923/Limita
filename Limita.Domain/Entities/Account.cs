@@ -12,7 +12,7 @@ namespace Limita.Domain.Entities
 {
     public sealed class Account : Entity
     {
-        public Account()
+        private Account()
         {
         }
 
@@ -28,7 +28,7 @@ namespace Limita.Domain.Entities
         public static Account Open(Guid userId, string accountNumber, AccountType type, string currency) => new()
         {
             UserId = userId,
-            AccountNumber = accountNumber,
+            AccountNumber = Guard.NotBlank(accountNumber, "Account number", 34),
             Type = type,
             Balance = Money.Zero(currency),
             Status = AccountStatus.Active
@@ -95,7 +95,7 @@ namespace Limita.Domain.Entities
             if(Status != AccountStatus.Frozen)
                 throw new DomainException("Only a frozen account can be unfrozen.");
 
-            Status = ~AccountStatus.Active;
+            Status = AccountStatus.Active;
         }
 
         public void Close()

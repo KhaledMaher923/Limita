@@ -22,6 +22,7 @@ namespace Limita.Infrastructure.Persistence.Configurations
             builder.Property(u => u.PhoneNumber).HasMaxLength(20).IsRequired();
             builder.Property(u => u.PasswordHash).HasMaxLength(256).IsRequired();
             builder.Property(u => u.ProfilePictureUrl).HasMaxLength(2048);
+            builder.Property(u => u.PreferredLanguageCode).HasMaxLength(10).IsRequired();
 
             builder.HasIndex(u => u.Email).IsUnique();
             builder.HasIndex(u => u.PhoneNumber).IsUnique();

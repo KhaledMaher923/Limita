@@ -12,6 +12,13 @@ namespace Limita.Domain.Entities
 {
     public sealed class SpendingLimit : Entity
     {
+        /// <summary>
+        /// Debits in these categories move money between the user's own products or out to other people.
+        /// They are not "spending", so they never count towards a spending limit.
+        /// Used by both the limit check and the limits screen so they always agree.
+        /// </summary>
+        public static IReadOnlyList<TransactionCategory> ExcludedCategories { get; } =
+            [TransactionCategory.Transfer, TransactionCategory.Savings, TransactionCategory.Exchange];
         private SpendingLimit() // required by EF Core
         {
         }
