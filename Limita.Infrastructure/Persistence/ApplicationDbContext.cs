@@ -18,7 +18,6 @@ namespace Limita.Infrastructure.Persistence
     {
         private IDbContextTransaction? _transaction;
 
-        // Member 3
         public DbSet<Bank> Banks => Set<Bank>();
         public DbSet<BankBranch> BankBranches => Set<BankBranch>();
         public DbSet<Beneficiary> Beneficiaries => Set<Beneficiary>();
@@ -36,10 +35,6 @@ namespace Limita.Infrastructure.Persistence
         public DbSet<TimeDeposit> TimeDeposits => Set<TimeDeposit>();
         public DbSet<Withdrawal> Withdrawals => Set<Withdrawal>();
         public DbSet<ExchangeOperation> ExchangeOperations => Set<ExchangeOperation>();
-
-
-
-
 
        
         public DbSet<Bill> Bills => Set<Bill>();   
@@ -61,8 +56,8 @@ namespace Limita.Infrastructure.Persistence
             // Picks up every IEntityTypeConfiguration<T> in this assembly (one per entity, added per module).
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(ApplicationDbContext).Assembly);
 
-            // Member 3: seed banks and branches
-            BankSeed.Seed(modelBuilder);
+            // Seed reference data: banks and their branches
+           BankSeed.Seed(modelBuilder);
         }
 
         protected override void ConfigureConventions(ModelConfigurationBuilder configurationBuilder)

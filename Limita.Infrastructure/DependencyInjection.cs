@@ -26,14 +26,14 @@ namespace Limita.Infrastructure
             // Do not enable EnableRetryOnFailure without redesigning TransactionBehavior: SQL Server retry
             // strategies do not allow user-initiated transactions unless they run inside an execution strategy.
             services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(connectionString));
-            services.AddHttpContextAccessor();
-            services.AddScoped<ICurrentUser, HttpCurrentUser>();
             services.AddScoped<IApplicationDbContext>(sp => sp.GetRequiredService<ApplicationDbContext>());
             services.AddScoped<IUnitOfWork>(sp => sp.GetRequiredService<ApplicationDbContext>());
             services.AddScoped<INotificationPublisher, NotificationPublisher>();
-
+            
             services.Configure<JwtOptions>(configuration.GetSection(JwtOptions.SectionName));
             services.AddSingleton(TimeProvider.System); // inject TimeProvider instead of calling DateTime.UtcNow
+
+            // The signed-in user, read from the JWT claims of the current request.
             services.AddHttpContextAccessor();
             services.AddScoped<ICurrentUser, HttpCurrentUser>();
 

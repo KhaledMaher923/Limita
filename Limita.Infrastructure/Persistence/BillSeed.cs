@@ -12,7 +12,7 @@ namespace Limita.Infrastructure.Persistence
             if (await db.Bills.AnyAsync(ct))
                 return;
 
-            // بنربط الفواتير بأول مستخدم موجود عشان Smart Pay يلاقي فواتير
+            // We link the invoices to the first available user so that Smart Pay can find invoices.
             var customerId = await db.Users
                 .OrderBy(u => u.CreatedAt)
                 .Select(u => (Guid?)u.Id)
@@ -24,15 +24,12 @@ namespace Limita.Infrastructure.Persistence
             Money Usd(decimal amount) => Money.Of(amount, "USD");
 
             db.Bills.AddRange(
-                // Figma: fee 470 + tax 10 = 480
                 Bill.Create(BillType.Electric, "2468", "Jackson Maine", "City Power",
                     periodFrom, today, Usd(470), Usd(10), today.AddDays(5), customerId),
 
-                // Figma (history): 280
                 Bill.Create(BillType.Water, "WTR-1001", "Jackson Maine", "City Water",
                     periodFrom, today, Usd(270), Usd(10), today.AddDays(7), customerId),
 
-                // Figma: fee 50 + tax 10 = 60, Capi Telecom
                 Bill.Create(BillType.Internet, "2343543", "Jackson Maine", "Capi Telecom",
                     periodFrom, today, Usd(50), Usd(10), today.AddDays(3), customerId),
 

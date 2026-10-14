@@ -20,6 +20,9 @@ namespace Limita.Domain.Entities
         public bool IsPhoneVerified { get; private set; }
         public string? ProfilePictureUrl { get; private set; }
         public DateTimeOffset CreatedAt { get; private set; }
+       
+        /// <summary>Code of the language the app should use for this user (see the Languages table). "en" by default.</summary>
+        public string PreferredLanguageCode { get; private set; } = "en";
 
         public const int MaxFailedLoginAttempts = 5;
         public static readonly TimeSpan LockoutDuration = TimeSpan.FromMinutes(15);
@@ -64,6 +67,8 @@ namespace Limita.Domain.Entities
             FullName = Guard.NotBlank(fullName, "Full name", 100);
             ProfilePictureUrl = Guard.Optional(profilePictureUrl, "Profile picture URL", 2048);
         }
+        public void ChangePreferredLanguage(string languageCode)
+            => PreferredLanguageCode = Guard.NotBlank(languageCode, "Language code", 10).ToLowerInvariant();
 
         public void ChangePassword(string newPasswordHash)
             => PasswordHash = Guard.NotBlank(newPasswordHash, "Password hash", 256);
