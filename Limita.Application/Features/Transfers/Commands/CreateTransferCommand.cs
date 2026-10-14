@@ -9,6 +9,11 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Limita.Application.Features.Transfers.Commands;
 
+/// <summary>
+/// Sends money to a beneficiary outside Limita. The amount and the fee leave the account immediately
+/// and the transfer stays Pending until the receiving bank confirms it.
+/// Send an IdempotencyKey (any unique string per attempt, for example a GUID) so a retried request never charges twice.
+/// </summary>
 public sealed record CreateTransferCommand(
     Guid FromAccountId,
     TransferType TransferType,
@@ -16,7 +21,8 @@ public sealed record CreateTransferCommand(
     decimal Amount,
     string Currency,
     Guid? BeneficiaryId,
-    string? Note) : ICommand<CreateTransferResult>;
+    string? Note,
+    string? IdempotencyKey = null) : ICommand<CreateTransferResult>;
 
 public sealed record CreateTransferResult(
     Guid TransferId,
@@ -37,7 +43,9 @@ public sealed class CreateTransferValidator : AbstractValidator<CreateTransferCo
         RuleFor(x => x.VerificationMethod).IsInEnum();
         RuleFor(x => x.Amount).GreaterThan(0);
         RuleFor(x => x.Currency).NotEmpty().Length(3);
+        RuleFor(x => x.BeneficiaryId).NotNull().WithMessage("A beneficiary is required.");
         RuleFor(x => x.Note).MaximumLength(200);
+        RuleFor(x => x.IdempotencyKey).MaximumLength(100);
     }
 }
 
@@ -54,9 +62,8 @@ internal sealed class CreateTransferHandler(
         if (currentUser.UserId is not Guid userId)
             return TransferErrors.AuthRequired;
 
-        // Validate account belongs to user
+        // The account is tracked (no AsNoTracking) because its balance changes below.
         var account = await dbContext.Accounts
-            .AsNoTracking()
             .SingleOrDefaultAsync(
                 a => a.Id == request.FromAccountId && a.UserId == userId,
                 cancellationToken);
@@ -64,46 +71,78 @@ internal sealed class CreateTransferHandler(
         if (account is null)
             return TransferErrors.AccountNotFound;
 
-        // Validate beneficiary if provided
-        if (request.BeneficiaryId.HasValue)
-        {
-            var beneficiary = await dbContext.Beneficiaries
-                .AsNoTracking()
-                .SingleOrDefaultAsync(
-                    b => b.Id == request.BeneficiaryId.Value && b.UserId == userId,
-                    cancellationToken);
+        // A retried request returns the original transfer instead of charging again.
+        // Without a key the request is treated as new, so it has no retry protection.
+        var idempotencyKey = string.IsNullOrWhiteSpace(request.IdempotencyKey)
+            ? Guid.NewGuid().ToString("N")
+            : request.IdempotencyKey.Trim();
 
-            if (beneficiary is null)
-                return TransferErrors.BeneficiaryNotFound;
-        }
+        var existing = await dbContext.Transfers
+            .AsNoTracking()
+            .SingleOrDefaultAsync(
+                t => t.FromAccountId == account.Id && t.IdempotencyKey == idempotencyKey,
+                cancellationToken);
+       
+        if (existing is not null)
+            return ToResult(existing);
 
-        var amount = Money.Of(request.Amount, request.Currency.ToUpperInvariant());
-        var fee = Money.Of(TransferSettings.TransferFeeAmount, request.Currency.ToUpperInvariant());
+        var beneficiary = await dbContext.Beneficiaries
+            .AsNoTracking()
+            .SingleOrDefaultAsync(
+                b => b.Id == request.BeneficiaryId!.Value && b.UserId == userId,
+                cancellationToken);
 
-        var now = timeProvider.GetUtcNow();
+        if (beneficiary is null)
+            return TransferErrors.BeneficiaryNotFound;
+       
+        if (beneficiary.TransferType != request.TransferType)
+            return TransferErrors.BeneficiaryTypeMismatch;
 
-        // Transfer stays Pending because ledger / balance deduction is another member's responsibility.
-        var transfer = Transfer.CreatePending(
+        if (account.Status != AccountStatus.Active)
+            return TransferErrors.AccountNotActive;
+
+        var currency = request.Currency.ToUpperInvariant();
+
+        if (currency != account.Balance.Currency)
+            return TransferErrors.CurrencyMismatch;
+
+        var amount = Money.Of(request.Amount, currency);
+        var fee = Money.Of(TransferSettings.TransferFeeAmount, currency);
+
+        if (!account.HasSufficientFunds(amount + fee))
+            return TransferErrors.InsufficientFunds;
+
+        // TODO(OTP / biometrics): VerificationMethod is stored but not enforced yet.
+
+        var created = Transfer.CreateExternal(
+            account,
             userId,
-            request.FromAccountId,
             request.TransferType,
             request.VerificationMethod,
             amount,
             fee,
-            request.BeneficiaryId,
+            beneficiary.Id,
+            idempotencyKey,
             request.Note,
-            now);
+            timeProvider.GetUtcNow());
 
-        dbContext.Transfers.Add(transfer);
+        dbContext.Transfers.Add(created.Transfer);
+        dbContext.Transactions.Add(created.TransferDebit);
 
-        return Result.Success(new CreateTransferResult(
-            transfer.Id,
-            transfer.Status.ToString(),
-            transfer.TransferType.ToString(),
-            transfer.VerificationMethod.ToString(),
-            transfer.Amount.Amount,
-            fee.Amount,
-            transfer.Amount.Currency,
-            transfer.CreatedAt));
+        if (created.FeeDebit is not null)
+            dbContext.Transactions.Add(created.FeeDebit);
+
+        return ToResult(created.Transfer);
     }
+
+    private static CreateTransferResult ToResult(Transfer transfer) => new(
+        transfer.Id,
+        transfer.Status.ToString(),
+        transfer.TransferType.ToString(),
+        transfer.VerificationMethod.ToString(),
+        transfer.Amount.Amount,
+        transfer.Fee.Amount,
+        transfer.Amount.Currency,
+        transfer.CreatedAt);
+
 }

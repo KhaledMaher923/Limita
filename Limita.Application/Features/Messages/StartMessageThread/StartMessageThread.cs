@@ -23,7 +23,7 @@ public sealed class StartMessageThreadHandler(IApplicationDbContext db, ICurrent
         return Task.FromResult(Result.Success(thread.Id));
     }
 }
-public sealed class StartMessageThreadCommandValidator : FluentValidation.AbstractValidator<StartMessageThreadCommand>
+public sealed class StartMessageThreadCommandValidator : AbstractValidator<StartMessageThreadCommand>
 {
     public StartMessageThreadCommandValidator()
     {

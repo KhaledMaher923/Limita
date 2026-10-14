@@ -1,5 +1,6 @@
 ﻿using Limita.Application.Common.Abstractions;
 using Limita.Application.Common.DomainEvents;
+using Limita.Domain.Entities;
 using Limita.Domain.Enums;
 using Limita.Domain.Events;
 using Limita.Domain.ValueObjects;
@@ -23,10 +24,10 @@ internal sealed class TransactionCreatedSpendingLimitHandler(
         if (created.Type != TransactionType.Debit)
             return;
 
-        if (created.Category is TransactionCategory.Transfer
-            or TransactionCategory.Savings
-            or TransactionCategory.Exchange)
+        if (SpendingLimit.ExcludedCategories.Contains(created.Category))
             return;
+
+        var excludedCategories = SpendingLimit.ExcludedCategories.ToList();
 
         var now = timeProvider.GetUtcNow();
 
@@ -45,6 +46,7 @@ internal sealed class TransactionCreatedSpendingLimitHandler(
             var query = dbContext.Transactions.Where(transaction =>
                 transaction.AccountId == created.AccountId
                 && transaction.Type == TransactionType.Debit
+                && !excludedCategories.Contains(transaction.Category)
                 && transaction.CreatedAt >= periodStart);
 
             if (limit.Category is not null)

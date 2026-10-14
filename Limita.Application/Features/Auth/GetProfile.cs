@@ -31,6 +31,7 @@ namespace Limita.Application.Features.Auth
                         u.PhoneNumber,
                         u.IsPhoneVerified,
                         u.ProfilePictureUrl,
+                        u.PreferredLanguageCode,
                         u.CreatedAt))
                     .FirstOrDefaultAsync(cancellationToken);
 

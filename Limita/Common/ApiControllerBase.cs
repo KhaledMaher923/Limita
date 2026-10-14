@@ -6,12 +6,12 @@ namespace Limita.Api.Common
 {
     /// <summary>
     /// Base class for every controller.
-    /// Routes start with /api/v1/[controller]. Every action requires a signed-in user unless it is marked [AllowAnonymous],
-    /// so a new controller is secure by default. It also turns a Result from the Application layer into an HTTP response.
+    /// Every action requires a signed-in user unless it is marked [AllowAnonymous], so a new controller is secure by default.
+    /// It also turns a Result from the Application layer into an HTTP response (FromResult).
+    /// Each controller declares its own [Route], so a URL is never decided by a hidden default.
     /// </summary>
     [ApiController]
     [Authorize]
-    [Route("api/v1/[controller]")]
     public abstract class ApiControllerBase : ControllerBase
     {
         /// <summary>Success becomes 204 (or the response you pass in), a failed Result becomes a problem response.</summary>
