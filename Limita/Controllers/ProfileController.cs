@@ -1,6 +1,5 @@
 using Limita.Application.Features.Profile.ChangeLanguage;
-using Limita.Application.Features.Profile.GetProfile;
-using Limita.Application.Features.Profile.UpdateProfile;
+using Limita.Application.Features.Auth;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -18,15 +17,23 @@ public sealed class ProfileController(ISender sender) : ControllerBase
     [HttpGet]
     public async Task<IActionResult> Get(CancellationToken ct)
     {
-        var profile = await sender.Send(new GetProfileQuery(), ct);
-        return profile is null ? NotFound() : Ok(profile);
+        var result = await sender.Send(new GetProfile.Query(), ct);
+        return result.IsSuccess
+            ? Ok(result.Value)
+            : result.Error.Type == Limita.Application.Common.ErrorType.Unauthorized
+                ? Unauthorized(new { result.Error.Code, result.Error.Description })
+                : NotFound(new { result.Error.Code, result.Error.Description });
     }
 
     [HttpPut]
     public async Task<IActionResult> Update([FromBody] UpdateProfileRequest request, CancellationToken ct)
     {
-        var result = await sender.Send(new UpdateProfileCommand(request.FullName, request.ProfilePictureUrl), ct);
-        return result.IsSuccess ? NoContent() : NotFound(new { result.Error.Code, result.Error.Description });
+        var result = await sender.Send(new UpdateProfile.Command(request.FullName, request.ProfilePictureUrl), ct);
+        return result.IsSuccess
+            ? Ok(result.Value)
+            : result.Error.Type == Limita.Application.Common.ErrorType.Unauthorized
+                ? Unauthorized(new { result.Error.Code, result.Error.Description })
+                : NotFound(new { result.Error.Code, result.Error.Description });
     }
 
     [HttpPut("language")]

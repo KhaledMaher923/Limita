@@ -67,7 +67,7 @@ public sealed class TransfersController(ISender sender) : ControllerBase
         if (result.IsSuccess)
             return Ok(result.Value);
 
-        return result.Error.errorType switch
+        return result.Error.Type switch
         {
             ErrorType.NotFound => NotFound(new { result.Error.Code, result.Error.Description }),
             ErrorType.Validation => BadRequest(new { result.Error.Code, result.Error.Description }),

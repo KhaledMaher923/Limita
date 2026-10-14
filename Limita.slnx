@@ -3,4 +3,5 @@
   <Project Path="Limita.Domain/Limita.Domain.csproj" />
   <Project Path="Limita.Infrastructure/Limita.Infrastructure.csproj" />
   <Project Path="Limita/Limita.Api.csproj" />
+  <Project Path="Limita.Tests/Limita.Tests.csproj" />
 </Solution>
