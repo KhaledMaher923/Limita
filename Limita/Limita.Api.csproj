@@ -22,4 +22,10 @@
     <ProjectReference Include="..\Limita.Infrastructure\Limita.Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="Development\SeedData\seed-data.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

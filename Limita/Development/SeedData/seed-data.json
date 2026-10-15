@@ -1,0 +1,2880 @@
+{
+    "Users":  [
+                  {
+                      "Id":  "00000001-0000-4000-8000-000000000001",
+                      "FullName":  "Mika Tesfaye",
+                      "Email":  "mika.tesfaye@limita.test",
+                      "PhoneNumber":  "+251911000001",
+                      "PasswordHash":  "HASH:DevSeed#2026",
+                      "IsPhoneVerified":  true,
+                      "ProfilePictureUrl":  null,
+                      "CreatedAt":  "2026-03-29T12:05:20+00:00",
+                      "PreferredLanguageCode":  "en",
+                      "FailedLoginAttempts":  0,
+                      "LockedUntil":  null
+                  },
+                  {
+                      "Id":  "00000001-0000-4000-8000-000000000002",
+                      "FullName":  "Rania Adel",
+                      "Email":  "rania.adel@limita.test",
+                      "PhoneNumber":  "+201002200002",
+                      "PasswordHash":  "HASH:DevSeed#2026",
+                      "IsPhoneVerified":  true,
+                      "ProfilePictureUrl":  null,
+                      "CreatedAt":  "2026-04-03T12:05:20+00:00",
+                      "PreferredLanguageCode":  "en",
+                      "FailedLoginAttempts":  0,
+                      "LockedUntil":  null
+                  },
+                  {
+                      "Id":  "00000001-0000-4000-8000-000000000003",
+                      "FullName":  "Daniel Okoro",
+                      "Email":  "daniel.okoro@limita.test",
+                      "PhoneNumber":  "+234803300003",
+                      "PasswordHash":  "HASH:DevSeed#2026",
+                      "IsPhoneVerified":  true,
+                      "ProfilePictureUrl":  null,
+                      "CreatedAt":  "2026-04-08T12:05:20+00:00",
+                      "PreferredLanguageCode":  "en",
+                      "FailedLoginAttempts":  0,
+                      "LockedUntil":  null
+                  },
+                  {
+                      "Id":  "00000001-0000-4000-8000-000000000004",
+                      "FullName":  "Sara Haddad",
+                      "Email":  "sara.haddad@limita.test",
+                      "PhoneNumber":  "+966504400004",
+                      "PasswordHash":  "HASH:DevSeed#2026",
+                      "IsPhoneVerified":  false,
+                      "ProfilePictureUrl":  null,
+                      "CreatedAt":  "2026-04-13T12:05:20+00:00",
+                      "PreferredLanguageCode":  "en",
+                      "FailedLoginAttempts":  0,
+                      "LockedUntil":  null
+                  },
+                  {
+                      "Id":  "00000001-0000-4000-8000-000000000005",
+                      "FullName":  "Omar Farouk",
+                      "Email":  "omar.farouk@limita.test",
+                      "PhoneNumber":  "+251911000005",
+                      "PasswordHash":  "HASH:DevSeed#2026",
+                      "IsPhoneVerified":  true,
+                      "ProfilePictureUrl":  null,
+                      "CreatedAt":  "2026-04-18T12:05:20+00:00",
+                      "PreferredLanguageCode":  "en",
+                      "FailedLoginAttempts":  0,
+                      "LockedUntil":  "2026-10-15T12:20:20+00:00"
+                  },
+                  {
+                      "Id":  "00000001-0000-4000-8000-000000000006",
+                      "FullName":  "Layla Mansour",
+                      "Email":  "layla.mansour@limita.test",
+                      "PhoneNumber":  "+201156600006",
+                      "PasswordHash":  "HASH:DevSeed#2026",
+                      "IsPhoneVerified":  true,
+                      "ProfilePictureUrl":  null,
+                      "CreatedAt":  "2026-04-23T12:05:20+00:00",
+                      "PreferredLanguageCode":  "ar",
+                      "FailedLoginAttempts":  2,
+                      "LockedUntil":  null
+                  }
+              ],
+    "Accounts":  [
+                     {
+                         "Id":  "00000002-0000-4000-8000-000000000001",
+                         "UserId":  "00000001-0000-4000-8000-000000000001",
+                         "AccountNumber":  "261000000001",
+                         "Type":  "Current",
+                         "Balance":  {
+                                         "Amount":  4585.01,
+                                         "Currency":  "USD"
+                                     },
+                         "Status":  "Active"
+                     },
+                     {
+                         "Id":  "00000002-0000-4000-8000-000000000002",
+                         "UserId":  "00000001-0000-4000-8000-000000000001",
+                         "AccountNumber":  "261000000002",
+                         "Type":  "Savings",
+                         "Balance":  {
+                                         "Amount":  19500,
+                                         "Currency":  "EGP"
+                                     },
+                         "Status":  "Active"
+                     },
+                     {
+                         "Id":  "00000002-0000-4000-8000-000000000003",
+                         "UserId":  "00000001-0000-4000-8000-000000000002",
+                         "AccountNumber":  "261000000003",
+                         "Type":  "Current",
+                         "Balance":  {
+                                         "Amount":  21820,
+                                         "Currency":  "EGP"
+                                     },
+                         "Status":  "Active"
+                     },
+                     {
+                         "Id":  "00000002-0000-4000-8000-000000000004",
+                         "UserId":  "00000001-0000-4000-8000-000000000002",
+                         "AccountNumber":  "261000000004",
+                         "Type":  "Current",
+                         "Balance":  {
+                                         "Amount":  2735,
+                                         "Currency":  "USD"
+                                     },
+                         "Status":  "Active"
+                     },
+                     {
+                         "Id":  "00000002-0000-4000-8000-000000000005",
+                         "UserId":  "00000001-0000-4000-8000-000000000003",
+                         "AccountNumber":  "261000000005",
+                         "Type":  "Current",
+                         "Balance":  {
+                                         "Amount":  7165,
+                                         "Currency":  "USD"
+                                     },
+                         "Status":  "Active"
+                     },
+                     {
+                         "Id":  "00000002-0000-4000-8000-000000000006",
+                         "UserId":  "00000001-0000-4000-8000-000000000003",
+                         "AccountNumber":  "261000000006",
+                         "Type":  "Savings",
+                         "Balance":  {
+                                         "Amount":  15000,
+                                         "Currency":  "EGP"
+                                     },
+                         "Status":  "Active"
+                     },
+                     {
+                         "Id":  "00000002-0000-4000-8000-000000000007",
+                         "UserId":  "00000001-0000-4000-8000-000000000005",
+                         "AccountNumber":  "261000000007",
+                         "Type":  "Current",
+                         "Balance":  {
+                                         "Amount":  8300,
+                                         "Currency":  "EGP"
+                                     },
+                         "Status":  "Frozen"
+                     },
+                     {
+                         "Id":  "00000002-0000-4000-8000-000000000008",
+                         "UserId":  "00000001-0000-4000-8000-000000000006",
+                         "AccountNumber":  "261000000008",
+                         "Type":  "Current",
+                         "Balance":  {
+                                         "Amount":  0,
+                                         "Currency":  "USD"
+                                     },
+                         "Status":  "Closed"
+                     },
+                     {
+                         "Id":  "00000002-0000-4000-8000-000000000009",
+                         "UserId":  "00000001-0000-4000-8000-000000000006",
+                         "AccountNumber":  "261000000009",
+                         "Type":  "Savings",
+                         "Balance":  {
+                                         "Amount":  3690,
+                                         "Currency":  "EUR"
+                                     },
+                         "Status":  "Active"
+                     },
+                     {
+                         "Id":  "00000002-0000-4000-8000-000000000010",
+                         "UserId":  "00000001-0000-4000-8000-000000000003",
+                         "AccountNumber":  "261000000010",
+                         "Type":  "Savings",
+                         "Balance":  {
+                                         "Amount":  1100,
+                                         "Currency":  "USD"
+                                     },
+                         "Status":  "Active"
+                     }
+                 ],
+    "Transactions":  [
+                         {
+                             "Id":  "00000003-0000-4000-8000-000000000001",
+                             "AccountId":  "00000002-0000-4000-8000-000000000001",
+                             "TransferId":  null,
+                             "SavingsGoalId":  null,
+                             "WithdrawalId":  null,
+                             "TimeDepositId":  null,
+                             "ExchangeOperationId":  null,
+                             "Type":  "Credit",
+                             "Amount":  {
+                                            "Amount":  8500,
+                                            "Currency":  "USD"
+                                        },
+                             "BalanceAfter":  8500,
+                             "Category":  "General",
+                             "Description":  "Opening deposit",
+                             "CreatedAt":  "2026-04-08T12:05:20+00:00"
+                         },
+                         {
+                             "Id":  "00000003-0000-4000-8000-000000000002",
+                             "AccountId":  "00000002-0000-4000-8000-000000000001",
+                             "TransferId":  null,
+                             "SavingsGoalId":  null,
+                             "WithdrawalId":  null,
+                             "TimeDepositId":  "00000012-0000-4000-8000-000000000003",
+                             "ExchangeOperationId":  null,
+                             "Type":  "Debit",
+                             "Amount":  {
+                                            "Amount":  3000,
+                                            "Currency":  "USD"
+                                        },
+                             "BalanceAfter":  5500,
+                             "Category":  "Savings",
+                             "Description":  "Time deposit (6 months)",
+                             "CreatedAt":  "2026-04-13T12:05:20+00:00"
+                         },
+                         {
+                             "Id":  "00000003-0000-4000-8000-000000000003",
+                             "AccountId":  "00000002-0000-4000-8000-000000000001",
+                             "TransferId":  null,
+                             "SavingsGoalId":  null,
+                             "WithdrawalId":  null,
+                             "TimeDepositId":  null,
+                             "ExchangeOperationId":  null,
+                             "Type":  "Debit",
+                             "Amount":  {
+                                            "Amount":  89.99,
+                                            "Currency":  "USD"
+                                        },
+                             "BalanceAfter":  5410.01,
+                             "Category":  "Shopping",
+                             "Description":  "Weekly grocery shopping",
+                             "CreatedAt":  "2026-05-18T12:05:20+00:00"
+                         },
+                         {
+                             "Id":  "00000003-0000-4000-8000-000000000004",
+                             "AccountId":  "00000002-0000-4000-8000-000000000001",
+                             "TransferId":  null,
+                             "SavingsGoalId":  null,
+                             "WithdrawalId":  null,
+                             "TimeDepositId":  null,
+                             "ExchangeOperationId":  null,
+                             "Type":  "Debit",
+                             "Amount":  {
+                                            "Amount":  45,
+                                            "Currency":  "USD"
+                                        },
+                             "BalanceAfter":  5365.01,
+                             "Category":  "Food",
+                             "Description":  "Dinner with friends",
+                             "CreatedAt":  "2026-05-28T12:05:20+00:00"
+                         },
+                         {
+                             "Id":  "00000003-0000-4000-8000-000000000005",
+                             "AccountId":  "00000002-0000-4000-8000-000000000001",
+                             "TransferId":  null,
+                             "SavingsGoalId":  null,
+                             "WithdrawalId":  null,
+                             "TimeDepositId":  null,
+                             "ExchangeOperationId":  null,
+                             "Type":  "Debit",
+                             "Amount":  {
+                                            "Amount":  1200,
+                                            "Currency":  "USD"
+                                        },
+                             "BalanceAfter":  4165.01,
+                             "Category":  "Other",
+                             "Description":  "Apartment rent",
+                             "CreatedAt":  "2026-06-17T12:05:20+00:00"
+                         },
+                         {
+                             "Id":  "00000003-0000-4000-8000-000000000006",
+                             "AccountId":  "00000002-0000-4000-8000-000000000001",
+                             "TransferId":  null,
+                             "SavingsGoalId":  null,
+                             "WithdrawalId":  null,
+                             "TimeDepositId":  null,
+                             "ExchangeOperationId":  null,
+                             "Type":  "Debit",
+                             "Amount":  {
+                                            "Amount":  60,
+                                            "Currency":  "USD"
+                                        },
+                             "BalanceAfter":  4105.01,
+                             "Category":  "Transport",
+                             "Description":  "Metro card top-up",
+                             "CreatedAt":  "2026-07-07T12:05:20+00:00"
+                         },
+                         {
+                             "Id":  "00000003-0000-4000-8000-000000000007",
+                             "AccountId":  "00000002-0000-4000-8000-000000000001",
+                             "TransferId":  null,
+                             "SavingsGoalId":  "00000010-0000-4000-8000-000000000001",
+                             "WithdrawalId":  null,
+                             "TimeDepositId":  null,
+                             "ExchangeOperationId":  null,
+                             "Type":  "Debit",
+                             "Amount":  {
+                                            "Amount":  300,
+                                            "Currency":  "USD"
+                                        },
+                             "BalanceAfter":  3805.01,
+                             "Category":  "Savings",
+                             "Description":  "Savings goal: Emergency fund",
+                             "CreatedAt":  "2026-07-17T12:05:20+00:00"
+                         },
+                         {
+                             "Id":  "00000003-0000-4000-8000-000000000008",
+                             "AccountId":  "00000002-0000-4000-8000-000000000001",
+                             "TransferId":  "00000006-0000-4000-8000-000000000004",
+                             "SavingsGoalId":  null,
+                             "WithdrawalId":  null,
+                             "TimeDepositId":  null,
+                             "ExchangeOperationId":  null,
+                             "Type":  "Debit",
+                             "Amount":  {
+                                            "Amount":  120,
+                                            "Currency":  "USD"
+                                        },
+                             "BalanceAfter":  3685.01,
+                             "Category":  "Transfer",
+                             "Description":  "Gadget purchase",
+                             "CreatedAt":  "2026-08-06T12:05:20+00:00"
+                         },
+                         {
+                             "Id":  "00000003-0000-4000-8000-000000000009",
+                             "AccountId":  "00000002-0000-4000-8000-000000000001",
+                             "TransferId":  "00000006-0000-4000-8000-000000000004",
+                             "SavingsGoalId":  null,
+                             "WithdrawalId":  null,
+                             "TimeDepositId":  null,
+                             "ExchangeOperationId":  null,
+                             "Type":  "Debit",
+                             "Amount":  {
+                                            "Amount":  10,
+                                            "Currency":  "USD"
+                                        },
+                             "BalanceAfter":  3675.01,
+                             "Category":  "Transfer",
+                             "Description":  "Transfer fee",
+                             "CreatedAt":  "2026-08-06T12:05:20+00:00"
+                         },
+                         {
+                             "Id":  "00000003-0000-4000-8000-000000000010",
+                             "AccountId":  "00000002-0000-4000-8000-000000000001",
+                             "TransferId":  "00000006-0000-4000-8000-000000000004",
+                             "SavingsGoalId":  null,
+                             "WithdrawalId":  null,
+                             "TimeDepositId":  null,
+                             "ExchangeOperationId":  null,
+                             "Type":  "Credit",
+                             "Amount":  {
+                                            "Amount":  120,
+                                            "Currency":  "USD"
+                                        },
+                             "BalanceAfter":  3795.01,
+                             "Category":  "Transfer",
+                             "Description":  "Transfer refund",
+                             "CreatedAt":  "2026-08-06T12:05:20+00:00"
+                         },
+                         {
+                             "Id":  "00000003-0000-4000-8000-000000000011",
+                             "AccountId":  "00000002-0000-4000-8000-000000000001",
+                             "TransferId":  "00000006-0000-4000-8000-000000000004",
+                             "SavingsGoalId":  null,
+                             "WithdrawalId":  null,
+                             "TimeDepositId":  null,
+                             "ExchangeOperationId":  null,
+                             "Type":  "Credit",
+                             "Amount":  {
+                                            "Amount":  10,
+                                            "Currency":  "USD"
+                                        },
+                             "BalanceAfter":  3805.01,
+                             "Category":  "Transfer",
+                             "Description":  "Transfer fee refund",
+                             "CreatedAt":  "2026-08-06T12:05:20+00:00"
+                         },
+                         {
+                             "Id":  "00000003-0000-4000-8000-000000000012",
+                             "AccountId":  "00000002-0000-4000-8000-000000000001",
+                             "TransferId":  null,
+                             "SavingsGoalId":  "00000010-0000-4000-8000-000000000001",
+                             "WithdrawalId":  null,
+                             "TimeDepositId":  null,
+                             "ExchangeOperationId":  null,
+                             "Type":  "Debit",
+                             "Amount":  {
+                                            "Amount":  300,
+                                            "Currency":  "USD"
+                                        },
+                             "BalanceAfter":  3505.01,
+                             "Category":  "Savings",
+                             "Description":  "Savings goal: Emergency fund",
+                             "CreatedAt":  "2026-08-16T12:05:20+00:00"
+                         },
+                         {
+                             "Id":  "00000003-0000-4000-8000-000000000013",
+                             "AccountId":  "00000002-0000-4000-8000-000000000001",
+                             "TransferId":  null,
+                             "SavingsGoalId":  "00000010-0000-4000-8000-000000000001",
+                             "WithdrawalId":  null,
+                             "TimeDepositId":  null,
+                             "ExchangeOperationId":  null,
+                             "Type":  "Debit",
+                             "Amount":  {
+                                            "Amount":  300,
+                                            "Currency":  "USD"
+                                        },
+                             "BalanceAfter":  3205.01,
+                             "Category":  "Savings",
+                             "Description":  "Savings goal: Emergency fund",
+                             "CreatedAt":  "2026-09-15T12:05:20+00:00"
+                         },
+                         {
+                             "Id":  "00000003-0000-4000-8000-000000000014",
+                             "AccountId":  "00000002-0000-4000-8000-000000000001",
+                             "TransferId":  "00000006-0000-4000-8000-000000000007",
+                             "SavingsGoalId":  null,
+                             "WithdrawalId":  null,
+                             "TimeDepositId":  null,
+                             "ExchangeOperationId":  null,
+                             "Type":  "Debit",
+                             "Amount":  {
+                                            "Amount":  200,
+                                            "Currency":  "USD"
+                                        },
+                             "BalanceAfter":  3005.01,
+                             "Category":  "Transfer",
+                             "Description":  "Dinner split",
+                             "CreatedAt":  "2026-09-25T12:05:20+00:00"
+                         },
+                         {
+                             "Id":  "00000003-0000-4000-8000-000000000015",
+                             "AccountId":  "00000002-0000-4000-8000-000000000001",
+                             "TransferId":  null,
+                             "SavingsGoalId":  null,
+                             "WithdrawalId":  null,
+                             "TimeDepositId":  null,
+                             "ExchangeOperationId":  null,
+                             "Type":  "Debit",
+                             "Amount":  {
+                                            "Amount":  100,
+                                            "Currency":  "USD"
+                                        },
+                             "BalanceAfter":  2905.01,
+                             "Category":  "Education",
+                             "Description":  "Online course",
+                             "CreatedAt":  "2026-09-30T12:05:20+00:00"
+                         },
+                         {
+                             "Id":  "00000003-0000-4000-8000-000000000016",
+                             "AccountId":  "00000002-0000-4000-8000-000000000001",
+                             "TransferId":  "00000006-0000-4000-8000-000000000008",
+                             "SavingsGoalId":  null,
+                             "WithdrawalId":  null,
+                             "TimeDepositId":  null,
+                             "ExchangeOperationId":  null,
+                             "Type":  "Credit",
+                             "Amount":  {
+                                            "Amount":  150,
+                                            "Currency":  "USD"
+                                        },
+                             "BalanceAfter":  3055.01,
+                             "Category":  "Transfer",
+                             "Description":  "Shared utilities",
+                             "CreatedAt":  "2026-10-03T12:05:20+00:00"
+                         },
+                         {
+                             "Id":  "00000003-0000-4000-8000-000000000017",
+                             "AccountId":  "00000002-0000-4000-8000-000000000001",
+                             "TransferId":  null,
+                             "SavingsGoalId":  null,
+                             "WithdrawalId":  "00000013-0000-4000-8000-000000000002",
+                             "TimeDepositId":  null,
+                             "ExchangeOperationId":  null,
+                             "Type":  "Debit",
+                             "Amount":  {
+                                            "Amount":  60,
+                                            "Currency":  "USD"
+                                        },
+                             "BalanceAfter":  2995.01,
+                             "Category":  "Other",
+                             "Description":  "Cash withdrawal",
+                             "CreatedAt":  "2026-10-05T12:05:20+00:00"
+                         },
+                         {
+                             "Id":  "00000003-0000-4000-8000-000000000018",
+                             "AccountId":  "00000002-0000-4000-8000-000000000001",
+                             "TransferId":  null,
+                             "SavingsGoalId":  null,
+                             "WithdrawalId":  null,
+                             "TimeDepositId":  null,
+                             "ExchangeOperationId":  null,
+                             "Type":  "Debit",
+                             "Amount":  {
+                                            "Amount":  480,
+                                            "Currency":  "USD"
+                                        },
+                             "BalanceAfter":  2515.01,
+                             "Category":  "Bills",
+                             "Description":  "Electric bill ELEC-8801",
+                             "CreatedAt":  "2026-10-09T12:05:20+00:00"
+                         },
+                         {
+                             "Id":  "00000003-0000-4000-8000-000000000019",
+                             "AccountId":  "00000002-0000-4000-8000-000000000001",
+                             "TransferId":  "00000006-0000-4000-8000-000000000001",
+                             "SavingsGoalId":  null,
+                             "WithdrawalId":  null,
+                             "TimeDepositId":  null,
+                             "ExchangeOperationId":  null,
+                             "Type":  "Debit",
+                             "Amount":  {
+                                            "Amount":  250,
+                                            "Currency":  "USD"
+                                        },
+                             "BalanceAfter":  2265.01,
+                             "Category":  "Transfer",
+                             "Description":  "Rent share",
+                             "CreatedAt":  "2026-10-10T12:05:20+00:00"
+                         },
+                         {
+                             "Id":  "00000003-0000-4000-8000-000000000020",
+                             "AccountId":  "00000002-0000-4000-8000-000000000001",
+                             "TransferId":  "00000006-0000-4000-8000-000000000001",
+                             "SavingsGoalId":  null,
+                             "WithdrawalId":  null,
+                             "TimeDepositId":  null,
+                             "ExchangeOperationId":  null,
+                             "Type":  "Debit",
+                             "Amount":  {
+                                            "Amount":  10,
+                                            "Currency":  "USD"
+                                        },
+                             "BalanceAfter":  2255.01,
+                             "Category":  "Transfer",
+                             "Description":  "Transfer fee",
+                             "CreatedAt":  "2026-10-10T12:05:20+00:00"
+                         },
+                         {
+                             "Id":  "00000003-0000-4000-8000-000000000021",
+                             "AccountId":  "00000002-0000-4000-8000-000000000001",
+                             "TransferId":  null,
+                             "SavingsGoalId":  null,
+                             "WithdrawalId":  null,
+                             "TimeDepositId":  null,
+                             "ExchangeOperationId":  null,
+                             "Type":  "Debit",
+                             "Amount":  {
+                                            "Amount":  20,
+                                            "Currency":  "USD"
+                                        },
+                             "BalanceAfter":  2235.01,
+                             "Category":  "MobileTopUp",
+                             "Description":  "Mobile top-up",
+                             "CreatedAt":  "2026-10-12T12:05:20+00:00"
+                         },
+                         {
+                             "Id":  "00000003-0000-4000-8000-000000000022",
+                             "AccountId":  "00000002-0000-4000-8000-000000000001",
+                             "TransferId":  null,
+                             "SavingsGoalId":  null,
+                             "WithdrawalId":  null,
+                             "TimeDepositId":  null,
+                             "ExchangeOperationId":  null,
+                             "Type":  "Credit",
+                             "Amount":  {
+                                            "Amount":  2500,
+                                            "Currency":  "USD"
+                                        },
+                             "BalanceAfter":  4735.01,
+                             "Category":  "General",
+                             "Description":  "Freelance payment",
+                             "CreatedAt":  "2026-10-14T12:05:20+00:00"
+                         },
+                         {
+                             "Id":  "00000003-0000-4000-8000-000000000023",
+                             "AccountId":  "00000002-0000-4000-8000-000000000001",
+                             "TransferId":  null,
+                             "SavingsGoalId":  null,
+                             "WithdrawalId":  null,
+                             "TimeDepositId":  null,
+                             "ExchangeOperationId":  "00000014-0000-4000-8000-000000000001",
+                             "Type":  "Debit",
+                             "Amount":  {
+                                            "Amount":  150,
+                                            "Currency":  "USD"
+                                        },
+                             "BalanceAfter":  4585.01,
+                             "Category":  "Exchange",
+                             "Description":  "Exchange to EGP",
+                             "CreatedAt":  "2026-10-14T12:05:20+00:00"
+                         },
+                         {
+                             "Id":  "00000003-0000-4000-8000-000000000024",
+                             "AccountId":  "00000002-0000-4000-8000-000000000002",
+                             "TransferId":  null,
+                             "SavingsGoalId":  null,
+                             "WithdrawalId":  null,
+                             "TimeDepositId":  null,
+                             "ExchangeOperationId":  null,
+                             "Type":  "Credit",
+                             "Amount":  {
+                                            "Amount":  12000,
+                                            "Currency":  "EGP"
+                                        },
+                             "BalanceAfter":  12000,
+                             "Category":  "General",
+                             "Description":  "Opening deposit",
+                             "CreatedAt":  "2026-04-08T12:05:20+00:00"
+                         },
+                         {
+                             "Id":  "00000003-0000-4000-8000-000000000025",
+                             "AccountId":  "00000002-0000-4000-8000-000000000002",
+                             "TransferId":  null,
+                             "SavingsGoalId":  null,
+                             "WithdrawalId":  null,
+                             "TimeDepositId":  null,
+                             "ExchangeOperationId":  "00000014-0000-4000-8000-000000000001",
+                             "Type":  "Credit",
+                             "Amount":  {
+                                            "Amount":  7500,
+                                            "Currency":  "EGP"
+                                        },
+                             "BalanceAfter":  19500,
+                             "Category":  "Exchange",
+                             "Description":  "Exchange from USD",
+                             "CreatedAt":  "2026-10-14T12:05:20+00:00"
+                         },
+                         {
+                             "Id":  "00000003-0000-4000-8000-000000000026",
+                             "AccountId":  "00000002-0000-4000-8000-000000000003",
+                             "TransferId":  null,
+                             "SavingsGoalId":  null,
+                             "WithdrawalId":  null,
+                             "TimeDepositId":  null,
+                             "ExchangeOperationId":  null,
+                             "Type":  "Credit",
+                             "Amount":  {
+                                            "Amount":  25000,
+                                            "Currency":  "EGP"
+                                        },
+                             "BalanceAfter":  25000,
+                             "Category":  "General",
+                             "Description":  "Opening deposit",
+                             "CreatedAt":  "2026-04-18T12:05:20+00:00"
+                         },
+                         {
+                             "Id":  "00000003-0000-4000-8000-000000000027",
+                             "AccountId":  "00000002-0000-4000-8000-000000000003",
+                             "TransferId":  null,
+                             "SavingsGoalId":  null,
+                             "WithdrawalId":  null,
+                             "TimeDepositId":  null,
+                             "ExchangeOperationId":  null,
+                             "Type":  "Debit",
+                             "Amount":  {
+                                            "Amount":  320,
+                                            "Currency":  "EGP"
+                                        },
+                             "BalanceAfter":  24680,
+                             "Category":  "Food",
+                             "Description":  "Family dinner",
+                             "CreatedAt":  "2026-05-08T12:05:20+00:00"
+                         },
+                         {
+                             "Id":  "00000003-0000-4000-8000-000000000028",
+                             "AccountId":  "00000002-0000-4000-8000-000000000003",
+                             "TransferId":  null,
+                             "SavingsGoalId":  null,
+                             "WithdrawalId":  null,
+                             "TimeDepositId":  null,
+                             "ExchangeOperationId":  null,
+                             "Type":  "Debit",
+                             "Amount":  {
+                                            "Amount":  150,
+                                            "Currency":  "EGP"
+                                        },
+                             "BalanceAfter":  24530,
+                             "Category":  "Transport",
+                             "Description":  "Taxi rides",
+                             "CreatedAt":  "2026-05-28T12:05:20+00:00"
+                         },
+                         {
+                             "Id":  "00000003-0000-4000-8000-000000000029",
+                             "AccountId":  "00000002-0000-4000-8000-000000000003",
+                             "TransferId":  null,
+                             "SavingsGoalId":  "00000010-0000-4000-8000-000000000003",
+                             "WithdrawalId":  null,
+                             "TimeDepositId":  null,
+                             "ExchangeOperationId":  null,
+                             "Type":  "Debit",
+                             "Amount":  {
+                                            "Amount":  10000,
+                                            "Currency":  "EGP"
+                                        },
+                             "BalanceAfter":  14530,
+                             "Category":  "Savings",
+                             "Description":  "Savings goal: Umrah trip",
+                             "CreatedAt":  "2026-06-27T12:05:20+00:00"
+                         },
+                         {
+                             "Id":  "00000003-0000-4000-8000-000000000030",
+                             "AccountId":  "00000002-0000-4000-8000-000000000003",
+                             "TransferId":  null,
+                             "SavingsGoalId":  "00000010-0000-4000-8000-000000000003",
+                             "WithdrawalId":  null,
+                             "TimeDepositId":  null,
+                             "ExchangeOperationId":  null,
+                             "Type":  "Debit",
+                             "Amount":  {
+                                            "Amount":  10000,
+                                            "Currency":  "EGP"
+                                        },
+                             "BalanceAfter":  4530,
+                             "Category":  "Savings",
+                             "Description":  "Savings goal: Umrah trip",
+                             "CreatedAt":  "2026-07-27T12:05:20+00:00"
+                         },
+                         {
+                             "Id":  "00000003-0000-4000-8000-000000000031",
+                             "AccountId":  "00000002-0000-4000-8000-000000000003",
+                             "TransferId":  "00000006-0000-4000-8000-000000000002",
+                             "SavingsGoalId":  null,
+                             "WithdrawalId":  null,
+                             "TimeDepositId":  null,
+                             "ExchangeOperationId":  null,
+                             "Type":  "Debit",
+                             "Amount":  {
+                                            "Amount":  1500,
+                                            "Currency":  "EGP"
+                                        },
+                             "BalanceAfter":  3030,
+                             "Category":  "Transfer",
+                             "Description":  "Monthly support",
+                             "CreatedAt":  "2026-08-21T12:05:20+00:00"
+                         },
+                         {
+                             "Id":  "00000003-0000-4000-8000-000000000032",
+                             "AccountId":  "00000002-0000-4000-8000-000000000003",
+                             "TransferId":  "00000006-0000-4000-8000-000000000002",
+                             "SavingsGoalId":  null,
+                             "WithdrawalId":  null,
+                             "TimeDepositId":  null,
+                             "ExchangeOperationId":  null,
+                             "Type":  "Debit",
+                             "Amount":  {
+                                            "Amount":  10,
+                                            "Currency":  "EGP"
+                                        },
+                             "BalanceAfter":  3020,
+                             "Category":  "Transfer",
+                             "Description":  "Transfer fee",
+                             "CreatedAt":  "2026-08-21T12:05:20+00:00"
+                         },
+                         {
+                             "Id":  "00000003-0000-4000-8000-000000000033",
+                             "AccountId":  "00000002-0000-4000-8000-000000000003",
+                             "TransferId":  null,
+                             "SavingsGoalId":  null,
+                             "WithdrawalId":  null,
+                             "TimeDepositId":  null,
+                             "ExchangeOperationId":  null,
+                             "Type":  "Debit",
+                             "Amount":  {
+                                            "Amount":  900,
+                                            "Currency":  "EGP"
+                                        },
+                             "BalanceAfter":  2120,
+                             "Category":  "Bills",
+                             "Description":  "Water bill WTR-5502",
+                             "CreatedAt":  "2026-08-31T12:05:20+00:00"
+                         },
+                         {
+                             "Id":  "00000003-0000-4000-8000-000000000034",
+                             "AccountId":  "00000002-0000-4000-8000-000000000003",
+                             "TransferId":  null,
+                             "SavingsGoalId":  null,
+                             "WithdrawalId":  null,
+                             "TimeDepositId":  null,
+                             "ExchangeOperationId":  null,
+                             "Type":  "Debit",
+                             "Amount":  {
+                                            "Amount":  750,
+                                            "Currency":  "EGP"
+                                        },
+                             "BalanceAfter":  1370,
+                             "Category":  "Education",
+                             "Description":  "Kids school supplies",
+                             "CreatedAt":  "2026-09-05T12:05:20+00:00"
+                         },
+                         {
+                             "Id":  "00000003-0000-4000-8000-000000000035",
+                             "AccountId":  "00000002-0000-4000-8000-000000000003",
+                             "TransferId":  null,
+                             "SavingsGoalId":  null,
+                             "WithdrawalId":  null,
+                             "TimeDepositId":  null,
+                             "ExchangeOperationId":  null,
+                             "Type":  "Credit",
+                             "Amount":  {
+                                            "Amount":  12000,
+                                            "Currency":  "EGP"
+                                        },
+                             "BalanceAfter":  13370,
+                             "Category":  "General",
+                             "Description":  "Monthly salary",
+                             "CreatedAt":  "2026-09-30T12:05:20+00:00"
+                         },
+                         {
+                             "Id":  "00000003-0000-4000-8000-000000000036",
+                             "AccountId":  "00000002-0000-4000-8000-000000000003",
+                             "TransferId":  null,
+                             "SavingsGoalId":  null,
+                             "WithdrawalId":  null,
+                             "TimeDepositId":  null,
+                             "ExchangeOperationId":  "00000014-0000-4000-8000-000000000003",
+                             "Type":  "Credit",
+                             "Amount":  {
+                                            "Amount":  10000,
+                                            "Currency":  "EGP"
+                                        },
+                             "BalanceAfter":  23370,
+                             "Category":  "Exchange",
+                             "Description":  "Exchange from USD",
+                             "CreatedAt":  "2026-10-03T12:05:20+00:00"
+                         },
+                         {
+                             "Id":  "00000003-0000-4000-8000-000000000037",
+                             "AccountId":  "00000002-0000-4000-8000-000000000003",
+                             "TransferId":  null,
+                             "SavingsGoalId":  null,
+                             "WithdrawalId":  null,
+                             "TimeDepositId":  null,
+                             "ExchangeOperationId":  null,
+                             "Type":  "Debit",
+                             "Amount":  {
+                                            "Amount":  50,
+                                            "Currency":  "EGP"
+                                        },
+                             "BalanceAfter":  23320,
+                             "Category":  "MobileTopUp",
+                             "Description":  "Mobile top-up",
+                             "CreatedAt":  "2026-10-07T12:05:20+00:00"
+                         },
+                         {
+                             "Id":  "00000003-0000-4000-8000-000000000038",
+                             "AccountId":  "00000002-0000-4000-8000-000000000003",
+                             "TransferId":  null,
+                             "SavingsGoalId":  null,
+                             "WithdrawalId":  null,
+                             "TimeDepositId":  "00000012-0000-4000-8000-000000000004",
+                             "ExchangeOperationId":  null,
+                             "Type":  "Debit",
+                             "Amount":  {
+                                            "Amount":  1500,
+                                            "Currency":  "EGP"
+                                        },
+                             "BalanceAfter":  21820,
+                             "Category":  "Savings",
+                             "Description":  "Time deposit (3 months)",
+                             "CreatedAt":  "2026-10-12T12:05:20+00:00"
+                         },
+                         {
+                             "Id":  "00000003-0000-4000-8000-000000000039",
+                             "AccountId":  "00000002-0000-4000-8000-000000000004",
+                             "TransferId":  null,
+                             "SavingsGoalId":  null,
+                             "WithdrawalId":  null,
+                             "TimeDepositId":  null,
+                             "ExchangeOperationId":  null,
+                             "Type":  "Credit",
+                             "Amount":  {
+                                            "Amount":  3000,
+                                            "Currency":  "USD"
+                                        },
+                             "BalanceAfter":  3000,
+                             "Category":  "General",
+                             "Description":  "Opening deposit",
+                             "CreatedAt":  "2026-04-28T12:05:20+00:00"
+                         },
+                         {
+                             "Id":  "00000003-0000-4000-8000-000000000040",
+                             "AccountId":  "00000002-0000-4000-8000-000000000004",
+                             "TransferId":  null,
+                             "SavingsGoalId":  null,
+                             "WithdrawalId":  null,
+                             "TimeDepositId":  null,
+                             "ExchangeOperationId":  null,
+                             "Type":  "Debit",
+                             "Amount":  {
+                                            "Amount":  65,
+                                            "Currency":  "USD"
+                                        },
+                             "BalanceAfter":  2935,
+                             "Category":  "Entertainment",
+                             "Description":  "Concert tickets",
+                             "CreatedAt":  "2026-05-08T12:05:20+00:00"
+                         },
+                         {
+                             "Id":  "00000003-0000-4000-8000-000000000041",
+                             "AccountId":  "00000002-0000-4000-8000-000000000004",
+                             "TransferId":  null,
+                             "SavingsGoalId":  null,
+                             "WithdrawalId":  null,
+                             "TimeDepositId":  null,
+                             "ExchangeOperationId":  "00000014-0000-4000-8000-000000000003",
+                             "Type":  "Debit",
+                             "Amount":  {
+                                            "Amount":  200,
+                                            "Currency":  "USD"
+                                        },
+                             "BalanceAfter":  2735,
+                             "Category":  "Exchange",
+                             "Description":  "Exchange to EGP",
+                             "CreatedAt":  "2026-10-03T12:05:20+00:00"
+                         },
+                         {
+                             "Id":  "00000003-0000-4000-8000-000000000042",
+                             "AccountId":  "00000002-0000-4000-8000-000000000005",
+                             "TransferId":  null,
+                             "SavingsGoalId":  null,
+                             "WithdrawalId":  null,
+                             "TimeDepositId":  null,
+                             "ExchangeOperationId":  null,
+                             "Type":  "Credit",
+                             "Amount":  {
+                                            "Amount":  12500,
+                                            "Currency":  "USD"
+                                        },
+                             "BalanceAfter":  12500,
+                             "Category":  "General",
+                             "Description":  "Opening deposit",
+                             "CreatedAt":  "2026-04-08T12:05:20+00:00"
+                         },
+                         {
+                             "Id":  "00000003-0000-4000-8000-000000000043",
+                             "AccountId":  "00000002-0000-4000-8000-000000000005",
+                             "TransferId":  null,
+                             "SavingsGoalId":  null,
+                             "WithdrawalId":  null,
+                             "TimeDepositId":  "00000012-0000-4000-8000-000000000002",
+                             "ExchangeOperationId":  null,
+                             "Type":  "Debit",
+                             "Amount":  {
+                                            "Amount":  2000,
+                                            "Currency":  "USD"
+                                        },
+                             "BalanceAfter":  10500,
+                             "Category":  "Savings",
+                             "Description":  "Time deposit (3 months)",
+                             "CreatedAt":  "2026-04-13T12:05:20+00:00"
+                         },
+                         {
+                             "Id":  "00000003-0000-4000-8000-000000000044",
+                             "AccountId":  "00000002-0000-4000-8000-000000000005",
+                             "TransferId":  null,
+                             "SavingsGoalId":  null,
+                             "WithdrawalId":  null,
+                             "TimeDepositId":  null,
+                             "ExchangeOperationId":  null,
+                             "Type":  "Debit",
+                             "Amount":  {
+                                            "Amount":  55,
+                                            "Currency":  "USD"
+                                        },
+                             "BalanceAfter":  10445,
+                             "Category":  "Food",
+                             "Description":  "Lunch",
+                             "CreatedAt":  "2026-04-28T12:05:20+00:00"
+                         },
+                         {
+                             "Id":  "00000003-0000-4000-8000-000000000045",
+                             "AccountId":  "00000002-0000-4000-8000-000000000005",
+                             "TransferId":  null,
+                             "SavingsGoalId":  null,
+                             "WithdrawalId":  null,
+                             "TimeDepositId":  null,
+                             "ExchangeOperationId":  null,
+                             "Type":  "Debit",
+                             "Amount":  {
+                                            "Amount":  240,
+                                            "Currency":  "USD"
+                                        },
+                             "BalanceAfter":  10205,
+                             "Category":  "Shopping",
+                             "Description":  "New sneakers",
+                             "CreatedAt":  "2026-05-08T12:05:20+00:00"
+                         },
+                         {
+                             "Id":  "00000003-0000-4000-8000-000000000046",
+                             "AccountId":  "00000002-0000-4000-8000-000000000005",
+                             "TransferId":  null,
+                             "SavingsGoalId":  null,
+                             "WithdrawalId":  null,
+                             "TimeDepositId":  "00000012-0000-4000-8000-000000000001",
+                             "ExchangeOperationId":  null,
+                             "Type":  "Debit",
+                             "Amount":  {
+                                            "Amount":  5000,
+                                            "Currency":  "USD"
+                                        },
+                             "BalanceAfter":  5205,
+                             "Category":  "Savings",
+                             "Description":  "Time deposit (12 months)",
+                             "CreatedAt":  "2026-06-17T12:05:20+00:00"
+                         },
+                         {
+                             "Id":  "00000003-0000-4000-8000-000000000047",
+                             "AccountId":  "00000002-0000-4000-8000-000000000005",
+                             "TransferId":  null,
+                             "SavingsGoalId":  null,
+                             "WithdrawalId":  null,
+                             "TimeDepositId":  null,
+                             "ExchangeOperationId":  "00000014-0000-4000-8000-000000000002",
+                             "Type":  "Credit",
+                             "Amount":  {
+                                            "Amount":  100,
+                                            "Currency":  "USD"
+                                        },
+                             "BalanceAfter":  5305,
+                             "Category":  "Exchange",
+                             "Description":  "Exchange from EGP",
+                             "CreatedAt":  "2026-07-12T12:05:20+00:00"
+                         },
+                         {
+                             "Id":  "00000003-0000-4000-8000-000000000048",
+                             "AccountId":  "00000002-0000-4000-8000-000000000005",
+                             "TransferId":  "00000006-0000-4000-8000-000000000005",
+                             "SavingsGoalId":  null,
+                             "WithdrawalId":  null,
+                             "TimeDepositId":  null,
+                             "ExchangeOperationId":  null,
+                             "Type":  "Debit",
+                             "Amount":  {
+                                            "Amount":  400,
+                                            "Currency":  "USD"
+                                        },
+                             "BalanceAfter":  4905,
+                             "Category":  "Transfer",
+                             "Description":  "Rent to landlord",
+                             "CreatedAt":  "2026-07-17T12:05:20+00:00"
+                         },
+                         {
+                             "Id":  "00000003-0000-4000-8000-000000000049",
+                             "AccountId":  "00000002-0000-4000-8000-000000000005",
+                             "TransferId":  "00000006-0000-4000-8000-000000000005",
+                             "SavingsGoalId":  null,
+                             "WithdrawalId":  null,
+                             "TimeDepositId":  null,
+                             "ExchangeOperationId":  null,
+                             "Type":  "Debit",
+                             "Amount":  {
+                                            "Amount":  10,
+                                            "Currency":  "USD"
+                                        },
+                             "BalanceAfter":  4895,
+                             "Category":  "Transfer",
+                             "Description":  "Transfer fee",
+                             "CreatedAt":  "2026-07-17T12:05:20+00:00"
+                         },
+                         {
+                             "Id":  "00000003-0000-4000-8000-000000000050",
+                             "AccountId":  "00000002-0000-4000-8000-000000000005",
+                             "TransferId":  "00000006-0000-4000-8000-000000000005",
+                             "SavingsGoalId":  null,
+                             "WithdrawalId":  null,
+                             "TimeDepositId":  null,
+                             "ExchangeOperationId":  null,
+                             "Type":  "Credit",
+                             "Amount":  {
+                                            "Amount":  400,
+                                            "Currency":  "USD"
+                                        },
+                             "BalanceAfter":  5295,
+                             "Category":  "Transfer",
+                             "Description":  "Transfer refund",
+                             "CreatedAt":  "2026-07-17T12:05:20+00:00"
+                         },
+                         {
+                             "Id":  "00000003-0000-4000-8000-000000000051",
+                             "AccountId":  "00000002-0000-4000-8000-000000000005",
+                             "TransferId":  "00000006-0000-4000-8000-000000000005",
+                             "SavingsGoalId":  null,
+                             "WithdrawalId":  null,
+                             "TimeDepositId":  null,
+                             "ExchangeOperationId":  null,
+                             "Type":  "Credit",
+                             "Amount":  {
+                                            "Amount":  10,
+                                            "Currency":  "USD"
+                                        },
+                             "BalanceAfter":  5305,
+                             "Category":  "Transfer",
+                             "Description":  "Transfer fee refund",
+                             "CreatedAt":  "2026-07-17T12:05:20+00:00"
+                         },
+                         {
+                             "Id":  "00000003-0000-4000-8000-000000000052",
+                             "AccountId":  "00000002-0000-4000-8000-000000000005",
+                             "TransferId":  null,
+                             "SavingsGoalId":  null,
+                             "WithdrawalId":  null,
+                             "TimeDepositId":  null,
+                             "ExchangeOperationId":  null,
+                             "Type":  "Debit",
+                             "Amount":  {
+                                            "Amount":  60,
+                                            "Currency":  "USD"
+                                        },
+                             "BalanceAfter":  5245,
+                             "Category":  "Bills",
+                             "Description":  "Internet bill INT-7734",
+                             "CreatedAt":  "2026-08-31T12:05:20+00:00"
+                         },
+                         {
+                             "Id":  "00000003-0000-4000-8000-000000000053",
+                             "AccountId":  "00000002-0000-4000-8000-000000000005",
+                             "TransferId":  null,
+                             "SavingsGoalId":  null,
+                             "WithdrawalId":  null,
+                             "TimeDepositId":  "00000012-0000-4000-8000-000000000002",
+                             "ExchangeOperationId":  null,
+                             "Type":  "Credit",
+                             "Amount":  {
+                                            "Amount":  2020,
+                                            "Currency":  "USD"
+                                        },
+                             "BalanceAfter":  7265,
+                             "Category":  "Savings",
+                             "Description":  "Matured time deposit (3 months)",
+                             "CreatedAt":  "2026-09-05T12:05:20+00:00"
+                         },
+                         {
+                             "Id":  "00000003-0000-4000-8000-000000000054",
+                             "AccountId":  "00000002-0000-4000-8000-000000000005",
+                             "TransferId":  null,
+                             "SavingsGoalId":  null,
+                             "WithdrawalId":  null,
+                             "TimeDepositId":  null,
+                             "ExchangeOperationId":  null,
+                             "Type":  "Debit",
+                             "Amount":  {
+                                            "Amount":  40,
+                                            "Currency":  "USD"
+                                        },
+                             "BalanceAfter":  7225,
+                             "Category":  "Health",
+                             "Description":  "Pharmacy",
+                             "CreatedAt":  "2026-09-15T12:05:20+00:00"
+                         },
+                         {
+                             "Id":  "00000003-0000-4000-8000-000000000055",
+                             "AccountId":  "00000002-0000-4000-8000-000000000005",
+                             "TransferId":  "00000006-0000-4000-8000-000000000007",
+                             "SavingsGoalId":  null,
+                             "WithdrawalId":  null,
+                             "TimeDepositId":  null,
+                             "ExchangeOperationId":  null,
+                             "Type":  "Credit",
+                             "Amount":  {
+                                            "Amount":  200,
+                                            "Currency":  "USD"
+                                        },
+                             "BalanceAfter":  7425,
+                             "Category":  "Transfer",
+                             "Description":  "Dinner split",
+                             "CreatedAt":  "2026-09-25T12:05:20+00:00"
+                         },
+                         {
+                             "Id":  "00000003-0000-4000-8000-000000000056",
+                             "AccountId":  "00000002-0000-4000-8000-000000000005",
+                             "TransferId":  "00000006-0000-4000-8000-000000000008",
+                             "SavingsGoalId":  null,
+                             "WithdrawalId":  null,
+                             "TimeDepositId":  null,
+                             "ExchangeOperationId":  null,
+                             "Type":  "Debit",
+                             "Amount":  {
+                                            "Amount":  150,
+                                            "Currency":  "USD"
+                                        },
+                             "BalanceAfter":  7275,
+                             "Category":  "Transfer",
+                             "Description":  "Shared utilities",
+                             "CreatedAt":  "2026-10-03T12:05:20+00:00"
+                         },
+                         {
+                             "Id":  "00000003-0000-4000-8000-000000000057",
+                             "AccountId":  "00000002-0000-4000-8000-000000000005",
+                             "TransferId":  "00000006-0000-4000-8000-000000000003",
+                             "SavingsGoalId":  null,
+                             "WithdrawalId":  null,
+                             "TimeDepositId":  null,
+                             "ExchangeOperationId":  null,
+                             "Type":  "Debit",
+                             "Amount":  {
+                                            "Amount":  75,
+                                            "Currency":  "USD"
+                                        },
+                             "BalanceAfter":  7200,
+                             "Category":  "Transfer",
+                             "Description":  "Subscription",
+                             "CreatedAt":  "2026-10-04T12:05:20+00:00"
+                         },
+                         {
+                             "Id":  "00000003-0000-4000-8000-000000000058",
+                             "AccountId":  "00000002-0000-4000-8000-000000000005",
+                             "TransferId":  "00000006-0000-4000-8000-000000000003",
+                             "SavingsGoalId":  null,
+                             "WithdrawalId":  null,
+                             "TimeDepositId":  null,
+                             "ExchangeOperationId":  null,
+                             "Type":  "Debit",
+                             "Amount":  {
+                                            "Amount":  10,
+                                            "Currency":  "USD"
+                                        },
+                             "BalanceAfter":  7190,
+                             "Category":  "Transfer",
+                             "Description":  "Transfer fee",
+                             "CreatedAt":  "2026-10-04T12:05:20+00:00"
+                         },
+                         {
+                             "Id":  "00000003-0000-4000-8000-000000000059",
+                             "AccountId":  "00000002-0000-4000-8000-000000000005",
+                             "TransferId":  null,
+                             "SavingsGoalId":  null,
+                             "WithdrawalId":  null,
+                             "TimeDepositId":  null,
+                             "ExchangeOperationId":  null,
+                             "Type":  "Debit",
+                             "Amount":  {
+                                            "Amount":  25,
+                                            "Currency":  "USD"
+                                        },
+                             "BalanceAfter":  7165,
+                             "Category":  "MobileTopUp",
+                             "Description":  "Mobile top-up",
+                             "CreatedAt":  "2026-10-11T12:05:20+00:00"
+                         },
+                         {
+                             "Id":  "00000003-0000-4000-8000-000000000060",
+                             "AccountId":  "00000002-0000-4000-8000-000000000006",
+                             "TransferId":  null,
+                             "SavingsGoalId":  null,
+                             "WithdrawalId":  null,
+                             "TimeDepositId":  null,
+                             "ExchangeOperationId":  null,
+                             "Type":  "Credit",
+                             "Amount":  {
+                                            "Amount":  20000,
+                                            "Currency":  "EGP"
+                                        },
+                             "BalanceAfter":  20000,
+                             "Category":  "General",
+                             "Description":  "Opening deposit",
+                             "CreatedAt":  "2026-04-28T12:05:20+00:00"
+                         },
+                         {
+                             "Id":  "00000003-0000-4000-8000-000000000061",
+                             "AccountId":  "00000002-0000-4000-8000-000000000006",
+                             "TransferId":  null,
+                             "SavingsGoalId":  null,
+                             "WithdrawalId":  null,
+                             "TimeDepositId":  null,
+                             "ExchangeOperationId":  "00000014-0000-4000-8000-000000000002",
+                             "Type":  "Debit",
+                             "Amount":  {
+                                            "Amount":  5000,
+                                            "Currency":  "EGP"
+                                        },
+                             "BalanceAfter":  15000,
+                             "Category":  "Exchange",
+                             "Description":  "Exchange to USD",
+                             "CreatedAt":  "2026-07-12T12:05:20+00:00"
+                         },
+                         {
+                             "Id":  "00000003-0000-4000-8000-000000000062",
+                             "AccountId":  "00000002-0000-4000-8000-000000000007",
+                             "TransferId":  null,
+                             "SavingsGoalId":  null,
+                             "WithdrawalId":  null,
+                             "TimeDepositId":  null,
+                             "ExchangeOperationId":  null,
+                             "Type":  "Credit",
+                             "Amount":  {
+                                            "Amount":  9000,
+                                            "Currency":  "EGP"
+                                        },
+                             "BalanceAfter":  9000,
+                             "Category":  "General",
+                             "Description":  "Opening deposit",
+                             "CreatedAt":  "2026-05-18T12:05:20+00:00"
+                         },
+                         {
+                             "Id":  "00000003-0000-4000-8000-000000000063",
+                             "AccountId":  "00000002-0000-4000-8000-000000000007",
+                             "TransferId":  null,
+                             "SavingsGoalId":  null,
+                             "WithdrawalId":  null,
+                             "TimeDepositId":  null,
+                             "ExchangeOperationId":  null,
+                             "Type":  "Debit",
+                             "Amount":  {
+                                            "Amount":  700,
+                                            "Currency":  "EGP"
+                                        },
+                             "BalanceAfter":  8300,
+                             "Category":  "Food",
+                             "Description":  "Groceries",
+                             "CreatedAt":  "2026-07-07T12:05:20+00:00"
+                         },
+                         {
+                             "Id":  "00000003-0000-4000-8000-000000000064",
+                             "AccountId":  "00000002-0000-4000-8000-000000000008",
+                             "TransferId":  null,
+                             "SavingsGoalId":  null,
+                             "WithdrawalId":  null,
+                             "TimeDepositId":  null,
+                             "ExchangeOperationId":  null,
+                             "Type":  "Credit",
+                             "Amount":  {
+                                            "Amount":  1200,
+                                            "Currency":  "USD"
+                                        },
+                             "BalanceAfter":  1200,
+                             "Category":  "General",
+                             "Description":  "Opening deposit",
+                             "CreatedAt":  "2026-04-03T12:05:20+00:00"
+                         },
+                         {
+                             "Id":  "00000003-0000-4000-8000-000000000065",
+                             "AccountId":  "00000002-0000-4000-8000-000000000008",
+                             "TransferId":  null,
+                             "SavingsGoalId":  null,
+                             "WithdrawalId":  null,
+                             "TimeDepositId":  null,
+                             "ExchangeOperationId":  null,
+                             "Type":  "Debit",
+                             "Amount":  {
+                                            "Amount":  600,
+                                            "Currency":  "USD"
+                                        },
+                             "BalanceAfter":  600,
+                             "Category":  "Shopping",
+                             "Description":  "Laptop bag",
+                             "CreatedAt":  "2026-04-18T12:05:20+00:00"
+                         },
+                         {
+                             "Id":  "00000003-0000-4000-8000-000000000066",
+                             "AccountId":  "00000002-0000-4000-8000-000000000008",
+                             "TransferId":  null,
+                             "SavingsGoalId":  null,
+                             "WithdrawalId":  null,
+                             "TimeDepositId":  null,
+                             "ExchangeOperationId":  null,
+                             "Type":  "Debit",
+                             "Amount":  {
+                                            "Amount":  600,
+                                            "Currency":  "USD"
+                                        },
+                             "BalanceAfter":  0,
+                             "Category":  "Education",
+                             "Description":  "Certification exam fee",
+                             "CreatedAt":  "2026-04-23T12:05:20+00:00"
+                         },
+                         {
+                             "Id":  "00000003-0000-4000-8000-000000000067",
+                             "AccountId":  "00000002-0000-4000-8000-000000000009",
+                             "TransferId":  null,
+                             "SavingsGoalId":  null,
+                             "WithdrawalId":  null,
+                             "TimeDepositId":  null,
+                             "ExchangeOperationId":  null,
+                             "Type":  "Credit",
+                             "Amount":  {
+                                            "Amount":  4000,
+                                            "Currency":  "EUR"
+                                        },
+                             "BalanceAfter":  4000,
+                             "Category":  "General",
+                             "Description":  "Opening deposit",
+                             "CreatedAt":  "2026-05-08T12:05:20+00:00"
+                         },
+                         {
+                             "Id":  "00000003-0000-4000-8000-000000000068",
+                             "AccountId":  "00000002-0000-4000-8000-000000000009",
+                             "TransferId":  "00000006-0000-4000-8000-000000000006",
+                             "SavingsGoalId":  null,
+                             "WithdrawalId":  null,
+                             "TimeDepositId":  null,
+                             "ExchangeOperationId":  null,
+                             "Type":  "Debit",
+                             "Amount":  {
+                                            "Amount":  300,
+                                            "Currency":  "EUR"
+                                        },
+                             "BalanceAfter":  3700,
+                             "Category":  "Transfer",
+                             "Description":  "Family support",
+                             "CreatedAt":  "2026-09-15T12:05:20+00:00"
+                         },
+                         {
+                             "Id":  "00000003-0000-4000-8000-000000000069",
+                             "AccountId":  "00000002-0000-4000-8000-000000000009",
+                             "TransferId":  "00000006-0000-4000-8000-000000000006",
+                             "SavingsGoalId":  null,
+                             "WithdrawalId":  null,
+                             "TimeDepositId":  null,
+                             "ExchangeOperationId":  null,
+                             "Type":  "Debit",
+                             "Amount":  {
+                                            "Amount":  10,
+                                            "Currency":  "EUR"
+                                        },
+                             "BalanceAfter":  3690,
+                             "Category":  "Transfer",
+                             "Description":  "Transfer fee",
+                             "CreatedAt":  "2026-09-15T12:05:20+00:00"
+                         },
+                         {
+                             "Id":  "00000003-0000-4000-8000-000000000070",
+                             "AccountId":  "00000002-0000-4000-8000-000000000010",
+                             "TransferId":  null,
+                             "SavingsGoalId":  null,
+                             "WithdrawalId":  null,
+                             "TimeDepositId":  null,
+                             "ExchangeOperationId":  null,
+                             "Type":  "Credit",
+                             "Amount":  {
+                                            "Amount":  1500,
+                                            "Currency":  "USD"
+                                        },
+                             "BalanceAfter":  1500,
+                             "Category":  "General",
+                             "Description":  "Opening deposit",
+                             "CreatedAt":  "2026-05-28T12:05:20+00:00"
+                         },
+                         {
+                             "Id":  "00000003-0000-4000-8000-000000000071",
+                             "AccountId":  "00000002-0000-4000-8000-000000000010",
+                             "TransferId":  null,
+                             "SavingsGoalId":  "00000010-0000-4000-8000-000000000002",
+                             "WithdrawalId":  null,
+                             "TimeDepositId":  null,
+                             "ExchangeOperationId":  null,
+                             "Type":  "Debit",
+                             "Amount":  {
+                                            "Amount":  200,
+                                            "Currency":  "USD"
+                                        },
+                             "BalanceAfter":  1300,
+                             "Category":  "Savings",
+                             "Description":  "Savings goal: New laptop",
+                             "CreatedAt":  "2026-07-07T12:05:20+00:00"
+                         },
+                         {
+                             "Id":  "00000003-0000-4000-8000-000000000072",
+                             "AccountId":  "00000002-0000-4000-8000-000000000010",
+                             "TransferId":  null,
+                             "SavingsGoalId":  "00000010-0000-4000-8000-000000000002",
+                             "WithdrawalId":  null,
+                             "TimeDepositId":  null,
+                             "ExchangeOperationId":  null,
+                             "Type":  "Debit",
+                             "Amount":  {
+                                            "Amount":  200,
+                                            "Currency":  "USD"
+                                        },
+                             "BalanceAfter":  1100,
+                             "Category":  "Savings",
+                             "Description":  "Savings goal: New laptop",
+                             "CreatedAt":  "2026-08-06T12:05:20+00:00"
+                         }
+                     ],
+    "Cards":  [
+                  {
+                      "Id":  "00000004-0000-4000-8000-000000000001",
+                      "AccountId":  "00000002-0000-4000-8000-000000000001",
+                      "Network":  "Visa",
+                      "Last4":  "7719",
+                      "ExpiryMonth":  12,
+                      "ExpiryYear":  2028,
+                      "HolderName":  "MIKA TESFAYE",
+                      "Status":  "Active",
+                      "Token":  "tok_seed_c1"
+                  },
+                  {
+                      "Id":  "00000004-0000-4000-8000-000000000002",
+                      "AccountId":  "00000002-0000-4000-8000-000000000002",
+                      "Network":  "Mastercard",
+                      "Last4":  "4321",
+                      "ExpiryMonth":  6,
+                      "ExpiryYear":  2027,
+                      "HolderName":  "MIKA TESFAYE",
+                      "Status":  "Active",
+                      "Token":  "tok_seed_c2"
+                  },
+                  {
+                      "Id":  "00000004-0000-4000-8000-000000000003",
+                      "AccountId":  "00000002-0000-4000-8000-000000000003",
+                      "Network":  "Visa",
+                      "Last4":  "5566",
+                      "ExpiryMonth":  3,
+                      "ExpiryYear":  2029,
+                      "HolderName":  "RANIA ADEL",
+                      "Status":  "Active",
+                      "Token":  "tok_seed_c3"
+                  },
+                  {
+                      "Id":  "00000004-0000-4000-8000-000000000004",
+                      "AccountId":  "00000002-0000-4000-8000-000000000004",
+                      "Network":  "Meeza",
+                      "Last4":  "8812",
+                      "ExpiryMonth":  9,
+                      "ExpiryYear":  2027,
+                      "HolderName":  "RANIA ADEL",
+                      "Status":  "Blocked",
+                      "Token":  "tok_seed_c4"
+                  },
+                  {
+                      "Id":  "00000004-0000-4000-8000-000000000005",
+                      "AccountId":  "00000002-0000-4000-8000-000000000005",
+                      "Network":  "Visa",
+                      "Last4":  "1234",
+                      "ExpiryMonth":  8,
+                      "ExpiryYear":  2028,
+                      "HolderName":  "DANIEL OKORO",
+                      "Status":  "Active",
+                      "Token":  "tok_seed_c5"
+                  },
+                  {
+                      "Id":  "00000004-0000-4000-8000-000000000006",
+                      "AccountId":  "00000002-0000-4000-8000-000000000008",
+                      "Network":  "Mastercard",
+                      "Last4":  "9999",
+                      "ExpiryMonth":  1,
+                      "ExpiryYear":  2024,
+                      "HolderName":  "LAYLA MANSOUR",
+                      "Status":  "Closed",
+                      "Token":  "tok_seed_c6"
+                  }
+              ],
+    "Beneficiaries":  [
+                          {
+                              "Id":  "00000005-0000-4000-8000-000000000001",
+                              "UserId":  "00000001-0000-4000-8000-000000000001",
+                              "Name":  "Omar Farouk",
+                              "TransferType":  "CardNumber",
+                              "CardNumberLast4":  "7719",
+                              "CardNumberHash":  "SHA256:4111111111117719",
+                              "AccountNumber":  null,
+                              "BankId":  null,
+                              "BranchId":  null,
+                              "CreatedAt":  "2026-04-28T12:05:20+00:00"
+                          },
+                          {
+                              "Id":  "00000005-0000-4000-8000-000000000002",
+                              "UserId":  "00000001-0000-4000-8000-000000000001",
+                              "Name":  "Rania Adel",
+                              "TransferType":  "SameBank",
+                              "CardNumberLast4":  null,
+                              "CardNumberHash":  null,
+                              "AccountNumber":  "261000000003",
+                              "BankId":  "a1000000-0000-0000-0000-000000000001",
+                              "BranchId":  "b1000000-0000-0000-0000-000000000001",
+                              "CreatedAt":  "2026-05-08T12:05:20+00:00"
+                          },
+                          {
+                              "Id":  "00000005-0000-4000-8000-000000000003",
+                              "UserId":  "00000001-0000-4000-8000-000000000002",
+                              "Name":  "Daniel Okoro",
+                              "TransferType":  "OtherBank",
+                              "CardNumberLast4":  null,
+                              "CardNumberHash":  null,
+                              "AccountNumber":  "261000000005",
+                              "BankId":  "a1000000-0000-0000-0000-000000000002",
+                              "BranchId":  "b1000000-0000-0000-0000-000000000004",
+                              "CreatedAt":  "2026-05-18T12:05:20+00:00"
+                          },
+                          {
+                              "Id":  "00000005-0000-4000-8000-000000000004",
+                              "UserId":  "00000001-0000-4000-8000-000000000003",
+                              "Name":  "Mika Tesfaye",
+                              "TransferType":  "SameBank",
+                              "CardNumberLast4":  null,
+                              "CardNumberHash":  null,
+                              "AccountNumber":  "261000000001",
+                              "BankId":  "a1000000-0000-0000-0000-000000000001",
+                              "BranchId":  "b1000000-0000-0000-0000-000000000001",
+                              "CreatedAt":  "2026-05-28T12:05:20+00:00"
+                          },
+                          {
+                              "Id":  "00000005-0000-4000-8000-000000000005",
+                              "UserId":  "00000001-0000-4000-8000-000000000003",
+                              "Name":  "Hana Okoro",
+                              "TransferType":  "CardNumber",
+                              "CardNumberLast4":  "8812",
+                              "CardNumberHash":  "SHA256:5222222222228812",
+                              "AccountNumber":  null,
+                              "BankId":  null,
+                              "BranchId":  null,
+                              "CreatedAt":  "2026-06-07T12:05:20+00:00"
+                          },
+                          {
+                              "Id":  "00000005-0000-4000-8000-000000000006",
+                              "UserId":  "00000001-0000-4000-8000-000000000006",
+                              "Name":  "Hana Mansour",
+                              "TransferType":  "OtherBank",
+                              "CardNumberLast4":  null,
+                              "CardNumberHash":  null,
+                              "AccountNumber":  "261000000002",
+                              "BankId":  "a1000000-0000-0000-0000-000000000005",
+                              "BranchId":  "b1000000-0000-0000-0000-000000000007",
+                              "CreatedAt":  "2026-06-17T12:05:20+00:00"
+                          }
+                      ],
+    "Transfers":  [
+                      {
+                          "Id":  "00000006-0000-4000-8000-000000000001",
+                          "FromAccountId":  "00000002-0000-4000-8000-000000000001",
+                          "ToAccountId":  null,
+                          "Amount":  {
+                                         "Amount":  250,
+                                         "Currency":  "USD"
+                                     },
+                          "Fee":  {
+                                      "Amount":  10,
+                                      "Currency":  "USD"
+                                  },
+                          "Status":  "Pending",
+                          "IdempotencyKey":  "seed-transfer-1",
+                          "Note":  "Rent share",
+                          "CreatedAt":  "2026-10-10T12:05:20+00:00",
+                          "CustomerId":  "00000001-0000-4000-8000-000000000001",
+                          "TransferType":  "CardNumber",
+                          "VerificationMethod":  "Otp",
+                          "BeneficiaryId":  "00000005-0000-4000-8000-000000000001",
+                          "FailureReason":  null
+                      },
+                      {
+                          "Id":  "00000006-0000-4000-8000-000000000002",
+                          "FromAccountId":  "00000002-0000-4000-8000-000000000003",
+                          "ToAccountId":  null,
+                          "Amount":  {
+                                         "Amount":  1500,
+                                         "Currency":  "EGP"
+                                     },
+                          "Fee":  {
+                                      "Amount":  10,
+                                      "Currency":  "EGP"
+                                  },
+                          "Status":  "Pending",
+                          "IdempotencyKey":  "seed-transfer-2",
+                          "Note":  "Monthly support",
+                          "CreatedAt":  "2026-08-21T12:05:20+00:00",
+                          "CustomerId":  "00000001-0000-4000-8000-000000000002",
+                          "TransferType":  "OtherBank",
+                          "VerificationMethod":  "TouchId",
+                          "BeneficiaryId":  "00000005-0000-4000-8000-000000000003",
+                          "FailureReason":  null
+                      },
+                      {
+                          "Id":  "00000006-0000-4000-8000-000000000003",
+                          "FromAccountId":  "00000002-0000-4000-8000-000000000005",
+                          "ToAccountId":  null,
+                          "Amount":  {
+                                         "Amount":  75,
+                                         "Currency":  "USD"
+                                     },
+                          "Fee":  {
+                                      "Amount":  10,
+                                      "Currency":  "USD"
+                                  },
+                          "Status":  "Pending",
+                          "IdempotencyKey":  "seed-transfer-3",
+                          "Note":  "Subscription",
+                          "CreatedAt":  "2026-10-04T12:05:20+00:00",
+                          "CustomerId":  "00000001-0000-4000-8000-000000000003",
+                          "TransferType":  "CardNumber",
+                          "VerificationMethod":  "FaceId",
+                          "BeneficiaryId":  "00000005-0000-4000-8000-000000000005",
+                          "FailureReason":  null
+                      },
+                      {
+                          "Id":  "00000006-0000-4000-8000-000000000004",
+                          "FromAccountId":  "00000002-0000-4000-8000-000000000001",
+                          "ToAccountId":  null,
+                          "Amount":  {
+                                         "Amount":  120,
+                                         "Currency":  "USD"
+                                     },
+                          "Fee":  {
+                                      "Amount":  10,
+                                      "Currency":  "USD"
+                                  },
+                          "Status":  "Failed",
+                          "IdempotencyKey":  "seed-transfer-4",
+                          "Note":  "Gadget purchase",
+                          "CreatedAt":  "2026-08-06T12:05:20+00:00",
+                          "CustomerId":  "00000001-0000-4000-8000-000000000001",
+                          "TransferType":  "CardNumber",
+                          "VerificationMethod":  "Otp",
+                          "BeneficiaryId":  "00000005-0000-4000-8000-000000000001",
+                          "FailureReason":  "The beneficiary card was declined by the issuing bank."
+                      },
+                      {
+                          "Id":  "00000006-0000-4000-8000-000000000005",
+                          "FromAccountId":  "00000002-0000-4000-8000-000000000005",
+                          "ToAccountId":  null,
+                          "Amount":  {
+                                         "Amount":  400,
+                                         "Currency":  "USD"
+                                     },
+                          "Fee":  {
+                                      "Amount":  10,
+                                      "Currency":  "USD"
+                                  },
+                          "Status":  "Failed",
+                          "IdempotencyKey":  "seed-transfer-5",
+                          "Note":  "Rent to landlord",
+                          "CreatedAt":  "2026-07-17T12:05:20+00:00",
+                          "CustomerId":  "00000001-0000-4000-8000-000000000003",
+                          "TransferType":  "OtherBank",
+                          "VerificationMethod":  "TouchId",
+                          "BeneficiaryId":  "00000005-0000-4000-8000-000000000004",
+                          "FailureReason":  "The beneficiary account was not found at the receiving bank."
+                      },
+                      {
+                          "Id":  "00000006-0000-4000-8000-000000000006",
+                          "FromAccountId":  "00000002-0000-4000-8000-000000000009",
+                          "ToAccountId":  null,
+                          "Amount":  {
+                                         "Amount":  300,
+                                         "Currency":  "EUR"
+                                     },
+                          "Fee":  {
+                                      "Amount":  10,
+                                      "Currency":  "EUR"
+                                  },
+                          "Status":  "Completed",
+                          "IdempotencyKey":  "seed-transfer-6",
+                          "Note":  "Family support",
+                          "CreatedAt":  "2026-09-15T12:05:20+00:00",
+                          "CustomerId":  "00000001-0000-4000-8000-000000000006",
+                          "TransferType":  "OtherBank",
+                          "VerificationMethod":  "Otp",
+                          "BeneficiaryId":  "00000005-0000-4000-8000-000000000006",
+                          "FailureReason":  null
+                      },
+                      {
+                          "Id":  "00000006-0000-4000-8000-000000000007",
+                          "FromAccountId":  "00000002-0000-4000-8000-000000000001",
+                          "ToAccountId":  "00000002-0000-4000-8000-000000000005",
+                          "Amount":  {
+                                         "Amount":  200,
+                                         "Currency":  "USD"
+                                     },
+                          "Fee":  {
+                                      "Amount":  0,
+                                      "Currency":  "USD"
+                                  },
+                          "Status":  "Completed",
+                          "IdempotencyKey":  "seed-transfer-7",
+                          "Note":  "Dinner split",
+                          "CreatedAt":  "2026-09-25T12:05:20+00:00",
+                          "CustomerId":  null,
+                          "TransferType":  "SameBank",
+                          "VerificationMethod":  "Otp",
+                          "BeneficiaryId":  null,
+                          "FailureReason":  null
+                      },
+                      {
+                          "Id":  "00000006-0000-4000-8000-000000000008",
+                          "FromAccountId":  "00000002-0000-4000-8000-000000000005",
+                          "ToAccountId":  "00000002-0000-4000-8000-000000000001",
+                          "Amount":  {
+                                         "Amount":  150,
+                                         "Currency":  "USD"
+                                     },
+                          "Fee":  {
+                                      "Amount":  0,
+                                      "Currency":  "USD"
+                                  },
+                          "Status":  "Completed",
+                          "IdempotencyKey":  "seed-transfer-8",
+                          "Note":  "Shared utilities",
+                          "CreatedAt":  "2026-10-03T12:05:20+00:00",
+                          "CustomerId":  null,
+                          "TransferType":  "SameBank",
+                          "VerificationMethod":  "Otp",
+                          "BeneficiaryId":  null,
+                          "FailureReason":  null
+                      }
+                  ],
+    "Bills":  [
+                  {
+                      "Id":  "00000007-0000-4000-8000-000000000001",
+                      "Type":  "Electric",
+                      "Code":  "ELEC-8801",
+                      "CustomerName":  "Mika Tesfaye",
+                      "Company":  "EEUA",
+                      "PeriodFrom":  "2026-09-09",
+                      "PeriodTo":  "2026-10-09",
+                      "Fee":  {
+                                  "Amount":  450,
+                                  "Currency":  "USD"
+                              },
+                      "Tax":  {
+                                  "Amount":  30,
+                                  "Currency":  "USD"
+                              },
+                      "DueDate":  "2026-10-09",
+                      "Status":  "Paid",
+                      "CustomerUserId":  "00000001-0000-4000-8000-000000000001"
+                  },
+                  {
+                      "Id":  "00000007-0000-4000-8000-000000000002",
+                      "Type":  "Water",
+                      "Code":  "WTR-5502",
+                      "CustomerName":  "Rania Adel",
+                      "Company":  "Cairo Water Company",
+                      "PeriodFrom":  "2026-08-31",
+                      "PeriodTo":  "2026-09-30",
+                      "Fee":  {
+                                  "Amount":  850,
+                                  "Currency":  "EGP"
+                              },
+                      "Tax":  {
+                                  "Amount":  50,
+                                  "Currency":  "EGP"
+                              },
+                      "DueDate":  "2026-09-30",
+                      "Status":  "Paid",
+                      "CustomerUserId":  "00000001-0000-4000-8000-000000000002"
+                  },
+                  {
+                      "Id":  "00000007-0000-4000-8000-000000000003",
+                      "Type":  "Internet",
+                      "Code":  "INT-7734",
+                      "CustomerName":  "Daniel Okoro",
+                      "Company":  "Ethio Telecom",
+                      "PeriodFrom":  "2026-08-31",
+                      "PeriodTo":  "2026-09-30",
+                      "Fee":  {
+                                  "Amount":  55,
+                                  "Currency":  "USD"
+                              },
+                      "Tax":  {
+                                  "Amount":  5,
+                                  "Currency":  "USD"
+                              },
+                      "DueDate":  "2026-09-30",
+                      "Status":  "Paid",
+                      "CustomerUserId":  "00000001-0000-4000-8000-000000000003"
+                  },
+                  {
+                      "Id":  "00000007-0000-4000-8000-000000000004",
+                      "Type":  "Mobile",
+                      "Code":  "MOB-8802",
+                      "CustomerName":  "Sara Haddad",
+                      "Company":  "Zain KSA",
+                      "PeriodFrom":  "2026-10-01",
+                      "PeriodTo":  "2026-10-14",
+                      "Fee":  {
+                                  "Amount":  45,
+                                  "Currency":  "USD"
+                              },
+                      "Tax":  {
+                                  "Amount":  5,
+                                  "Currency":  "USD"
+                              },
+                      "DueDate":  "2026-10-22",
+                      "Status":  "Unpaid",
+                      "CustomerUserId":  "00000001-0000-4000-8000-000000000004"
+                  },
+                  {
+                      "Id":  "00000007-0000-4000-8000-000000000005",
+                      "Type":  "Electric",
+                      "Code":  "ELEC-8815",
+                      "CustomerName":  "Omar Farouk",
+                      "Company":  "EEUA",
+                      "PeriodFrom":  "2026-09-15",
+                      "PeriodTo":  "2026-10-14",
+                      "Fee":  {
+                                  "Amount":  1200,
+                                  "Currency":  "EGP"
+                              },
+                      "Tax":  {
+                                  "Amount":  120,
+                                  "Currency":  "EGP"
+                              },
+                      "DueDate":  "2026-10-25",
+                      "Status":  "Unpaid",
+                      "CustomerUserId":  "00000001-0000-4000-8000-000000000005"
+                  },
+                  {
+                      "Id":  "00000007-0000-4000-8000-000000000006",
+                      "Type":  "Water",
+                      "Code":  "WTR-5611",
+                      "CustomerName":  "Layla Mansour",
+                      "Company":  "Cairo Water Company",
+                      "PeriodFrom":  "2026-09-15",
+                      "PeriodTo":  "2026-10-14",
+                      "Fee":  {
+                                  "Amount":  230,
+                                  "Currency":  "EGP"
+                              },
+                      "Tax":  {
+                                  "Amount":  25,
+                                  "Currency":  "EGP"
+                              },
+                      "DueDate":  "2026-10-27",
+                      "Status":  "Unpaid",
+                      "CustomerUserId":  "00000001-0000-4000-8000-000000000006"
+                  },
+                  {
+                      "Id":  "00000007-0000-4000-8000-000000000007",
+                      "Type":  "Internet",
+                      "Code":  "INT-9911",
+                      "CustomerName":  "Mika Tesfaye",
+                      "Company":  "Safaricom",
+                      "PeriodFrom":  "2026-09-15",
+                      "PeriodTo":  "2026-10-14",
+                      "Fee":  {
+                                  "Amount":  80,
+                                  "Currency":  "USD"
+                              },
+                      "Tax":  {
+                                  "Amount":  8,
+                                  "Currency":  "USD"
+                              },
+                      "DueDate":  "2026-10-30",
+                      "Status":  "Unpaid",
+                      "CustomerUserId":  "00000001-0000-4000-8000-000000000001"
+                  },
+                  {
+                      "Id":  "00000007-0000-4000-8000-000000000008",
+                      "Type":  "Electric",
+                      "Code":  "ELEC-9922",
+                      "CustomerName":  "Rania Adel",
+                      "Company":  "EEUA",
+                      "PeriodFrom":  "2026-09-15",
+                      "PeriodTo":  "2026-10-14",
+                      "Fee":  {
+                                  "Amount":  760,
+                                  "Currency":  "EGP"
+                              },
+                      "Tax":  {
+                                  "Amount":  70,
+                                  "Currency":  "EGP"
+                              },
+                      "DueDate":  "2026-11-04",
+                      "Status":  "Unpaid",
+                      "CustomerUserId":  "00000001-0000-4000-8000-000000000002"
+                  }
+              ],
+    "BillPayments":  [
+                         {
+                             "Id":  "00000008-0000-4000-8000-000000000001",
+                             "UserId":  "00000001-0000-4000-8000-000000000001",
+                             "BillId":  "00000007-0000-4000-8000-000000000001",
+                             "AccountId":  "00000002-0000-4000-8000-000000000001",
+                             "TransactionId":  "00000003-0000-4000-8000-000000000018",
+                             "BillType":  "Electric",
+                             "Amount":  {
+                                            "Amount":  480,
+                                            "Currency":  "USD"
+                                        },
+                             "IdempotencyKey":  "seed-bp-1",
+                             "CreatedAt":  "2026-10-09T12:05:20+00:00"
+                         },
+                         {
+                             "Id":  "00000008-0000-4000-8000-000000000002",
+                             "UserId":  "00000001-0000-4000-8000-000000000002",
+                             "BillId":  "00000007-0000-4000-8000-000000000002",
+                             "AccountId":  "00000002-0000-4000-8000-000000000003",
+                             "TransactionId":  "00000003-0000-4000-8000-000000000033",
+                             "BillType":  "Water",
+                             "Amount":  {
+                                            "Amount":  900,
+                                            "Currency":  "EGP"
+                                        },
+                             "IdempotencyKey":  "seed-bp-2",
+                             "CreatedAt":  "2026-08-31T12:05:20+00:00"
+                         },
+                         {
+                             "Id":  "00000008-0000-4000-8000-000000000003",
+                             "UserId":  "00000001-0000-4000-8000-000000000003",
+                             "BillId":  "00000007-0000-4000-8000-000000000003",
+                             "AccountId":  "00000002-0000-4000-8000-000000000005",
+                             "TransactionId":  "00000003-0000-4000-8000-000000000052",
+                             "BillType":  "Internet",
+                             "Amount":  {
+                                            "Amount":  60,
+                                            "Currency":  "USD"
+                                        },
+                             "IdempotencyKey":  "seed-bp-3",
+                             "CreatedAt":  "2026-08-31T12:05:20+00:00"
+                         }
+                     ],
+    "MobileTopUps":  [
+                         {
+                             "Id":  "00000009-0000-4000-8000-000000000001",
+                             "UserId":  "00000001-0000-4000-8000-000000000001",
+                             "AccountId":  "00000002-0000-4000-8000-000000000001",
+                             "TransactionId":  "00000003-0000-4000-8000-000000000021",
+                             "PhoneNumber":  "+251911000001",
+                             "Amount":  {
+                                            "Amount":  20,
+                                            "Currency":  "USD"
+                                        },
+                             "IdempotencyKey":  "seed-tp-1",
+                             "CreatedAt":  "2026-10-12T12:05:20+00:00"
+                         },
+                         {
+                             "Id":  "00000009-0000-4000-8000-000000000002",
+                             "UserId":  "00000001-0000-4000-8000-000000000002",
+                             "AccountId":  "00000002-0000-4000-8000-000000000003",
+                             "TransactionId":  "00000003-0000-4000-8000-000000000037",
+                             "PhoneNumber":  "+201002200002",
+                             "Amount":  {
+                                            "Amount":  50,
+                                            "Currency":  "EGP"
+                                        },
+                             "IdempotencyKey":  "seed-tp-2",
+                             "CreatedAt":  "2026-10-07T12:05:20+00:00"
+                         },
+                         {
+                             "Id":  "00000009-0000-4000-8000-000000000003",
+                             "UserId":  "00000001-0000-4000-8000-000000000003",
+                             "AccountId":  "00000002-0000-4000-8000-000000000005",
+                             "TransactionId":  "00000003-0000-4000-8000-000000000059",
+                             "PhoneNumber":  "+234803300003",
+                             "Amount":  {
+                                            "Amount":  25,
+                                            "Currency":  "USD"
+                                        },
+                             "IdempotencyKey":  "seed-tp-3",
+                             "CreatedAt":  "2026-10-11T12:05:20+00:00"
+                         }
+                     ],
+    "SavingsGoals":  [
+                         {
+                             "Id":  "00000010-0000-4000-8000-000000000001",
+                             "UserId":  "00000001-0000-4000-8000-000000000001",
+                             "AccountId":  "00000002-0000-4000-8000-000000000001",
+                             "Name":  "Emergency fund",
+                             "TargetAmount":  {
+                                                  "Amount":  3000,
+                                                  "Currency":  "USD"
+                                              },
+                             "SavedAmount":  {
+                                                 "Amount":  900,
+                                                 "Currency":  "USD"
+                                             },
+                             "TargetDate":  "2026-12-14",
+                             "Status":  "Active"
+                         },
+                         {
+                             "Id":  "00000010-0000-4000-8000-000000000002",
+                             "UserId":  "00000001-0000-4000-8000-000000000003",
+                             "AccountId":  "00000002-0000-4000-8000-000000000010",
+                             "Name":  "New laptop",
+                             "TargetAmount":  {
+                                                  "Amount":  1000,
+                                                  "Currency":  "USD"
+                                              },
+                             "SavedAmount":  {
+                                                 "Amount":  400,
+                                                 "Currency":  "USD"
+                                             },
+                             "TargetDate":  "2027-01-13",
+                             "Status":  "Active"
+                         },
+                         {
+                             "Id":  "00000010-0000-4000-8000-000000000003",
+                             "UserId":  "00000001-0000-4000-8000-000000000002",
+                             "AccountId":  "00000002-0000-4000-8000-000000000003",
+                             "Name":  "Umrah trip",
+                             "TargetAmount":  {
+                                                  "Amount":  20000,
+                                                  "Currency":  "EGP"
+                                              },
+                             "SavedAmount":  {
+                                                 "Amount":  20000,
+                                                 "Currency":  "EGP"
+                                             },
+                             "TargetDate":  "2026-11-14",
+                             "Status":  "Completed"
+                         }
+                     ],
+    "SpendingLimits":  [
+                           {
+                               "Id":  "00000011-0000-4000-8000-000000000001",
+                               "UserId":  "00000001-0000-4000-8000-000000000001",
+                               "CardId":  null,
+                               "AccountId":  "00000002-0000-4000-8000-000000000001",
+                               "Category":  "Food",
+                               "Period":  "Daily",
+                               "LimitAmount":  {
+                                                   "Amount":  100,
+                                                   "Currency":  "USD"
+                                               },
+                               "LastHalfwayNotificationPeriodStart":  null,
+                               "LastExceededNotificationPeriodStart":  null,
+                               "IsActive":  true
+                           },
+                           {
+                               "Id":  "00000011-0000-4000-8000-000000000002",
+                               "UserId":  "00000001-0000-4000-8000-000000000001",
+                               "CardId":  "00000004-0000-4000-8000-000000000001",
+                               "AccountId":  null,
+                               "Category":  "Shopping",
+                               "Period":  "Monthly",
+                               "LimitAmount":  {
+                                                   "Amount":  500,
+                                                   "Currency":  "USD"
+                                               },
+                               "LastHalfwayNotificationPeriodStart":  "2026-10-01T00:00:00+00:00",
+                               "LastExceededNotificationPeriodStart":  null,
+                               "IsActive":  true
+                           },
+                           {
+                               "Id":  "00000011-0000-4000-8000-000000000003",
+                               "UserId":  "00000001-0000-4000-8000-000000000002",
+                               "CardId":  null,
+                               "AccountId":  "00000002-0000-4000-8000-000000000003",
+                               "Category":  "Food",
+                               "Period":  "Daily",
+                               "LimitAmount":  {
+                                                   "Amount":  400,
+                                                   "Currency":  "EGP"
+                                               },
+                               "LastHalfwayNotificationPeriodStart":  null,
+                               "LastExceededNotificationPeriodStart":  null,
+                               "IsActive":  true
+                           },
+                           {
+                               "Id":  "00000011-0000-4000-8000-000000000004",
+                               "UserId":  "00000001-0000-4000-8000-000000000003",
+                               "CardId":  null,
+                               "AccountId":  "00000002-0000-4000-8000-000000000005",
+                               "Category":  "Food",
+                               "Period":  "Daily",
+                               "LimitAmount":  {
+                                                   "Amount":  100,
+                                                   "Currency":  "USD"
+                                               },
+                               "LastHalfwayNotificationPeriodStart":  null,
+                               "LastExceededNotificationPeriodStart":  "2026-10-15T00:00:00+00:00",
+                               "IsActive":  false
+                           },
+                           {
+                               "Id":  "00000011-0000-4000-8000-000000000005",
+                               "UserId":  "00000001-0000-4000-8000-000000000003",
+                               "CardId":  "00000004-0000-4000-8000-000000000005",
+                               "AccountId":  null,
+                               "Category":  "Entertainment",
+                               "Period":  "Weekly",
+                               "LimitAmount":  {
+                                                   "Amount":  200,
+                                                   "Currency":  "USD"
+                                               },
+                               "LastHalfwayNotificationPeriodStart":  null,
+                               "LastExceededNotificationPeriodStart":  null,
+                               "IsActive":  true
+                           }
+                       ],
+    "TimeDeposits":  [
+                         {
+                             "Id":  "00000012-0000-4000-8000-000000000001",
+                             "UserId":  "00000001-0000-4000-8000-000000000001",
+                             "FundingAccountId":  "00000002-0000-4000-8000-000000000001",
+                             "Principal":  {
+                                               "Amount":  5000,
+                                               "Currency":  "USD"
+                                           },
+                             "TermInMonths":  12,
+                             "AnnualInterestRatePercent":  5,
+                             "CreatedAt":  "2026-06-17T12:05:20+00:00",
+                             "MaturesAt":  "2027-06-17T12:05:20+00:00",
+                             "Status":  "Active"
+                         },
+                         {
+                             "Id":  "00000012-0000-4000-8000-000000000002",
+                             "UserId":  "00000001-0000-4000-8000-000000000003",
+                             "FundingAccountId":  "00000002-0000-4000-8000-000000000005",
+                             "Principal":  {
+                                               "Amount":  2000,
+                                               "Currency":  "USD"
+                                           },
+                             "TermInMonths":  3,
+                             "AnnualInterestRatePercent":  4,
+                             "CreatedAt":  "2026-04-13T12:05:20+00:00",
+                             "MaturesAt":  "2026-07-13T12:05:20+00:00",
+                             "Status":  "Redeemed"
+                         },
+                         {
+                             "Id":  "00000012-0000-4000-8000-000000000003",
+                             "UserId":  "00000001-0000-4000-8000-000000000001",
+                             "FundingAccountId":  "00000002-0000-4000-8000-000000000001",
+                             "Principal":  {
+                                               "Amount":  3000,
+                                               "Currency":  "USD"
+                                           },
+                             "TermInMonths":  6,
+                             "AnnualInterestRatePercent":  4.5,
+                             "CreatedAt":  "2026-04-13T12:05:20+00:00",
+                             "MaturesAt":  "2026-10-13T12:05:20+00:00",
+                             "Status":  "Matured"
+                         },
+                         {
+                             "Id":  "00000012-0000-4000-8000-000000000004",
+                             "UserId":  "00000001-0000-4000-8000-000000000002",
+                             "FundingAccountId":  "00000002-0000-4000-8000-000000000003",
+                             "Principal":  {
+                                               "Amount":  1500,
+                                               "Currency":  "EGP"
+                                           },
+                             "TermInMonths":  3,
+                             "AnnualInterestRatePercent":  4,
+                             "CreatedAt":  "2026-10-12T12:05:20+00:00",
+                             "MaturesAt":  "2027-01-12T12:05:20+00:00",
+                             "Status":  "Active"
+                         }
+                     ],
+    "Withdrawals":  [
+                        {
+                            "Id":  "00000013-0000-4000-8000-000000000001",
+                            "UserId":  "00000001-0000-4000-8000-000000000001",
+                            "AccountId":  "00000002-0000-4000-8000-000000000001",
+                            "PhoneNumber":  "+251911000001",
+                            "Amount":  {
+                                           "Amount":  100,
+                                           "Currency":  "USD"
+                                       },
+                            "CodeHash":  "HMAC:seed-wd-1",
+                            "Status":  "PendingVerification",
+                            "FailedVerificationAttempts":  0,
+                            "CreatedAt":  "2026-10-13T12:05:20+00:00",
+                            "ExpiresAt":  "2026-10-13T12:10:20+00:00",
+                            "CompletedAt":  null
+                        },
+                        {
+                            "Id":  "00000013-0000-4000-8000-000000000002",
+                            "UserId":  "00000001-0000-4000-8000-000000000001",
+                            "AccountId":  "00000002-0000-4000-8000-000000000001",
+                            "PhoneNumber":  "+251911000001",
+                            "Amount":  {
+                                           "Amount":  60,
+                                           "Currency":  "USD"
+                                       },
+                            "CodeHash":  "HMAC:seed-wd-2",
+                            "Status":  "Completed",
+                            "FailedVerificationAttempts":  0,
+                            "CreatedAt":  "2026-10-05T12:03:20+00:00",
+                            "ExpiresAt":  "2026-10-05T12:08:20+00:00",
+                            "CompletedAt":  "2026-10-05T12:05:20+00:00"
+                        },
+                        {
+                            "Id":  "00000013-0000-4000-8000-000000000003",
+                            "UserId":  "00000001-0000-4000-8000-000000000003",
+                            "AccountId":  "00000002-0000-4000-8000-000000000005",
+                            "PhoneNumber":  "+234803300003",
+                            "Amount":  {
+                                           "Amount":  200,
+                                           "Currency":  "USD"
+                                       },
+                            "CodeHash":  "HMAC:seed-wd-3",
+                            "Status":  "Expired",
+                            "FailedVerificationAttempts":  1,
+                            "CreatedAt":  "2026-09-29T12:05:20+00:00",
+                            "ExpiresAt":  "2026-09-29T12:10:20+00:00",
+                            "CompletedAt":  null
+                        },
+                        {
+                            "Id":  "00000013-0000-4000-8000-000000000004",
+                            "UserId":  "00000001-0000-4000-8000-000000000003",
+                            "AccountId":  "00000002-0000-4000-8000-000000000005",
+                            "PhoneNumber":  "+234803300003",
+                            "Amount":  {
+                                           "Amount":  150,
+                                           "Currency":  "USD"
+                                       },
+                            "CodeHash":  "HMAC:seed-wd-4",
+                            "Status":  "Cancelled",
+                            "FailedVerificationAttempts":  3,
+                            "CreatedAt":  "2026-10-01T12:05:20+00:00",
+                            "ExpiresAt":  "2026-10-01T12:10:20+00:00",
+                            "CompletedAt":  null
+                        }
+                    ],
+    "ExchangeOperations":  [
+                               {
+                                   "Id":  "00000014-0000-4000-8000-000000000001",
+                                   "UserId":  "00000001-0000-4000-8000-000000000001",
+                                   "SourceAccountId":  "00000002-0000-4000-8000-000000000001",
+                                   "TargetAccountId":  "00000002-0000-4000-8000-000000000002",
+                                   "SourceAmount":  {
+                                                        "Amount":  150,
+                                                        "Currency":  "USD"
+                                                    },
+                                   "TargetAmount":  {
+                                                        "Amount":  7500,
+                                                        "Currency":  "EGP"
+                                                    },
+                                   "ExchangeRate":  50,
+                                   "CreatedAt":  "2026-10-14T12:05:20+00:00"
+                               },
+                               {
+                                   "Id":  "00000014-0000-4000-8000-000000000002",
+                                   "UserId":  "00000001-0000-4000-8000-000000000003",
+                                   "SourceAccountId":  "00000002-0000-4000-8000-000000000006",
+                                   "TargetAccountId":  "00000002-0000-4000-8000-000000000005",
+                                   "SourceAmount":  {
+                                                        "Amount":  5000,
+                                                        "Currency":  "EGP"
+                                                    },
+                                   "TargetAmount":  {
+                                                        "Amount":  100,
+                                                        "Currency":  "USD"
+                                                    },
+                                   "ExchangeRate":  0.02,
+                                   "CreatedAt":  "2026-07-12T12:05:20+00:00"
+                               },
+                               {
+                                   "Id":  "00000014-0000-4000-8000-000000000003",
+                                   "UserId":  "00000001-0000-4000-8000-000000000002",
+                                   "SourceAccountId":  "00000002-0000-4000-8000-000000000004",
+                                   "TargetAccountId":  "00000002-0000-4000-8000-000000000003",
+                                   "SourceAmount":  {
+                                                        "Amount":  200,
+                                                        "Currency":  "USD"
+                                                    },
+                                   "TargetAmount":  {
+                                                        "Amount":  10000,
+                                                        "Currency":  "EGP"
+                                                    },
+                                   "ExchangeRate":  50,
+                                   "CreatedAt":  "2026-10-03T12:05:20+00:00"
+                               }
+                           ],
+    "Notifications":  [
+                          {
+                              "Id":  "00000015-0000-4000-8000-000000000001",
+                              "UserId":  "00000001-0000-4000-8000-000000000001",
+                              "Type":  "TransferSent",
+                              "Title":  "Transfer sent",
+                              "Body":  "Your transfer of USD 250.00 is being processed.",
+                              "RelatedEntityId":  "00000006-0000-4000-8000-000000000001",
+                              "IsRead":  true,
+                              "CreatedAt":  "2026-10-10T12:05:20+00:00"
+                          },
+                          {
+                              "Id":  "00000015-0000-4000-8000-000000000002",
+                              "UserId":  "00000001-0000-4000-8000-000000000001",
+                              "Type":  "PaymentSuccessful",
+                              "Title":  "Bill paid",
+                              "Body":  "Your Electric bill ELEC-8801 was paid.",
+                              "RelatedEntityId":  "00000008-0000-4000-8000-000000000001",
+                              "IsRead":  true,
+                              "CreatedAt":  "2026-10-09T12:05:20+00:00"
+                          },
+                          {
+                              "Id":  "00000015-0000-4000-8000-000000000003",
+                              "UserId":  "00000001-0000-4000-8000-000000000001",
+                              "Type":  "SpendingLimitHalfwayReached",
+                              "Title":  "Half of your limit used",
+                              "Body":  "You have used half of your Shopping limit.",
+                              "RelatedEntityId":  "00000011-0000-4000-8000-000000000002",
+                              "IsRead":  false,
+                              "CreatedAt":  "2026-10-14T12:05:20+00:00"
+                          },
+                          {
+                              "Id":  "00000015-0000-4000-8000-000000000004",
+                              "UserId":  "00000001-0000-4000-8000-000000000001",
+                              "Type":  "CardAdded",
+                              "Title":  "Card added",
+                              "Body":  "A new Visa card ending 7719 was added.",
+                              "RelatedEntityId":  "00000004-0000-4000-8000-000000000001",
+                              "IsRead":  true,
+                              "CreatedAt":  "2026-04-28T12:05:20+00:00"
+                          },
+                          {
+                              "Id":  "00000015-0000-4000-8000-000000000005",
+                              "UserId":  "00000001-0000-4000-8000-000000000002",
+                              "Type":  "PaymentSuccessful",
+                              "Title":  "Bill paid",
+                              "Body":  "Your Water bill WTR-5502 was paid.",
+                              "RelatedEntityId":  "00000008-0000-4000-8000-000000000002",
+                              "IsRead":  true,
+                              "CreatedAt":  "2026-08-31T12:05:20+00:00"
+                          },
+                          {
+                              "Id":  "00000015-0000-4000-8000-000000000006",
+                              "UserId":  "00000001-0000-4000-8000-000000000002",
+                              "Type":  "SavingsGoalReached",
+                              "Title":  "Savings goal reached",
+                              "Body":  "Congratulations! You reached your Umrah trip goal.",
+                              "RelatedEntityId":  "00000010-0000-4000-8000-000000000003",
+                              "IsRead":  true,
+                              "CreatedAt":  "2026-07-27T12:05:20+00:00"
+                          },
+                          {
+                              "Id":  "00000015-0000-4000-8000-000000000007",
+                              "UserId":  "00000001-0000-4000-8000-000000000003",
+                              "Type":  "TransferReceived",
+                              "Title":  "Money received",
+                              "Body":  "You received USD 200.00 from Mika Tesfaye.",
+                              "RelatedEntityId":  "00000006-0000-4000-8000-000000000007",
+                              "IsRead":  false,
+                              "CreatedAt":  "2026-09-25T12:05:20+00:00"
+                          },
+                          {
+                              "Id":  "00000015-0000-4000-8000-000000000008",
+                              "UserId":  "00000001-0000-4000-8000-000000000003",
+                              "Type":  "PaymentSuccessful",
+                              "Title":  "Bill paid",
+                              "Body":  "Your Internet bill INT-7734 was paid.",
+                              "RelatedEntityId":  "00000008-0000-4000-8000-000000000003",
+                              "IsRead":  true,
+                              "CreatedAt":  "2026-08-31T12:05:20+00:00"
+                          },
+                          {
+                              "Id":  "00000015-0000-4000-8000-000000000009",
+                              "UserId":  "00000001-0000-4000-8000-000000000006",
+                              "Type":  "TransferSent",
+                              "Title":  "Transfer sent",
+                              "Body":  "Your transfer of EUR 300.00 has completed.",
+                              "RelatedEntityId":  "00000006-0000-4000-8000-000000000006",
+                              "IsRead":  false,
+                              "CreatedAt":  "2026-09-15T12:05:20+00:00"
+                          },
+                          {
+                              "Id":  "00000015-0000-4000-8000-000000000010",
+                              "UserId":  "00000001-0000-4000-8000-000000000002",
+                              "Type":  "General",
+                              "Title":  "Welcome to Limita",
+                              "Body":  "Thanks for joining Limita. Explore your new app.",
+                              "RelatedEntityId":  null,
+                              "IsRead":  true,
+                              "CreatedAt":  "2026-04-18T12:05:20+00:00"
+                          }
+                      ],
+    "OtpCodes":  [
+                     {
+                         "Id":  "00000016-0000-4000-8000-000000000001",
+                         "UserId":  "00000001-0000-4000-8000-000000000001",
+                         "Purpose":  "PhoneVerification",
+                         "CodeHash":  "HMAC:seed-otp-1",
+                         "CreatedAt":  "2026-10-14T12:05:20+00:00",
+                         "ExpiresAt":  "2026-10-14T12:10:20+00:00",
+                         "ConsumedAt":  null,
+                         "FailedAttempts":  0
+                     },
+                     {
+                         "Id":  "00000016-0000-4000-8000-000000000002",
+                         "UserId":  "00000001-0000-4000-8000-000000000004",
+                         "Purpose":  "PhoneVerification",
+                         "CodeHash":  "HMAC:seed-otp-2",
+                         "CreatedAt":  "2026-10-14T12:05:20+00:00",
+                         "ExpiresAt":  "2026-10-14T12:10:20+00:00",
+                         "ConsumedAt":  null,
+                         "FailedAttempts":  1
+                     },
+                     {
+                         "Id":  "00000016-0000-4000-8000-000000000003",
+                         "UserId":  "00000001-0000-4000-8000-000000000001",
+                         "Purpose":  "PasswordReset",
+                         "CodeHash":  "HMAC:seed-otp-3",
+                         "CreatedAt":  "2026-10-05T12:05:20+00:00",
+                         "ExpiresAt":  "2026-10-05T12:10:20+00:00",
+                         "ConsumedAt":  null,
+                         "FailedAttempts":  0
+                     },
+                     {
+                         "Id":  "00000016-0000-4000-8000-000000000004",
+                         "UserId":  "00000001-0000-4000-8000-000000000006",
+                         "Purpose":  "PasswordReset",
+                         "CodeHash":  "HMAC:seed-otp-4",
+                         "CreatedAt":  "2026-10-07T12:05:20+00:00",
+                         "ExpiresAt":  "2026-10-07T12:10:20+00:00",
+                         "ConsumedAt":  "2026-10-07T12:05:20+00:00",
+                         "FailedAttempts":  0
+                     }
+                 ],
+    "RefreshTokens":  [
+                          {
+                              "Id":  "00000017-0000-4000-8000-000000000001",
+                              "UserId":  "00000001-0000-4000-8000-000000000001",
+                              "TokenHash":  "HMAC:seed-rt-1",
+                              "ExpiresAt":  "2026-10-12T12:05:20+00:00",
+                              "CreatedAt":  "2026-10-05T12:05:20+00:00",
+                              "RevokedAt":  null
+                          },
+                          {
+                              "Id":  "00000017-0000-4000-8000-000000000002",
+                              "UserId":  "00000001-0000-4000-8000-000000000002",
+                              "TokenHash":  "HMAC:seed-rt-2",
+                              "ExpiresAt":  "2026-10-21T12:05:20+00:00",
+                              "CreatedAt":  "2026-10-14T12:05:20+00:00",
+                              "RevokedAt":  null
+                          },
+                          {
+                              "Id":  "00000017-0000-4000-8000-000000000003",
+                              "UserId":  "00000001-0000-4000-8000-000000000003",
+                              "TokenHash":  "HMAC:seed-rt-3",
+                              "ExpiresAt":  "2026-10-12T12:05:20+00:00",
+                              "CreatedAt":  "2026-10-05T12:05:20+00:00",
+                              "RevokedAt":  "2026-10-06T12:05:20+00:00"
+                          }
+                      ],
+    "Branches":  [
+                     {
+                         "Id":  "00000018-0000-4000-8000-000000000001",
+                         "Name":  "Maadi Branch",
+                         "Address":  "12 Road 9, Maadi",
+                         "City":  "Cairo",
+                         "PhoneNumber":  "+20225280001",
+                         "Latitude":  29.9602,
+                         "Longitude":  31.2569,
+                         "IsActive":  false
+                     },
+                     {
+                         "Id":  "00000018-0000-4000-8000-000000000002",
+                         "Name":  "Nasr City Branch",
+                         "Address":  "5 Abbas El Akkad, Nasr City",
+                         "City":  "Cairo",
+                         "PhoneNumber":  "+20222600002",
+                         "Latitude":  30.0596,
+                         "Longitude":  31.34,
+                         "IsActive":  true
+                     },
+                     {
+                         "Id":  "00000018-0000-4000-8000-000000000003",
+                         "Name":  "Bole Branch",
+                         "Address":  "Africa Avenue, Bole",
+                         "City":  "Addis Ababa",
+                         "PhoneNumber":  "+25111660003",
+                         "Latitude":  9.0054,
+                         "Longitude":  38.7636,
+                         "IsActive":  true
+                     },
+                     {
+                         "Id":  "00000018-0000-4000-8000-000000000004",
+                         "Name":  "Ikeja Branch",
+                         "Address":  "12 Allen Avenue, Ikeja",
+                         "City":  "Lagos",
+                         "PhoneNumber":  "+23417700004",
+                         "Latitude":  6.6018,
+                         "Longitude":  3.3515,
+                         "IsActive":  true
+                     },
+                     {
+                         "Id":  "00000018-0000-4000-8000-000000000005",
+                         "Name":  "Deira Branch",
+                         "Address":  "Al Rigga Road, Deira",
+                         "City":  "Dubai",
+                         "PhoneNumber":  "+97142200005",
+                         "Latitude":  25.2653,
+                         "Longitude":  55.323,
+                         "IsActive":  true
+                     },
+                     {
+                         "Id":  "00000018-0000-4000-8000-000000000006",
+                         "Name":  "Maadi Corniche ATM",
+                         "Address":  "Corniche El Nil, Maadi",
+                         "City":  "Cairo",
+                         "PhoneNumber":  null,
+                         "Latitude":  29.955,
+                         "Longitude":  31.24,
+                         "IsActive":  true
+                     }
+                 ],
+    "InterestRates":  [
+                          {
+                              "Id":  "00000019-0000-4000-8000-000000000001",
+                              "ProductCode":  "TD-3M",
+                              "ProductName":  "Time Deposit - 3 Months",
+                              "AnnualRatePercent":  4,
+                              "MinimumTermMonths":  3,
+                              "MaximumTermMonths":  3,
+                              "MinimumAmount":  1000,
+                              "CurrencyCode":  "USD",
+                              "EffectiveFrom":  "2026-07-17T12:05:20+00:00",
+                              "IsActive":  true
+                          },
+                          {
+                              "Id":  "00000019-0000-4000-8000-000000000002",
+                              "ProductCode":  "TD-6M",
+                              "ProductName":  "Time Deposit - 6 Months",
+                              "AnnualRatePercent":  4.5,
+                              "MinimumTermMonths":  6,
+                              "MaximumTermMonths":  6,
+                              "MinimumAmount":  1000,
+                              "CurrencyCode":  "USD",
+                              "EffectiveFrom":  "2026-07-17T12:05:20+00:00",
+                              "IsActive":  true
+                          },
+                          {
+                              "Id":  "00000019-0000-4000-8000-000000000003",
+                              "ProductCode":  "TD-12M",
+                              "ProductName":  "Time Deposit - 12 Months",
+                              "AnnualRatePercent":  5,
+                              "MinimumTermMonths":  12,
+                              "MaximumTermMonths":  12,
+                              "MinimumAmount":  1000,
+                              "CurrencyCode":  "USD",
+                              "EffectiveFrom":  "2026-07-17T12:05:20+00:00",
+                              "IsActive":  true
+                          },
+                          {
+                              "Id":  "00000019-0000-4000-8000-000000000004",
+                              "ProductCode":  "TD-16M",
+                              "ProductName":  "Time Deposit - 16 Months",
+                              "AnnualRatePercent":  5.5,
+                              "MinimumTermMonths":  16,
+                              "MaximumTermMonths":  16,
+                              "MinimumAmount":  1000,
+                              "CurrencyCode":  "USD",
+                              "EffectiveFrom":  "2026-07-17T12:05:20+00:00",
+                              "IsActive":  true
+                          },
+                          {
+                              "Id":  "00000019-0000-4000-8000-000000000005",
+                              "ProductCode":  "TD-24M",
+                              "ProductName":  "Time Deposit - 24 Months",
+                              "AnnualRatePercent":  6,
+                              "MinimumTermMonths":  24,
+                              "MaximumTermMonths":  24,
+                              "MinimumAmount":  1000,
+                              "CurrencyCode":  "USD",
+                              "EffectiveFrom":  "2026-07-17T12:05:20+00:00",
+                              "IsActive":  false
+                          },
+                          {
+                              "Id":  "00000019-0000-4000-8000-000000000006",
+                              "ProductCode":  "SAV-USD",
+                              "ProductName":  "USD Savings Account",
+                              "AnnualRatePercent":  2.5,
+                              "MinimumTermMonths":  null,
+                              "MaximumTermMonths":  null,
+                              "MinimumAmount":  100,
+                              "CurrencyCode":  "USD",
+                              "EffectiveFrom":  "2026-07-17T12:05:20+00:00",
+                              "IsActive":  true
+                          },
+                          {
+                              "Id":  "00000019-0000-4000-8000-000000000007",
+                              "ProductCode":  "SAV-EGP",
+                              "ProductName":  "EGP Savings Account",
+                              "AnnualRatePercent":  3,
+                              "MinimumTermMonths":  null,
+                              "MaximumTermMonths":  null,
+                              "MinimumAmount":  1000,
+                              "CurrencyCode":  "EGP",
+                              "EffectiveFrom":  "2026-07-17T12:05:20+00:00",
+                              "IsActive":  true
+                          }
+                      ],
+    "ExchangeRates":  [
+                          {
+                              "Id":  "00000020-0000-4000-8000-000000000001",
+                              "BaseCurrency":  "USD",
+                              "QuoteCurrency":  "EGP",
+                              "Rate":  50,
+                              "BuyRate":  49.5,
+                              "SellRate":  50.5,
+                              "UpdatedAt":  "2026-10-14T12:05:20+00:00",
+                              "IsActive":  true
+                          },
+                          {
+                              "Id":  "00000020-0000-4000-8000-000000000002",
+                              "BaseCurrency":  "EUR",
+                              "QuoteCurrency":  "EGP",
+                              "Rate":  54,
+                              "BuyRate":  53.5,
+                              "SellRate":  54.5,
+                              "UpdatedAt":  "2026-10-14T12:05:20+00:00",
+                              "IsActive":  true
+                          },
+                          {
+                              "Id":  "00000020-0000-4000-8000-000000000003",
+                              "BaseCurrency":  "GBP",
+                              "QuoteCurrency":  "EGP",
+                              "Rate":  64,
+                              "BuyRate":  63.4,
+                              "SellRate":  64.6,
+                              "UpdatedAt":  "2026-10-14T12:05:20+00:00",
+                              "IsActive":  true
+                          },
+                          {
+                              "Id":  "00000020-0000-4000-8000-000000000004",
+                              "BaseCurrency":  "SAR",
+                              "QuoteCurrency":  "EGP",
+                              "Rate":  13.33,
+                              "BuyRate":  13.2,
+                              "SellRate":  13.46,
+                              "UpdatedAt":  "2026-10-14T12:05:20+00:00",
+                              "IsActive":  true
+                          },
+                          {
+                              "Id":  "00000020-0000-4000-8000-000000000005",
+                              "BaseCurrency":  "AED",
+                              "QuoteCurrency":  "EGP",
+                              "Rate":  13.61,
+                              "BuyRate":  13.48,
+                              "SellRate":  13.74,
+                              "UpdatedAt":  "2026-10-14T12:05:20+00:00",
+                              "IsActive":  true
+                          },
+                          {
+                              "Id":  "00000020-0000-4000-8000-000000000006",
+                              "BaseCurrency":  "USD",
+                              "QuoteCurrency":  "SAR",
+                              "Rate":  3.75,
+                              "BuyRate":  3.71,
+                              "SellRate":  3.79,
+                              "UpdatedAt":  "2026-10-14T12:05:20+00:00",
+                              "IsActive":  true
+                          },
+                          {
+                              "Id":  "00000020-0000-4000-8000-000000000007",
+                              "BaseCurrency":  "USD",
+                              "QuoteCurrency":  "AED",
+                              "Rate":  3.67,
+                              "BuyRate":  3.63,
+                              "SellRate":  3.71,
+                              "UpdatedAt":  "2026-10-14T12:05:20+00:00",
+                              "IsActive":  true
+                          },
+                          {
+                              "Id":  "00000020-0000-4000-8000-000000000008",
+                              "BaseCurrency":  "EUR",
+                              "QuoteCurrency":  "USD",
+                              "Rate":  1.08,
+                              "BuyRate":  1.07,
+                              "SellRate":  1.09,
+                              "UpdatedAt":  "2026-10-14T12:05:20+00:00",
+                              "IsActive":  true
+                          },
+                          {
+                              "Id":  "00000020-0000-4000-8000-000000000009",
+                              "BaseCurrency":  "GBP",
+                              "QuoteCurrency":  "USD",
+                              "Rate":  1.28,
+                              "BuyRate":  1.27,
+                              "SellRate":  1.29,
+                              "UpdatedAt":  "2026-10-14T12:05:20+00:00",
+                              "IsActive":  true
+                          },
+                          {
+                              "Id":  "00000020-0000-4000-8000-000000000010",
+                              "BaseCurrency":  "EGP",
+                              "QuoteCurrency":  "AED",
+                              "Rate":  0.0735,
+                              "BuyRate":  null,
+                              "SellRate":  null,
+                              "UpdatedAt":  "2026-09-15T12:05:20+00:00",
+                              "IsActive":  false
+                          }
+                      ],
+    "MessageThreads":  [
+                           {
+                               "Id":  "00000021-0000-4000-8000-000000000001",
+                               "UserId":  "00000001-0000-4000-8000-000000000001",
+                               "Subject":  "Card payment declined",
+                               "Status":  "Open",
+                               "CreatedAt":  "2026-09-25T12:05:20+00:00",
+                               "UpdatedAt":  "2026-09-27T12:05:20+00:00"
+                           },
+                           {
+                               "Id":  "00000021-0000-4000-8000-000000000002",
+                               "UserId":  "00000001-0000-4000-8000-000000000002",
+                               "Subject":  "Account verification",
+                               "Status":  "Closed",
+                               "CreatedAt":  "2026-08-16T12:05:20+00:00",
+                               "UpdatedAt":  "2026-08-18T12:05:20+00:00"
+                           },
+                           {
+                               "Id":  "00000021-0000-4000-8000-000000000003",
+                               "UserId":  "00000001-0000-4000-8000-000000000003",
+                               "Subject":  "Transfer enquiry",
+                               "Status":  "Open",
+                               "CreatedAt":  "2026-10-05T12:05:20+00:00",
+                               "UpdatedAt":  "2026-10-06T12:05:20+00:00"
+                           }
+                       ],
+    "Messages":  [
+                     {
+                         "Id":  "00000022-0000-4000-8000-000000000001",
+                         "ThreadId":  "00000021-0000-4000-8000-000000000001",
+                         "SenderUserId":  "00000001-0000-4000-8000-000000000001",
+                         "Body":  "My card payment was declined yesterday.",
+                         "IsFromBank":  false,
+                         "SentAt":  "2026-09-25T12:05:20+00:00"
+                     },
+                     {
+                         "Id":  "00000022-0000-4000-8000-000000000002",
+                         "ThreadId":  "00000021-0000-4000-8000-000000000001",
+                         "SenderUserId":  "00000001-0000-4000-8000-000000000001",
+                         "Body":  "We are looking into it and will get back to you.",
+                         "IsFromBank":  true,
+                         "SentAt":  "2026-09-26T12:05:20+00:00"
+                     },
+                     {
+                         "Id":  "00000022-0000-4000-8000-000000000003",
+                         "ThreadId":  "00000021-0000-4000-8000-000000000001",
+                         "SenderUserId":  "00000001-0000-4000-8000-000000000001",
+                         "Body":  "Thank you for the quick response.",
+                         "IsFromBank":  false,
+                         "SentAt":  "2026-09-27T12:05:20+00:00"
+                     },
+                     {
+                         "Id":  "00000022-0000-4000-8000-000000000004",
+                         "ThreadId":  "00000021-0000-4000-8000-000000000002",
+                         "SenderUserId":  "00000001-0000-4000-8000-000000000002",
+                         "Body":  "How do I verify my account?",
+                         "IsFromBank":  false,
+                         "SentAt":  "2026-08-16T12:05:20+00:00"
+                     },
+                     {
+                         "Id":  "00000022-0000-4000-8000-000000000005",
+                         "ThreadId":  "00000021-0000-4000-8000-000000000002",
+                         "SenderUserId":  "00000001-0000-4000-8000-000000000002",
+                         "Body":  "Please upload your ID through the app.",
+                         "IsFromBank":  true,
+                         "SentAt":  "2026-08-17T12:05:20+00:00"
+                     },
+                     {
+                         "Id":  "00000022-0000-4000-8000-000000000006",
+                         "ThreadId":  "00000021-0000-4000-8000-000000000002",
+                         "SenderUserId":  "00000001-0000-4000-8000-000000000002",
+                         "Body":  "Done, thanks.",
+                         "IsFromBank":  false,
+                         "SentAt":  "2026-08-18T12:05:20+00:00"
+                     },
+                     {
+                         "Id":  "00000022-0000-4000-8000-000000000007",
+                         "ThreadId":  "00000021-0000-4000-8000-000000000003",
+                         "SenderUserId":  "00000001-0000-4000-8000-000000000003",
+                         "Body":  "Why is my transfer still pending?",
+                         "IsFromBank":  false,
+                         "SentAt":  "2026-10-05T12:05:20+00:00"
+                     },
+                     {
+                         "Id":  "00000022-0000-4000-8000-000000000008",
+                         "ThreadId":  "00000021-0000-4000-8000-000000000003",
+                         "SenderUserId":  "00000001-0000-4000-8000-000000000003",
+                         "Body":  "External transfers can take up to one business day.",
+                         "IsFromBank":  true,
+                         "SentAt":  "2026-10-06T12:05:20+00:00"
+                     },
+                     {
+                         "Id":  "00000022-0000-4000-8000-000000000009",
+                         "ThreadId":  "00000021-0000-4000-8000-000000000003",
+                         "SenderUserId":  "00000001-0000-4000-8000-000000000003",
+                         "Body":  "I understand now.",
+                         "IsFromBank":  false,
+                         "SentAt":  "2026-10-06T12:05:20+00:00"
+                     }
+                 ]
+}
