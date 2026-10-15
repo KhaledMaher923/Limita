@@ -70,5 +70,8 @@ public static class DevelopmentDataSeeder
 
             await dbContext.SaveChangesAsync();
         }
+
+        // Load the hand-crafted mock dataset (Development/SeedData/seed-data.json) when it is present.
+        await SeedDataFileSeeder.EnsureAsync(services);
     }
 }
